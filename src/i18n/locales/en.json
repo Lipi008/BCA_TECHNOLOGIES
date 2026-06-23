@@ -1,0 +1,580 @@
+{
+  "nav": {
+    "home": "HOME",
+    "about": "ABOUT",
+    "activites": "ACTIVITIES",
+    "offres": "OFFERS",
+    "solutions": "SOLUTIONS",
+    "realisations": "PROJECTS",
+    "references": "REFERENCES",
+    "partenaires": "PARTNERS",
+    "actualites": "NEWS",
+    "more": "More",
+    "partners": "Partners",
+    "news": "News",
+    "faq": "FAQ",
+    "contact_btn": "Contact Us",
+    "discover": "Discover",
+    "read_more": "Read more"
+  },
+  "hero": {
+    "tagline": "Reliable networks, smart solutions, assured performance",
+    "slogan_line1": "Reliable networks,",
+    "slogan_line2": "smart solutions,",
+    "slogan_line3": "assured performance",
+    "tagline_line1": "Connecting Africa to the",
+    "tagline_line2": "best technologies",
+    "description": "BCA Technologies Limited — your technology partner for a digital future. Specializing in fiber optics, professional security, and intelligent solutions across Africa.",
+    "cta_primary": "Discover our offers",
+    "cta_secondary": "Contact Us",
+    "stat_years": "Years of experience",
+    "stat_clients": "Satisfied clients",
+    "stat_countries": "Countries covered"
+  },
+  "highlight": {
+    "title": "OUR DOMAINS",
+    "activites": "Telecom, IT, security, home automation and energy — we cover all your technology needs.",
+    "offres": "Tailored solutions adapted to every industry and budget.",
+    "realisations": "Discover our landmark projects delivered across West Africa.",
+    "partenaires": "Strategic partnerships with global technology leaders."
+  },
+  "expertise": {
+    "badge": "Areas of expertise",
+    "title": "OUR EXPERTISE",
+    "subtitle": "Three key areas to transform your technology infrastructure.",
+    "fiber_title": "Fiber Optics",
+    "fiber_subtitle": "High-performance fiber optic network deployment for businesses and institutions.",
+    "fiber_items": ["FTTH, FTTB, FTTC, FTTN", "GPON Networks", "Voice, Video & Data", "Maintenance & Support"],
+    "security_title": "Professional Security",
+    "security_subtitle": "Complete electronic security solutions for the protection of your premises and assets.",
+    "security_items": ["Wi-Fi video intercoms", "GSM door openers", "Biometric access control", "Anti-intrusion systems"],
+    "smart_title": "Smart Solutions",
+    "smart_subtitle": "Automation and IoT for smart buildings and connected agriculture.",
+    "smart_items": ["Home Automation & BMS", "Smart Agriculture", "IoT Connected Devices", "Automated Access Control"]
+  },
+  "homestats": {
+    "renewal_label": "Client renewal rate",
+    "buildings_label": "Buildings with automation",
+    "fiber_label": "Km of fiber deployed",
+    "uptime_label": "Network availability",
+    "devices_label": "Connected devices installed",
+    "recommends_label": "Companies recommend BCA"
+  },
+  "home_news": {
+    "badge": "Latest News",
+    "title": "LATEST NEWS",
+    "items": [
+      {
+        "category": "Fiber Optics",
+        "date": "January 2025",
+        "title": "Deployment of 1,500 km of fiber optics in 2025",
+        "excerpt": "BCA Technologies actively participates in the national plan to deploy 1,500 km of fiber optic across Ivory Coast, covering Abidjan, Yamoussoukro, Bouaké, Daloa and Korhogo.",
+        "color": "bg-blue-500/20 text-blue-200"
+      },
+      {
+        "category": "Infrastructure",
+        "date": "February 2025",
+        "title": "National plan: 7,000 km of fiber optic",
+        "excerpt": "Ivory Coast aims for a national network of 7,000 km of fiber. BCA Technologies is positioned as a strategic partner for this major initiative.",
+        "color": "bg-purple-500/20 text-purple-700"
+      },
+      {
+        "category": "Innovation",
+        "date": "March 2025",
+        "title": "Connected agriculture: IoT serving rural areas",
+        "excerpt": "BCA deploys smart IoT solutions for agriculture in rural areas, improving productivity and reducing costs for farmers.",
+        "color": "bg-green-500/20 text-green-700"
+      },
+      {
+        "category": "Programme",
+        "date": "April 2025",
+        "title": "&#39;Internet for All&#39; programme — rural areas",
+        "excerpt": "BCA Technologies joins the national &#39;Internet for All&#39; program to connect rural areas of Ivory Coast to high-speed fiber internet.",
+        "color": "bg-cyan-500/20 text-cyan-200"
+      }
+    ]
+  },
+  "cta": {
+    "title": "A PROJECT? LET&#39;S TALK.",
+    "subtitle": "Our team of experts is available to study your project and propose the most suitable technology solution.",
+    "btn_contact": "Contact us",
+    "btn_offers": "Our offers"
+  },
+  "presentation": {
+    "badge": "About Us",
+    "title": "ABOUT US",
+    "text1_short": "Company based in Abidjan, founded in 2017, specializing in technology solutions for Africa.",
+    "text1": "BUSINESS CANADA AFRICA TECHNOLOGIES LIMITED, abbreviated BCA TECHNOLOGIES LIMITED, is a company based in Abidjan, in the municipality of Cocody. Founded in 2017 by Mr. Gbran Georges Poiret ANGAHI, the company was born from an ambitious vision: to actively contribute to the technological development of the African continent through innovative solutions adapted to local realities.",
+    "text2": "Specializing in the supply of telecom, IT, and electronic equipment, as well as security systems and various equipment, BCA TECHNOLOGIES LIMITED offers reliable and high-performance solutions for businesses, institutions, and individuals.",
+    "text3": "Guided by values of excellence, innovation, and integrity, the company has positioned itself as a key player in the technology sector in Côte d&#39;Ivoire, with strong sub-regional ambitions.",
+    "founded_label": "Founded in",
+    "hq_label": "Headquarters",
+    "founder_label": "Founder",
+    "mission_title": "Our Mission",
+    "mission_text": "To provide innovative and reliable technology solutions that foster digital development in Africa, bringing international-quality equipment accessible to local businesses.",
+    "vision_title": "Our Vision",
+    "vision_text": "To become the reference technology partner in sub-Saharan Africa, connecting African businesses to the world&#39;s best technologies while developing local talent.",
+    "values_title": "Our Values",
+    "values_text": "Excellence · Innovation · Integrity · Proximity · Commitment. These five pillars guide every decision and relationship with our clients, partners and collaborators."
+  },
+  "activites": {
+    "page_title": "OUR ACTIVITIES",
+    "page_subtitle": "A broad spectrum of technology expertise serving African businesses.",
+    "telecom_title": "Telecommunications",
+    "telecom_desc": "Supply, installation, and maintenance of high-performance telecom networks.",
+    "telecom_items": ["Fiber optic deployment", "Structured cabling", "Enterprise Wi-Fi", "VoIP & IP Telephony"],
+    "it_title": "IT & Electronics",
+    "it_desc": "State-of-the-art IT equipment and electronic solutions for your infrastructure.",
+    "it_items": ["Servers & Storage", "Workstations", "Switches & Routers", "Office equipment"],
+    "security_title": "Electronic Security",
+    "security_desc": "Complete protection for your premises and assets.",
+    "security_items": ["CCTV Surveillance", "Biometric access control", "Alarms & Detection", "Perimeter security"],
+    "domotique_title": "Home Automation & BMS",
+    "domotique_desc": "Smart automation for residential and commercial buildings.",
+    "domotique_items": ["Lighting management", "Automated HVAC", "Energy management", "Smart Building"],
+    "import_title": "Import & Export",
+    "import_desc": "International logistics and regulatory compliance for global procurement.",
+    "import_items": ["North American sourcing", "Customs clearance", "B2B delivery", "ECOWAS compliance"],
+    "energy_title": "Electrical Equipment",
+    "energy_desc": "Lighting and electrical solutions for all your projects.",
+    "energy_items": ["Industrial LED lighting", "Electrical panels", "Cables & Accessories", "Renewable energy"]
+  },
+  "solutions": {
+    "badge": "Our Offers",
+    "title": "OUR OFFERS",
+    "subtitle": "Innovative and reliable technology solutions to meet your business needs.",
+    "learn_more": "Learn more",
+    "cta_title": "Have a project in mind?",
+    "cta_subtitle": "Let&#39;s discuss your technology needs. Our team of experts supports you from design to implementation.",
+    "cta_btn": "Contact us",
+    "about_btn": "Learn more about BCA",
+    "items": [
+      { "icon": "📡", "title": "Telecommunications", "description": "Supply and installation of high-performance telecom equipment, network infrastructure deployment, and connectivity solutions tailored to your needs." },
+      { "icon": "💻", "title": "IT & Electronics", "description": "State-of-the-art IT and electronic equipment — servers, workstations, switches, routers, and all the hardware needed for your IT infrastructure." },
+      { "icon": "🔒", "title": "Security Systems", "description": "Comprehensive security solutions: CCTV surveillance, biometric access control, alarms, fire detection, and perimeter security." },
+      { "icon": "🏠", "title": "Home Automation", "description": "Integrated smart home and building automation solutions — lighting, air conditioning, security, and energy management automation." },
+      { "icon": "🌍", "title": "Import & Export", "description": "Import-export services combining international logistics expertise and regulatory compliance to facilitate your access to global markets." },
+      { "icon": "⚡", "title": "Electrical Equipment", "description": "Supply of electrical equipment and lighting for residential or commercial projects, combining aesthetics and energy performance." }
+    ],
+    "services": {
+      "telecom": {
+        "badge": "Telecoms",
+        "title": "Your fiber network, designed with precision, deployed with excellence",
+        "tagline": "Your fiber network, designed with precision, deployed with excellence",
+        "cta": "Request a network audit",
+        "kpi": [
+          { "value": "250 km", "label": "Fiber deployed" },
+          { "value": "99%+", "label": "Availability" },
+          { "value": "150+", "label": "Companies" }
+        ],
+        "subSections": [
+          {
+            "title": "Expertise & Engineering",
+            "items": [
+              "Civil engineering studies and works: Site analysis and infrastructure preparation.",
+              "Design & Implementation: Complete project management of your connectivity projects.",
+              "Network Architecture: Design of reliable and transparent solutions for next-generation voice, video, and data service deployment."
+            ]
+          },
+          {
+            "title": "Deployment & Infrastructure",
+            "items": [
+              "Metropolitan Networks and Backbones: Large-scale deployment of structural fiber optic networks.",
+              "FTTx Solutions: Implementation of faster and more reliable networks (FTTH, FTTB, FTTC, FTTN).",
+              "GPON & POL Technologies: Creation of Passive Optical LAN networks for optimal performance.",
+              "Hybrid Infrastructures: Integration of fiber, xDSL, or mixed architectures to reach millions of homes."
+            ]
+          },
+          {
+            "title": "Maintenance & Performance",
+            "items": [
+              "Preventive and Corrective Maintenance: Rigorous monitoring of optical transport networks to ensure maximum availability.",
+              "High-Precision Testing and Measurement: Use of EXFO equipment for intelligent, automated, and field-tested solutions.",
+              "Quality Optimization: Guarantee of a high quality level for all your transport and distribution infrastructures."
+            ]
+          }
+        ]
+      },
+      "it": {
+        "badge": "Security",
+        "title": "Your security, our commitment",
+        "tagline": "Professional security solutions — Electronic Security Expertise",
+        "cta": "Free security audit",
+        "kpi": [
+          { "value": "80", "label": "Secured buildings" },
+          { "value": "500+", "label": "Cameras installed" },
+          { "value": "5★", "label": "Client satisfaction" }
+        ],
+        "subSections": [
+          {
+            "title": "Intelligent Video Surveillance (CCTV)",
+            "items": [
+              "Installation of high-definition IP cameras (4K) with integrated video analytics.",
+              "Line crossing detection, abandoned object detection, and facial recognition.",
+              "Hybrid storage solutions (local NVR and secure Cloud)."
+            ]
+          },
+          {
+            "title": "High-Security Access Control",
+            "items": [
+              "Biometric readers (fingerprints, palm or facial recognition).",
+              "RFID badge access management and smartphone unlocking solutions.",
+              "Centralized multi-site management for businesses and industrial complexes."
+            ]
+          },
+          {
+            "title": "Alarm Systems and Intrusion Detection",
+            "items": [
+              "Connected alarm panels with immediate video verification.",
+              "Perimeter sensors, dual-technology motion detectors, and infrared barriers.",
+              "Anti-assault systems and silent panic buttons."
+            ]
+          },
+          {
+            "title": "Fire Safety and Technical Risks",
+            "items": [
+              "Installation of certified smoke, heat, and carbon monoxide detectors.",
+              "System interlocking (automatic emergency exit opening, gas shutdown).",
+              "Preventive maintenance to ensure compliance with safety standards."
+            ]
+          }
+        ]
+      },
+      "security": {
+        "badge": "IoT & Smart Building",
+        "title": "Connect, automate, control your environment",
+        "tagline": "Smart and connected technologies — Intelligent Convergence Solutions",
+        "cta": "Design my smart building",
+        "kpi": [
+          { "value": "30%", "label": "Avg. energy savings" },
+          { "value": "80", "label": "Buildings equipped" },
+          { "value": "100%", "label": "Custom-made" }
+        ],
+        "subSections": [
+          {
+            "title": "IoT Ecosystems (Internet of Things)",
+            "items": [
+              "Integration and interconnection of smart sensors for automated management of your infrastructure.",
+              "Smart Building & Office: Transforming workspaces into connected environments to optimize productivity and reduce operational costs.",
+              "Unified Networks: Convergence of voice, data, and video streams onto a single, robust, and secure network infrastructure.",
+              "Connected Energy Management: Deployment of smart meters and monitoring systems for real-time control of your energy footprint."
+            ]
+          },
+          {
+            "title": "User Interfaces and Experience",
+            "items": [
+              "Centralized Dashboards: Global visualization of your systems&#39; status (security, network, energy) on a single ergonomic interface.",
+              "Remote Control & Mobility: Full access to your facilities via secure mobile applications, wherever you are in the world.",
+              "Predictive Automation: Use of artificial intelligence to anticipate building needs (air conditioning, preventive maintenance)."
+            ]
+          },
+          {
+            "title": "High-Value-Added Services",
+            "items": [
+              "Connectivity Audit: Analysis of your existing installations to identify modernization and technological optimization levers.",
+              "Deployment Engineering: End-to-end support, from feasibility study to commissioning of your connected solutions.",
+              "Technical Support & Managed Services: Proactive assistance to ensure service continuity for your smart technologies."
+            ]
+          }
+        ]
+      },
+      "domotique": {
+        "badge": "Smart Agriculture",
+        "title": "Technology serving your land",
+        "tagline": "Smart Agriculture — Precision equipment controllable from a computer or smartphone",
+        "description": "BCA Technologies supports agricultural producers and agro-industry with precision equipment controllable from a computer or smartphone:",
+        "cta": "Equip my farm",
+        "kpi": [
+          { "value": "5", "label": "Soil sensor layers" },
+          { "value": "24/7", "label": "Real-time monitoring" },
+          { "value": "100%", "label": "Remote control" }
+        ],
+        "subSections": [
+          {
+            "title": "5-layer soil temperature and humidity sensors",
+            "items": [
+              "Precise and continuous measurement of the water status of your plots at different depths."
+            ]
+          },
+          {
+            "title": "Professional weather station",
+            "items": [
+              "Real-time collection of local climate data to anticipate your crops&#39; needs and adapt your interventions."
+            ]
+          },
+          {
+            "title": "Optimal irrigation assisted by computer and smartphone",
+            "items": [
+              "Automatic and intelligent irrigation control through cross-analysis of soil and weather data, to save water and maximize yields."
+            ]
+          }
+        ]
+      },
+      "import": {
+        "badge": "Import / Export",
+        "title": "Import & Export",
+        "tagline": "Access global markets with peace of mind",
+        "description": "Leveraging its international roots, BCA Technologies facilitates your purchases in North America and Europe, managing the entire logistics chain: sourcing, customs clearance, transport, and B2B delivery in West Africa.",
+        "cta": "Request sourcing",
+        "kpi": [
+          { "value": "6", "label": "Countries served" },
+          { "value": "100%", "label": "Customs compliance" },
+          { "value": "2017", "label": "Since" }
+        ],
+        "features": [
+          "North America & Europe sourcing",
+          "Customs clearance & ECOWAS compliance",
+          "Air & sea freight",
+          "B2B delivery in 6 countries",
+          "Document management",
+          "Cargo insurance"
+        ]
+      },
+      "energy": {
+        "badge": "Energy",
+        "title": "Electrical Equipment",
+        "tagline": "Lighting and energy for all your projects",
+        "description": "Supply and installation of electrical equipment and lighting for residential or commercial projects. BCA Technologies offers low-consumption LED solutions and equipment compliant with applicable standards.",
+        "cta": "Electrical project",
+        "kpi": [
+          { "value": "50%", "label": "Consumption reduction" },
+          { "value": "CE", "label": "Certification" },
+          { "value": "10 yrs", "label": "LED warranty" }
+        ],
+        "features": [
+          "Industrial & commercial LED lighting",
+          "LV/HV electrical panels",
+          "Cables & electrical accessories",
+          "Generators & UPS",
+          "Solar panels & inverters",
+          "Energy audit"
+        ]
+      }
+    }
+  },
+  "stats": {
+    "title": "BCA IN NUMBERS",
+    "subtitle": "Results that reflect our commitment to excellence",
+    "items": [
+      { "value": "2017", "label": "Year founded" },
+      { "value": "365K+", "label": "Satisfied clients" },
+      { "value": "5+", "label": "Countries covered" },
+      { "value": "40+", "label": "Available services" },
+      { "value": "853+", "label": "Partner engineers" },
+      { "value": "10+", "label": "Main warehouses" }
+    ]
+  },
+  "team": {
+    "badge": "Our Team",
+    "title": "OUR EXPERTS",
+    "subtitle": "A passionate and qualified team dedicated to technological excellence for our clients.",
+    "members": [
+      { "name": "Gbran Georges Poiret ANGAHI", "role": "Founder & CEO", "bio": "Visionary entrepreneur, Mr. ANGAHI founded BCA Technologies in 2017 with the ambition of connecting Africa to the world&#39;s best technologies.", "initials": "GA", "color": "from-blue-600 to-blue-800" },
+      { "name": "Technical Division", "role": "Engineering & Deployment", "bio": "A team of certified engineers specialized in deploying telecom infrastructures, networks, and complex security systems.", "initials": "IT", "color": "from-indigo-600 to-purple-700" },
+      { "name": "Commercial Division", "role": "Sales & Partnerships", "bio": "Business development experts who cultivate strategic partnerships and guide clients in defining and meeting their technology goals.", "initials": "DC", "color": "from-cyan-600 to-blue-700" }
+    ]
+  },
+  "partners": {
+    "badge": "Our Partners",
+    "title": "THEY TRUST US",
+    "subtitle": "BCA Technologies collaborates with global technology leaders to bring you the very best.",
+    "list": [
+      { "name": "Cisco", "icon": "🔵" },
+      { "name": "Huawei", "icon": "🌐" },
+      { "name": "Orange CI", "icon": "🟠" },
+      { "name": "MTN Côte d&#39;Ivoire", "icon": "🟡" },
+      { "name": "Microsoft", "icon": "🪟" },
+      { "name": "Hikvision", "icon": "📹" },
+      { "name": "Samsung", "icon": "📱" },
+      { "name": "Schneider", "icon": "⚡" },
+      { "name": "TP-Link", "icon": "📡" },
+      { "name": "Dell", "icon": "💻" },
+      { "name": "HP", "icon": "🖨️" },
+      { "name": "Bosch Security", "icon": "🔒" }
+    ]
+  },
+  "testimonials": {
+    "badge": "Testimonials",
+    "title": "WHAT OUR CLIENTS SAY",
+    "satisfaction": "85% client renewal rate — they trust us.",
+    "items": [
+      { "quote": "BCA Technologies transformed our network infrastructure with remarkable efficiency. Their team is professional, responsive, and their equipment is of superior quality.", "name": "IT Director", "company": "Regional Bank of Abidjan", "initials": "BR" },
+      { "quote": "We entrusted BCA with the installation of our campus surveillance system. The result exceeded our expectations. A trusted partner for our security projects.", "name": "Administrative Director", "company": "University of Yamoussoukro", "initials": "UA" },
+      { "quote": "Thanks to BCA Technologies, our fiber optic deployment across the industrial zone was completed on time and with impeccable quality. I highly recommend them.", "name": "Infrastructure Manager", "company": "Industrial Group CI", "initials": "GI" }
+    ]
+  },
+  "references": {
+    "title": "OUR REFERENCES",
+    "subtitle": "Trusted clients across all industries throughout West Africa.",
+    "and_more": "And many more companies across Côte d'Ivoire and West Africa…"
+  },
+  "actualites": {
+    "title": "NEWS",
+    "subtitle": "Latest news, projects, and events from BCA Technologies Limited."
+  },
+  "realisations": {
+    "badge": "Our Projects",
+    "title": "OUR PROJECTS",
+    "subtitle": "Discover some of our most significant projects across Africa.",
+    "all": "All",
+    "filters": ["All", "Telecoms", "Security", "IT", "Automation", "Energy"],
+    "projects": [
+      { "title": "Fiber Optic Network — Industrial Zone", "description": "Deployment of a high-capacity fiber optic network covering an industrial zone of 150 companies in Abidjan.", "category": "Télécoms", "location": "Abidjan, Côte d&#39;Ivoire", "year": "2023" },
+      { "title": "University Campus Security", "description": "Installation of a 360° surveillance system with 280 IP cameras and biometric access control.", "category": "Sécurité", "location": "Yamoussoukro, CI", "year": "2023" },
+      { "title": "IT Infrastructure — Regional Bank", "description": "Supply and deployment of a complete IT infrastructure for 12 bank branches in 3 countries.", "category": "Informatique", "location": "Abidjan / Accra / Bamako", "year": "2022" },
+      { "title": "Smart Building — Office Tower", "description": "Full smart building integration of an 8-floor office building with centralized management.", "category": "Domotique", "location": "Plateau, Abidjan", "year": "2022" },
+      { "title": "Structured Cabling — Hotel Complex", "description": "Structured cabling and high-density Wi-Fi network for a 5-star hotel complex with 320 rooms.", "category": "Télécoms", "location": "Grand-Bassam, CI", "year": "2023" },
+      { "title": "Industrial LED Lighting", "description": "Replacement and modernization of industrial lighting with low-consumption LED solutions.", "category": "Énergie", "location": "Yopougon, Abidjan", "year": "2021" }
+    ]
+  },
+  "why": {
+    "badge": "Why us",
+    "title": "WHY CHOOSE BCA?",
+    "subtitle": "BCA TECHNOLOGIES LIMITED is committed to delivering international-quality solutions adapted to African realities.",
+    "items": [
+      { "icon": "🏆", "title": "North American Standards", "description": "We import and offer only equipment that meets North American and international quality standards." },
+      { "icon": "🤝", "title": "Strategic Partnerships", "description": "Strong partnerships with recognized global manufacturers and distributors to guarantee reliable, certified products." },
+      { "icon": "🌐", "title": "Multi-Country Presence", "description": "Active in Côte d&#39;Ivoire, Canada, Ghana, Mali, Burkina Faso, and Liberia for optimal regional coverage." },
+      { "icon": "⚡", "title": "Sector Expertise", "description": "A team of qualified experts with in-depth knowledge of telecom, IT, electronics, and security sectors." },
+      { "icon": "🚚", "title": "Efficient Logistics", "description": "A structured logistics network ensuring fast and secure delivery of your equipment from Canada to Africa." },
+      { "icon": "🎯", "title": "Personalized Service", "description": "A tailor-made approach for each client, with dedicated support from order to installation." }
+    ]
+  },
+  "contact": {
+    "badge": "Contact",
+    "title": "CONTACT US",
+    "subtitle": "Our team is available to answer all your questions and study your project.",
+    "address_label": "Address",
+    "address": "Angré Château, Cocody, Abidjan, Côte d&#39;Ivoire",
+    "phone_label": "Phone",
+    "phone1": "+225 01 50 57 57 57",
+    "phone2": "+225 07 99 57 57 57",
+    "phone3": "+225 05 65 57 57 57",
+    "email_label": "Email",
+    "email": "info@bcamultiservices.com",
+    "hours_label": "Hours",
+    "hours": "Monday – Friday: 8:00 AM – 5:30 PM",
+    "form": {
+      "name": "Full name",
+      "name_placeholder": "Your full name",
+      "email": "Email address",
+      "email_placeholder": "your@email.com",
+      "subject": "Subject",
+      "subject_placeholder": "Subject of your message",
+      "message": "Message",
+      "message_placeholder": "Describe your project or request…",
+      "send": "Send message",
+      "sending": "Sending…",
+      "error_name": "Name is required.",
+      "error_email_required": "Email address is required.",
+      "error_email_invalid": "Invalid email format.",
+      "error_message": "Message is required.",
+      "error_message_short": "Message must be at least 10 characters.",
+      "success_title": "Message sent!",
+      "success_message": "Thank you for reaching out. We will get back to you as soon as possible.",
+      "send_another": "Send another message"
+    }
+  },
+  "about": {
+    "ceo_title": "Message from the General Manager",
+    "ceo_founded": "Founded in 2017",
+    "ceo_location": "Cocody, Abidjan, CI",
+    "ceo_education": "Engineering & Entrepreneurship",
+    "ceo_badge": "Founder & CEO",
+    "ceo_name_short": "G.P. ANGAHI",
+    "ceo_name_full": "Gbran Georges Poiret ANGAHI",
+    "ceo_company": "BCA Technologies Limited",
+    "ceo_p1": "Since the creation of BCA Technologies Limited in 2017, our ambition has always been the same: to actively contribute to Africa's digital transformation by bringing world-class technology solutions adapted to the continent's realities and needs.",
+    "ceo_p2": "We chose not to simply distribute equipment, but to support our clients over the long term — from design to implementation, through to maintenance and the evolution of their infrastructures. This added value is what sets us apart and explains our 85% client renewal rate.",
+    "ceo_p3": "Our vision for the coming years: strengthen our sub-regional presence, invest in training local talent, and continue innovating to position BCA Technologies as the reference technology partner in sub-Saharan Africa.",
+    "ceo_p4": "I thank our entire team, our partners, and our clients for their trust, which allows us every day to take on new challenges with passion and commitment.",
+    "ceo_signature_role": "Founder & General Manager",
+    "orgchart_title": "Organizational Chart",
+    "nos_forces_title": "Our Strengths",
+    "forces": [
+      { "icon": "⚙️", "title": "Qualified expertise", "desc": "Highly qualified resources with expertise in deployment, operations and maintenance of fiber optic networks (Backbone, Metro, FTTx)." },
+      { "icon": "🧰", "title": "Complete equipment", "desc": "A high-performance fleet of equipment for control, management and installation of fiber optic networks." },
+      { "icon": "🚐", "title": "Logistical resources", "desc": "7 fully equipped vans to ensure speed and efficiency in interventions." },
+      { "icon": "📦", "title": "Turnkey projects", "desc": "Complete organization covering study, implementation, testing, installation and maintenance." },
+      { "icon": "⭐", "title": "Client satisfaction", "desc": "Rigorous quality management system to ensure optimal satisfaction." },
+      { "icon": "🔄", "title": "Flexibility", "desc": "Quick adaptation to market changes and specific client needs." },
+      { "icon": "⚡", "title": "Responsiveness", "desc": "Fast decision-making and efficient interventions to reduce delays." },
+      { "icon": "🌍", "title": "Extended coverage", "desc": "Interventions throughout Côte d'Ivoire and internationally." }
+    ],
+    "team_members": [
+      { "name": "Gbran G. P. ANGAHI", "role": "Founder & CEO" },
+      { "name": "Technical Division", "role": "Engineering & Deployment" },
+      { "name": "Commercial Division", "role": "Sales & Partnerships" },
+      { "name": "Technical Support", "role": "Maintenance & After-Sales" },
+      { "name": "Logistics Team", "role": "Import / Export & Delivery" },
+      { "name": "Admin & Finance", "role": "HR, Legal & Accounting" }
+    ]
+  },
+  "home": {
+    "tagline": "Innovate, secure, connect: Africa in motion",
+    "slide1_tag": "Fiber Optics",
+    "slide1_title": "High-performance network deployment",
+    "slide1_desc": "Connecting businesses and institutions with FTTH, FTTB, GPON technologies.",
+    "slide1_tags": ["FTTH / FTTB / FTTC", "GPON Networks", "Voice, Video & Data", "Maintenance & Support"],
+    "slide2_tag": "Professional Security",
+    "slide2_title": "Complete protection of your premises and assets",
+    "slide2_desc": "Electronic security solutions tailored to businesses and institutions.",
+    "slide2_tags": ["Wi-Fi video intercoms", "GSM door openers", "Biometric access control", "Anti-intrusion"],
+    "slide3_tag": "Smart Solutions",
+    "slide3_title": "Smart buildings and connected agriculture",
+    "slide3_desc": "Automation and IoT to transform your spaces and processes.",
+    "slide3_tags": ["Home Automation & BMS", "Smart Agriculture", "IoT Connected Devices", "Automated Access Control"],
+    "references_title": "Our references",
+    "see_all_refs": "View all our references →",
+    "partners_title": "Our partners",
+    "see_all_partners": "View all our partners →",
+    "learn_more_bca": "Learn more about BCA →",
+    "all_news": "All news →",
+    "read_article": "Read article →",
+    "read": "Read →"
+  },
+  "realizations": {
+    "gallery_badge": "Gallery",
+    "gallery_title": "PHOTO GALLERY",
+    "gallery_subtitle": "A selection of photos from our worksites and installations across West Africa.",
+    "projects_title": "OUR PROJECTS"
+  },
+  "news_items": [
+    { "date": "March 2025", "category": "Partnership", "title": "BCA Technologies signs strategic agreement with Huawei Africa", "excerpt": "A new official partnership strengthens our ability to distribute certified Huawei equipment throughout the sub-region." },
+    { "date": "February 2025", "category": "Project", "title": "Fiber optic deployment in Yopougon industrial zone", "excerpt": "BCA Technologies finalizes a 45 km fiber optic deployment in the Yopougon industrial zone, connecting over 200 businesses." },
+    { "date": "January 2025", "category": "Expansion", "title": "Opening of a new office in Ghana", "excerpt": "BCA Technologies strengthens its regional presence with the opening of an office in Accra to better serve its Ghanaian clients." },
+    { "date": "December 2024", "category": "Certification", "title": "BCA Technologies obtains Cisco Gold Partner certification", "excerpt": "After a year of effort, our technical team obtains the Cisco Gold Partner certification, guaranteeing the highest level of network expertise." },
+    { "date": "November 2024", "category": "Event", "title": "Participation in the Abidjan Technology Forum", "excerpt": "BCA Technologies presented its latest innovative solutions at the first Abidjan Technology Forum, gathering over 500 professionals." },
+    { "date": "October 2024", "category": "Innovation", "title": "Launch of a range of low-cost home automation solutions", "excerpt": "To democratize access to home automation in Africa, BCA Technologies launches a range of smart solutions accessible to SMEs." }
+  ],
+  "gallery_items": [
+    { "category": "Fiber Optics", "title": "Fiber cable laying — Abidjan Industrial Zone", "description": "Installation of 12 km of underground fiber optic cable in microducts within an industrial zone housing 150 companies.", "location": "Yopougon, Abidjan", "year": "2023" },
+    { "category": "Security", "title": "IP camera deployment — University Campus", "description": "Installation of 280 Hikvision IP cameras with centralized recording, 360° coverage.", "location": "Yamoussoukro", "year": "2023" },
+    { "category": "Network", "title": "Network room — Regional Bank", "description": "Core network infrastructure with patch panels, managed switches and Cisco routers for 12 branches.", "location": "Plateau, Abidjan", "year": "2022" },
+    { "category": "Automation", "title": "Smart Building — 8-floor Office Tower", "description": "Full BMS integration: automated lighting, centralized air conditioning, access control, energy monitoring.", "location": "Cocody, Abidjan", "year": "2022" },
+    { "category": "Wi-Fi", "title": "High-density Wi-Fi — 5-Star Hotel", "description": "Wi-Fi 6 deployment for 320 rooms with centralized controller and outdoor coverage for pool & gardens.", "location": "Grand-Bassam", "year": "2023" },
+    { "category": "IoT", "title": "Connected agriculture — IoT sensors", "description": "Deployment of 200 LoRaWAN IoT sensors for soil monitoring, weather, and automated irrigation in rural areas.", "location": "Bouaké, CI", "year": "2024" },
+    { "category": "Energy", "title": "Industrial LED lighting", "description": "Replacement and modernization of 400 industrial fixtures with low-consumption LED solutions (-50% on electricity bill).", "location": "Free Trade Zone, Abidjan", "year": "2021" },
+    { "category": "Fiber Optics", "title": "Fiber backbone — Inter-site deployment", "description": "Dark fiber link between 8 remote sites of a public institution, entirely with civil engineering works.", "location": "Greater Abidjan", "year": "2024" }
+  ],
+  "gallery_filters": ["All", "Fiber Optics", "Security", "Network", "Automation", "Wi-Fi", "IoT", "Energy"],
+  "partenaires_page": {
+    "technical_title": "Technical Partners",
+    "financial_title": "Financial Partners"
+  },
+  "footer": {
+    "tagline": "Innovate, secure, connect: Africa in motion",
+    "quicklinks": "Quick Links",
+    "services": "Our Services",
+    "contact_title": "Contact",
+    "newsletter_title": "Newsletter",
+    "newsletter_subtitle": "Stay informed of our latest news.",
+    "newsletter_placeholder": "Your email address",
+    "newsletter_send": "Subscribe",
+    "newsletter_sent": "✓ Subscribed!",
+    "follow": "Follow us",
+    "copyright": "© 2024 BCA Technologies Limited. All rights reserved.",
+    "links": ["Home", "About", "Solutions", "Projects", "Contact"],
+    "services_list": ["Telecommunications", "IT & Electronics", "Security Systems", "Home Automation", "Import & Export"]
+  }
+}
