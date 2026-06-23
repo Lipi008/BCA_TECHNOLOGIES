@@ -1,6 +1,14 @@
 import { useTranslation } from "react-i18next";
 import { FiberBg } from "../FiberBg";
 
+import imgCEO        from "../../img/image_a_use/CEO.jpg";
+import imgDG         from "../../img/image_a_use/dg.jpg";
+import imgOrgChart   from "../../img/image_a_use/orgganigram.png";
+import imgPhotoGrp   from "../../img/image_a_use/photo_grp.jpg";
+import imgPaul       from "../../img/image_a_use/paulm.jpg";
+import imgAssistante from "../../img/image_a_use/assitante.jpg";
+import imgLogistique from "../../img/image_a_use/m7.jpeg";
+
 const PageHero = ({ badge, title, subtitle }: { badge: string; title: string; subtitle?: string; dark?: boolean }) => (
   <section className="relative py-24 px-6 overflow-hidden" style={{ background: "linear-gradient(135deg, #2563eb 0%, #4f46e5 50%, #7c3aed 100%)" }}>
     <div className="relative z-10 max-w-4xl mx-auto text-center">
@@ -59,7 +67,7 @@ const CEOMessage = () => {
               {/* Photo agrandie */}
               <div className="w-72 h-80 rounded-3xl overflow-hidden border-4 border-blue-100 shadow-2xl">
                 <img
-                  src="https://c.animaapp.com/mn4bql9mR7qaS3/img/uploaded-asset-1774795313606-0.png"
+                  src={imgCEO}
                   alt="G.P. ANGAHI — PDG de BCA Technologies"
                   className="w-full h-full object-cover object-top"
                 />
@@ -173,7 +181,7 @@ const OrgChart = () => (
       </div>
       <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
         <img
-          src="https://c.animaapp.com/mn4bql9mR7qaS3/img/uploaded-asset-1774795153711-0.png"
+          src={imgOrgChart}
           alt="Organigramme BCA Technologies"
           className="w-full h-auto object-contain"
           style={{ minWidth: 800 }}
@@ -262,7 +270,7 @@ const TeamSection = () => {
       bio: "Visionnaire et entrepreneur, M. ANGAHI a fondé BCA Technologies en 2017 avec l&#39;ambition de connecter l&#39;Afrique aux meilleures technologies mondiales.",
       initials: "GA",
       color: "from-blue-600 to-blue-900",
-      photo: "https://c.animaapp.com/mn4bql9mR7qaS3/img/uploaded-asset-1774795313606-0.png",
+      photo: imgCEO,
     },
     {
       name: "Direction Technique",
@@ -270,7 +278,7 @@ const TeamSection = () => {
       bio: "Une équipe d&#39;ingénieurs certifiés spécialisée dans le déploiement d&#39;infrastructures télécoms, réseaux fibre et systèmes de sécurité électronique.",
       initials: "DT",
       color: "from-indigo-600 to-purple-700",
-      photo: "https://c.animaapp.com/mn4bql9mR7qaS3/img/generated-image-1775171115483.png",
+      photo: imgPhotoGrp,
     },
     {
       name: "Direction Commerciale",
@@ -278,7 +286,7 @@ const TeamSection = () => {
       bio: "Des experts en développement commercial qui cultivent des partenariats stratégiques et accompagnent les clients de la définition du besoin à la livraison.",
       initials: "DC",
       color: "from-cyan-600 to-blue-700",
-      photo: null,
+      photo: imgDG,
     },
     {
       name: "Support Technique",
@@ -286,7 +294,7 @@ const TeamSection = () => {
       bio: "Une équipe réactive disponible pour assurer la maintenance, le support et la pérennité de toutes les installations BCA Technologies.",
       initials: "ST",
       color: "from-emerald-600 to-teal-700",
-      photo: null,
+      photo: imgPaul,
     },
     {
       name: "Équipe Logistique",
@@ -294,7 +302,7 @@ const TeamSection = () => {
       bio: "Gestion de la chaîne d&#39;approvisionnement internationale — du sourcing nord-américain jusqu&#39;à la livraison en Afrique de l&#39;Ouest.",
       initials: "LG",
       color: "from-orange-500 to-red-600",
-      photo: null,
+      photo: imgLogistique,
     },
     {
       name: "Administration & Finance",
@@ -302,7 +310,7 @@ const TeamSection = () => {
       bio: "L&#39;équipe administrative veille à la bonne gouvernance, à la conformité réglementaire et à la santé financière de l&#39;entreprise.",
       initials: "AF",
       color: "from-violet-600 to-purple-800",
-      photo: null,
+      photo: imgAssistante,
     },
   ];
 

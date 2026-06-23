@@ -4,6 +4,22 @@ import { FiberBg } from "../FiberBg";
 import { BCAWhyUs } from "../BCAWhyUs";
 import type { PageId } from "../BCARouter";
 
+import logoOrange      from "../../img/image_a_use/orange.png";
+import logoMTN         from "../../img/image_a_use/mtn.jpg";
+import logoMoov        from "../../img/image_a_use/moov.png";
+import logoTotal       from "../../img/image_a_use/total-energies-logo.png";
+import logoCITelecom   from "../../img/image_a_use/ci-telecom-logo.png";
+import logoCanalPlus   from "../../img/image_a_use/Canal_+_Afrique_logo.jpg";
+import logoBicici      from "../../img/image_a_use/Bicici.png";
+import logoBollore     from "../../img/image_a_use/Bolloré_Transport_Logistics.png";
+import logoSocGen      from "../../img/image_a_use/SocieteGenerale.jpg";
+import logoEXFO        from "../../img/image_a_use/exfo.png";
+import logoInfractive  from "../../img/image_a_use/infractive-01.jpg";
+import logo3M          from "../../img/image_a_use/m3.png";
+import logoEcobank     from "../../img/image_a_use/Ecobank CI.jpg";
+import logoBridgeBank  from "../../img/image_a_use/bridge_bank.png";
+import logoBanqueAtl   from "../../img/image_a_use/Banque_Atlantique.png";
+
 interface Props { navigate: (p: PageId) => void; }
 
 /* ─────────────────────────────────────────────
@@ -46,6 +62,7 @@ const HERO_SLIDES = [
 ];
 
 const Hero = ({ navigate }: Props) => {
+  const { t } = useTranslation();
   const [slide, setSlide] = useState(0);
   const [fading, setFading] = useState(false);
   const total = HERO_SLIDES.length;
@@ -106,11 +123,11 @@ const Hero = ({ navigate }: Props) => {
           >
             {slide === 1 && (
               <div className="max-w-3xl">
-                <p className="text-blue-300 text-xs font-semibold uppercase tracking-widest mb-1">Fibre Optique</p>
-                <h2 className="text-white text-2xl md:text-3xl font-bold leading-snug mb-2">Déploiement de réseaux haute performance</h2>
-                <p className="text-white/80 text-sm mb-3">Connecter entreprises et institutions avec des technologies FTTH, FTTB, GPON.</p>
+                <p className="text-blue-300 text-xs font-semibold uppercase tracking-widest mb-1">{t("home.slide1_tag")}</p>
+                <h2 className="text-white text-2xl md:text-3xl font-bold leading-snug mb-2">{t("home.slide1_title")}</h2>
+                <p className="text-white/80 text-sm mb-3">{t("home.slide1_desc")}</p>
                 <div className="flex flex-wrap gap-2">
-                  {["FTTH / FTTB / FTTC", "Réseaux GPON", "Voix, Vidéo & Données", "Maintenance & Support"].map((tag, i) => (
+                  {(t("home.slide1_tags", { returnObjects: true }) as string[]).map((tag, i) => (
                     <span key={i} className="bg-white/15 border border-white/25 text-white text-xs px-3 py-1 rounded-full">{tag}</span>
                   ))}
                 </div>
@@ -118,11 +135,11 @@ const Hero = ({ navigate }: Props) => {
             )}
             {slide === 2 && (
               <div className="max-w-3xl">
-                <p className="text-slate-300 text-xs font-semibold uppercase tracking-widest mb-1">Sécurité Professionnelle</p>
-                <h2 className="text-white text-2xl md:text-3xl font-bold leading-snug mb-2">Protection complète de vos locaux et actifs</h2>
-                <p className="text-white/80 text-sm mb-3">Solutions de sécurité électronique adaptées aux entreprises et institutions.</p>
+                <p className="text-slate-300 text-xs font-semibold uppercase tracking-widest mb-1">{t("home.slide2_tag")}</p>
+                <h2 className="text-white text-2xl md:text-3xl font-bold leading-snug mb-2">{t("home.slide2_title")}</h2>
+                <p className="text-white/80 text-sm mb-3">{t("home.slide2_desc")}</p>
                 <div className="flex flex-wrap gap-2">
-                  {["Interphones vidéo Wi-Fi", "Ouvre-portes GSM", "Contrôle d'accès biométrique", "Anti-intrusion"].map((tag, i) => (
+                  {(t("home.slide2_tags", { returnObjects: true }) as string[]).map((tag, i) => (
                     <span key={i} className="bg-white/15 border border-white/25 text-white text-xs px-3 py-1 rounded-full">{tag}</span>
                   ))}
                 </div>
@@ -130,11 +147,11 @@ const Hero = ({ navigate }: Props) => {
             )}
             {slide === 3 && (
               <div className="max-w-3xl">
-                <p className="text-cyan-300 text-xs font-semibold uppercase tracking-widest mb-1">Solutions Intelligentes</p>
-                <h2 className="text-white text-2xl md:text-3xl font-bold leading-snug mb-2">Bâtiments intelligents et agriculture connectée</h2>
-                <p className="text-white/80 text-sm mb-3">Automatisation et IoT pour transformer vos espaces et processes.</p>
+                <p className="text-cyan-300 text-xs font-semibold uppercase tracking-widest mb-1">{t("home.slide3_tag")}</p>
+                <h2 className="text-white text-2xl md:text-3xl font-bold leading-snug mb-2">{t("home.slide3_title")}</h2>
+                <p className="text-white/80 text-sm mb-3">{t("home.slide3_desc")}</p>
                 <div className="flex flex-wrap gap-2">
-                  {["Domotique & BMS", "Agriculture intelligente", "Objets connectés IoT", "Contrôle d'accès automatisé"].map((tag, i) => (
+                  {(t("home.slide3_tags", { returnObjects: true }) as string[]).map((tag, i) => (
                     <span key={i} className="bg-white/15 border border-white/25 text-white text-xs px-3 py-1 rounded-full">{tag}</span>
                   ))}
                 </div>
@@ -181,7 +198,7 @@ const Hero = ({ navigate }: Props) => {
       {/* ── TAGLINE sous le slider ── */}
       <div className="bg-gray-100 border-t border-gray-200 py-5 px-6 text-center">
         <p className="text-gray-900 font-bold text-base sm:text-lg md:text-xl">
-          Innover, sécuriser, connecter&nbsp;: l&#39;Afrique en mouvement
+          {t("home.tagline")}
         </p>
       </div>
     </section>
@@ -225,7 +242,7 @@ const Presentation = ({ navigate }: Props) => {
               onClick={() => navigate("about")}
               className="text-blue-700 font-medium text-sm hover:underline mt-2"
             >
-              En savoir plus sur BCA →
+              {t("home.learn_more_bca")}
             </button>
           </div>
 
@@ -251,30 +268,33 @@ const Presentation = ({ navigate }: Props) => {
 /* ─────────────────────────────────────────────
    RÉFÉRENCES — défilement infini (marquee)
 ───────────────────────────────────────────── */
-const REFS_DATA = [
-  { name: "Orange CI", logo: "https://logo.clearbit.com/orange.com" },
-  { name: "MTN Côte d'Ivoire", logo: "https://logo.clearbit.com/mtn.com" },
-  { name: "Moov Africa", logo: "https://logo.clearbit.com/moov-africa.com" },
-  { name: "SFR", logo: "https://logo.clearbit.com/sfr.fr" },
-  { name: "Ministère des TIC", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Coat_of_arms_of_Ivory_Coast.svg/120px-Coat_of_arms_of_Ivory_Coast.svg.png" },
-  { name: "Côte d'Ivoire Télécom", logo: "https://logo.clearbit.com/telecom.ci" },
-  { name: "Canal+ Afrique", logo: "https://logo.clearbit.com/canalplus.com" },
-  { name: "Société Générale CI", logo: "https://logo.clearbit.com/societegenerale.com" },
-  { name: "BICICI", logo: "https://logo.clearbit.com/bicici.com" },
-  { name: "Université FHB", logo: "https://upload.wikimedia.org/wikipedia/fr/thumb/2/2e/Universit%C3%A9_F%C3%A9lix-Houphou%C3%ABt-Boigny_logo.png/120px-Universit%C3%A9_F%C3%A9lix-Houphou%C3%ABt-Boigny_logo.png" },
-  { name: "TOTAL Énergies CI", logo: "https://logo.clearbit.com/totalenergies.com" },
-  { name: "Bolloré Africa Logistics", logo: "https://logo.clearbit.com/bollore.com" },
+const REFS_DATA: { name: string; logo?: string; color?: string }[] = [
+  { name: "Orange CI",           logo: logoOrange    },
+  { name: "MTN Côte d'Ivoire",   logo: logoMTN       },
+  { name: "Moov Africa",         logo: logoMoov      },
+  { name: "SFR",                 color: "#E4003A"    },
+  { name: "Ministère des TIC",   color: "#009A44"    },
+  { name: "CITélécom",           logo: logoCITelecom },
+  { name: "Canal+ Afrique",      logo: logoCanalPlus },
+  { name: "Société Générale CI", logo: logoSocGen    },
+  { name: "BICICI",              logo: logoBicici    },
+  { name: "Université FHB",      color: "#006837"    },
+  { name: "TOTAL Énergies CI",   logo: logoTotal     },
+  { name: "Bolloré Logistics",   logo: logoBollore   },
 ];
 
-const ReferenceLogoCard = ({ name, logo }: { name: string; logo: string }) => {
+const ReferenceLogoCard = ({ name, logo, color }: { name: string; logo?: string; color?: string }) => {
   const [failed, setFailed] = React.useState(false);
+  const initials = name.split(" ").slice(0, 2).map((w) => w[0]).join("").toUpperCase();
   return (
     <div className="flex-shrink-0 flex flex-col items-center justify-center gap-2 px-5 py-4 border border-gray-200 rounded-lg bg-white hover:border-blue-300 hover:shadow-md transition-all group" style={{ minWidth: 140, height: 100 }}>
       <div className="w-24 h-12 flex items-center justify-center overflow-hidden">
-        {!failed ? (
+        {logo && !failed ? (
           <img src={logo} alt={name} className="max-h-full max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300" onError={() => setFailed(true)} />
         ) : (
-          <span className="text-gray-600 font-semibold text-xs text-center leading-tight">{name}</span>
+          <div className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-black text-sm select-none" style={{ backgroundColor: color || "#2563eb" }}>
+            {initials}
+          </div>
         )}
       </div>
       <span className="text-xs text-gray-500 font-medium text-center leading-tight truncate w-full">{name}</span>
@@ -283,6 +303,7 @@ const ReferenceLogoCard = ({ name, logo }: { name: string; logo: string }) => {
 };
 
 const ReferencesSlider = ({ navigate }: Props) => {
+  const { t } = useTranslation();
   const doubled = [...REFS_DATA, ...REFS_DATA];
 
   return (
@@ -290,11 +311,11 @@ const ReferencesSlider = ({ navigate }: Props) => {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
           <div>
-            <h2 className="text-2xl font-bold text-gray-900">Nos références</h2>
+            <h2 className="text-2xl font-bold text-gray-900">{t("home.references_title")}</h2>
             <div className="mt-2 w-8 h-0.5 bg-blue-600" />
           </div>
           <button onClick={() => navigate("references")} className="text-blue-700 font-medium text-sm hover:underline flex-shrink-0">
-            Voir toutes nos références →
+            {t("home.see_all_refs")}
           </button>
         </div>
 
@@ -335,16 +356,15 @@ const PartnerLogoCard = ({ name, logo, bg, text }: { name: string; logo?: string
 };
 
 const PartnersSlider = ({ navigate }: Props) => {
+  const { t } = useTranslation();
   const partners = [
-    /* Techniques */
-    { name: "DACOM FARM", logo: "https://c.animaapp.com/mn4bql9mR7qaS3/img/uploaded-asset-1774690590760-0.png", bg: "#F5A623", text: "DACOM\nFARM" },
-    { name: "EXFO", logo: "https://c.animaapp.com/mn4bql9mR7qaS3/img/uploaded-asset-1774691067456-0.jpeg", bg: "#005BAA", text: "EXFO" },
-    { name: "Infractive", logo: "https://c.animaapp.com/mn4bql9mR7qaS3/img/uploaded-asset-1774691067457-1.png", bg: "#7B2D8B", text: "INFRACTIVE" },
-    { name: "3M", logo: "https://c.animaapp.com/mn4bql9mR7qaS3/img/uploaded-asset-1774690916031-0.jpeg", bg: "#FF0000", text: "3M" },
-    /* Financiers */
-    { name: "Ecobank", logo: "https://c.animaapp.com/mn4bql9mR7qaS3/img/uploaded-asset-1774691851764-0.jpeg", bg: "#00529B", text: "ECOBANK" },
-    { name: "Bridge Bank", logo: "https://c.animaapp.com/mn4bql9mR7qaS3/img/uploaded-asset-1774690916033-2.png", bg: "#C04A1A", text: "BRIDGE\nBANK" },
-    { name: "Banque Atlantique", logo: "https://c.animaapp.com/mn4bql9mR7qaS3/img/uploaded-asset-1774690916032-1.png", bg: "#E07B00", text: "BANQUE\nATLANTIQUE" },
+    { name: "DACOM FARM",       logo: undefined,       bg: "#F5A623", text: "DACOM\nFARM"       },
+    { name: "EXFO",             logo: logoEXFO,        bg: "#005BAA", text: "EXFO"              },
+    { name: "Infractive",       logo: logoInfractive,  bg: "#7B2D8B", text: "INFRACTIVE"       },
+    { name: "3M",               logo: logo3M,          bg: "#FF0000", text: "3M"                },
+    { name: "Ecobank",          logo: logoEcobank,     bg: "#00529B", text: "ECOBANK"           },
+    { name: "Bridge Bank",      logo: logoBridgeBank,  bg: "#C04A1A", text: "BRIDGE\nBANK"      },
+    { name: "Banque Atlantique",logo: logoBanqueAtl,   bg: "#E07B00", text: "BANQUE\nATLANTIQUE"},
   ];
 
   const doubled = [...partners, ...partners];
@@ -354,11 +374,11 @@ const PartnersSlider = ({ navigate }: Props) => {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
           <div>
-            <h2 className="text-2xl font-bold text-gray-900">Nos partenaires</h2>
+            <h2 className="text-2xl font-bold text-gray-900">{t("home.partners_title")}</h2>
             <div className="mt-2 w-8 h-0.5 bg-blue-600" />
           </div>
           <button onClick={() => navigate("partenaires")} className="text-blue-700 font-medium text-sm hover:underline flex-shrink-0">
-            Voir tous nos partenaires →
+            {t("home.see_all_partners")}
           </button>
         </div>
 
@@ -450,7 +470,7 @@ const Expertise = ({ navigate }: Props) => {
                   onClick={() => navigate(d.page)}
                   className="mt-2 text-blue-700 font-medium text-sm hover:underline text-left"
                 >
-                  En savoir plus →
+                  {t("solutions.learn_more")} →
                 </button>
               </div>
             </div>
@@ -524,7 +544,7 @@ const Actualites = ({ navigate }: Props) => {
             <div className="mt-2 w-8 h-0.5 bg-blue-600" />
           </div>
           <button onClick={() => navigate("actualites")} className="text-blue-700 font-medium text-sm hover:underline flex-shrink-0">
-            Toutes les actualités →
+            {t("home.all_news")}
           </button>
         </div>
 
@@ -536,7 +556,7 @@ const Actualites = ({ navigate }: Props) => {
               <p className="text-blue-300 text-xs mb-2">{news[0]?.category} · {news[0]?.date}</p>
               <h3 className="text-white font-bold text-xl leading-snug mb-3 group-hover:text-blue-200 transition-colors">{news[0]?.title}</h3>
               <p className="text-blue-100/70 text-sm leading-relaxed mb-4">{news[0]?.excerpt}</p>
-              <span className="text-blue-300 text-sm font-medium">Lire l&#39;article →</span>
+              <span className="text-blue-300 text-sm font-medium">{t("home.read_article")}</span>
             </div>
           </div>
 
@@ -548,7 +568,7 @@ const Actualites = ({ navigate }: Props) => {
                 <p className="text-gray-400 text-xs mb-1">{item.category} · {item.date}</p>
                 <h3 className="font-semibold text-gray-900 text-sm leading-snug mb-2">{item.title}</h3>
                 <p className="text-gray-500 text-xs leading-relaxed">{item.excerpt}</p>
-                <span className="mt-3 inline-block text-blue-700 text-xs font-medium">Lire →</span>
+                <span className="mt-3 inline-block text-blue-700 text-xs font-medium">{t("home.read")}</span>
               </div>
             ))}
           </div>

@@ -1,5 +1,16 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FiberBg } from "../FiberBg";
+
+import logoOrange    from "../../img/image_a_use/orange.png";
+import logoMTN       from "../../img/image_a_use/mtn.jpg";
+import logoMoov      from "../../img/image_a_use/moov.png";
+import logoTotal     from "../../img/image_a_use/total-energies-logo.png";
+import logoCITelecom from "../../img/image_a_use/ci-telecom-logo.png";
+import logoCanalPlus from "../../img/image_a_use/Canal_+_Afrique_logo.jpg";
+import logoBicici    from "../../img/image_a_use/Bicici.png";
+import logoBollore   from "../../img/image_a_use/Bolloré_Transport_Logistics.png";
+import logoSocGen    from "../../img/image_a_use/SocieteGenerale.jpg";
 
 const PageHero = ({ badge, title, subtitle }: { badge: string; title: string; subtitle?: string }) => (
   <section className="relative py-24 px-6 overflow-hidden" style={{ background: "linear-gradient(135deg, #2563eb 0%, #4f46e5 50%, #7c3aed 100%)" }}>
@@ -11,60 +22,48 @@ const PageHero = ({ badge, title, subtitle }: { badge: string; title: string; su
   </section>
 );
 
-/* -----------------------------------------------
-   Références = logos des entreprises clientes
-   Remplacez les `logo` URLs par vos vrais logos
------------------------------------------------ */
-const REFERENCES = [
-  {
-    name: "Orange CI",
-    logo: "https://logo.clearbit.com/orange.com",
-  },
-  {
-    name: "MTN Côte d'Ivoire",
-    logo: "https://logo.clearbit.com/mtn.com",
-  },
-  {
-    name: "Moov Africa",
-    logo: "https://logo.clearbit.com/moov-africa.com",
-  },
-  {
-    name: "SFR",
-    logo: "https://logo.clearbit.com/sfr.fr",
-  },
-  {
-    name: "Ministère des TIC",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Coat_of_arms_of_Ivory_Coast.svg/120px-Coat_of_arms_of_Ivory_Coast.svg.png",
-  },
-  {
-    name: "Côte d'Ivoire Télécom",
-    logo: "https://logo.clearbit.com/telecom.ci",
-  },
-  {
-    name: "Canal+ Afrique",
-    logo: "https://logo.clearbit.com/canalplus.com",
-  },
-  {
-    name: "Société Générale CI",
-    logo: "https://logo.clearbit.com/societegenerale.com",
-  },
-  {
-    name: "BICICI",
-    logo: "https://logo.clearbit.com/bicici.com",
-  },
-  {
-    name: "Université FHB",
-    logo: "https://upload.wikimedia.org/wikipedia/fr/thumb/2/2e/Universit%C3%A9_F%C3%A9lix-Houphou%C3%ABt-Boigny_logo.png/120px-Universit%C3%A9_F%C3%A9lix-Houphou%C3%ABt-Boigny_logo.png",
-  },
-  {
-    name: "TOTAL Énergies CI",
-    logo: "https://logo.clearbit.com/totalenergies.com",
-  },
-  {
-    name: "Bolloré Africa Logistics",
-    logo: "https://logo.clearbit.com/bollore.com",
-  },
+const REFERENCES: { name: string; logo?: string; color?: string }[] = [
+  { name: "Orange CI",               logo: logoOrange    },
+  { name: "MTN Côte d'Ivoire",       logo: logoMTN       },
+  { name: "Moov Africa",             logo: logoMoov      },
+  { name: "SFR",                     color: "#E4003A"    },
+  { name: "Ministère des TIC",       color: "#009A44"    },
+  { name: "CITélécom",               logo: logoCITelecom },
+  { name: "Canal+ Afrique",          logo: logoCanalPlus },
+  { name: "Société Générale CI",     logo: logoSocGen    },
+  { name: "BICICI",                  logo: logoBicici    },
+  { name: "Université FHB",          color: "#006837"    },
+  { name: "TOTAL Énergies CI",       logo: logoTotal     },
+  { name: "Bolloré Logistics",       logo: logoBollore   },
 ];
+
+const ReferenceCard = ({ name, logo, color, index }: { name: string; logo?: string; color?: string; index: number }) => {
+  const [failed, setFailed] = useState(false);
+  const initials = name.split(" ").slice(0, 2).map((w) => w[0]).join("").toUpperCase();
+
+  return (
+    <div className={`animate-on-scroll stagger-${(index % 3) + 1} group flex flex-col items-center justify-center gap-3 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all p-5`}>
+      <div className="w-24 h-14 flex items-center justify-center">
+        {logo && !failed ? (
+          <img
+            src={logo}
+            alt={name}
+            className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+            onError={() => setFailed(true)}
+          />
+        ) : (
+          <div
+            className="w-14 h-14 rounded-xl flex items-center justify-center text-white font-black text-lg select-none"
+            style={{ backgroundColor: color || "#2563eb" }}
+          >
+            {initials}
+          </div>
+        )}
+      </div>
+      <span className="text-gray-600 text-xs font-medium text-center leading-tight">{name}</span>
+    </div>
+  );
+};
 
 export const BCAReferencesPage = () => {
   const { t } = useTranslation();
@@ -78,21 +77,7 @@ export const BCAReferencesPage = () => {
         <div className="relative z-10 max-w-6xl mx-auto">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {REFERENCES.map((ref, i) => (
-              <div
-                key={i}
-                className={`animate-on-scroll stagger-${(i % 3) + 1} group flex items-center justify-center bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all p-5`}
-              >
-                <div className="w-24 h-16 flex items-center justify-center">
-                  <img
-                    src={ref.logo}
-                    alt={ref.name}
-                    className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = "none";
-                    }}
-                  />
-                </div>
-              </div>
+              <ReferenceCard key={i} index={i} name={ref.name} logo={ref.logo} color={ref.color} />
             ))}
           </div>
 

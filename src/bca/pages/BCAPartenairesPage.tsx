@@ -1,6 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FiberBg } from "../FiberBg";
+
+import logoOrange        from "../../img/image_a_use/orange.png";
+import logoMTN           from "../../img/image_a_use/mtn.jpg";
+import logoMoov          from "../../img/image_a_use/moov.png";
+import logoTotal         from "../../img/image_a_use/total-energies-logo.png";
+import logoCITelecom     from "../../img/image_a_use/ci-telecom-logo.png";
+import logoCanalPlus     from "../../img/image_a_use/Canal_+_Afrique_logo.jpg";
+import logoBicici        from "../../img/image_a_use/Bicici.png";
+import logoBollore       from "../../img/image_a_use/Bolloré_Transport_Logistics.png";
+import logoSocGen        from "../../img/image_a_use/SocieteGenerale.jpg";
+import logoEXFO          from "../../img/image_a_use/exfo.png";
+import logoInfractive    from "../../img/image_a_use/infractive-01.jpg";
+import logo3M            from "../../img/image_a_use/m3.png";
+import logoEcobank       from "../../img/image_a_use/Ecobank CI.jpg";
+import logoBridgeBank    from "../../img/image_a_use/bridge_bank.png";
+import logoBanqueAtl     from "../../img/image_a_use/Banque_Atlantique.png";
 
 const PageHero = ({ badge, title, subtitle }: { badge: string; title: string; subtitle?: string }) => (
   <section className="relative py-24 px-6 overflow-hidden" style={{ background: "linear-gradient(135deg, #2563eb 0%, #4f46e5 50%, #7c3aed 100%)" }}>
@@ -12,78 +28,63 @@ const PageHero = ({ badge, title, subtitle }: { badge: string; title: string; su
   </section>
 );
 
-/* ---- Références section (merged) ---- */
-const REFERENCES = [
-  { name: "Orange CI", logo: "https://logo.clearbit.com/orange.com" },
-  { name: "MTN Côte d'Ivoire", logo: "https://logo.clearbit.com/mtn.com" },
-  { name: "Moov Africa", logo: "https://logo.clearbit.com/moov-africa.com" },
-  { name: "SFR", logo: "https://logo.clearbit.com/sfr.fr" },
-  { name: "Ministère des TIC", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Coat_of_arms_of_Ivory_Coast.svg/120px-Coat_of_arms_of_Ivory_Coast.svg.png" },
-  { name: "Côte d'Ivoire Télécom", logo: "https://logo.clearbit.com/telecom.ci" },
-  { name: "Canal+ Afrique", logo: "https://logo.clearbit.com/canalplus.com" },
-  { name: "Société Générale CI", logo: "https://logo.clearbit.com/societegenerale.com" },
-  { name: "BICICI", logo: "https://logo.clearbit.com/bicici.com" },
-  { name: "Université FHB", logo: "https://upload.wikimedia.org/wikipedia/fr/thumb/2/2e/Universit%C3%A9_F%C3%A9lix-Houphou%C3%ABt-Boigny_logo.png/120px-Universit%C3%A9_F%C3%A9lix-Houphou%C3%ABt-Boigny_logo.png" },
-  { name: "TOTAL Énergies CI", logo: "https://logo.clearbit.com/totalenergies.com" },
-  { name: "Bolloré Africa Logistics", logo: "https://logo.clearbit.com/bollore.com" },
+const REFERENCES: { name: string; logo?: string; color?: string }[] = [
+  { name: "Orange CI",               logo: logoOrange    },
+  { name: "MTN Côte d'Ivoire",       logo: logoMTN       },
+  { name: "Moov Africa",             logo: logoMoov      },
+  { name: "SFR",                     color: "#E4003A"    },
+  { name: "Ministère des TIC",       color: "#009A44"    },
+  { name: "CITélécom",               logo: logoCITelecom },
+  { name: "Canal+ Afrique",          logo: logoCanalPlus },
+  { name: "Société Générale CI",     logo: logoSocGen    },
+  { name: "BICICI",                  logo: logoBicici    },
+  { name: "Université FHB",          color: "#006837"    },
+  { name: "TOTAL Énergies CI",       logo: logoTotal     },
+  { name: "Bolloré Logistics",       logo: logoBollore   },
 ];
 
 const TECHNICAL_PARTNERS = [
-  {
-    name: "DACOM FARM",
-    logo: "https://c.animaapp.com/mn4bql9mR7qaS3/img/uploaded-asset-1774690590760-0.png",
-    fallback: "DACOM FARM",
-    bg: "#F5A623",
-    text: "DACOM\nFARM",
-  },
-  {
-    name: "EXFO",
-    logo: "https://c.animaapp.com/mn4bql9mR7qaS3/img/uploaded-asset-1774691067456-0.jpeg",
-    fallback: "EXFO",
-    bg: "#005BAA",
-    text: "EXFO",
-  },
-  {
-    name: "Infractive",
-    logo: "https://c.animaapp.com/mn4bql9mR7qaS3/img/uploaded-asset-1774691067457-1.png",
-    fallback: "Infractive",
-    bg: "#7B2D8B",
-    text: "INFRACTIVE",
-  },
-  {
-    name: "3M Maroc",
-    logo: "https://c.animaapp.com/mn4bql9mR7qaS3/img/uploaded-asset-1774690916031-0.jpeg",
-    fallback: "3M",
-    bg: "#FF0000",
-    text: "3M",
-  },
+  { name: "DACOM FARM",  logo: undefined,       bg: "#F5A623", text: "DACOM\nFARM"  },
+  { name: "EXFO",        logo: logoEXFO,        bg: "#005BAA", text: "EXFO"         },
+  { name: "Infractive",  logo: logoInfractive,  bg: "#7B2D8B", text: "INFRACTIVE"  },
+  { name: "3M",          logo: logo3M,          bg: "#FF0000", text: "3M"           },
 ];
 
 const FINANCIAL_PARTNERS = [
-  {
-    name: "Ecobank",
-    logo: "https://c.animaapp.com/mn4bql9mR7qaS3/img/uploaded-asset-1774691851764-0.jpeg",
-    fallback: "Ecobank",
-    bg: "#00529B",
-    text: "ECOBANK",
-  },
-  {
-    name: "Bridge Bank Group",
-    logo: "https://c.animaapp.com/mn4bql9mR7qaS3/img/uploaded-asset-1774690916033-2.png",
-    fallback: "Bridge Bank",
-    bg: "#C04A1A",
-    text: "BRIDGE\nBANK",
-  },
-  {
-    name: "Banque Atlantique",
-    logo: "https://c.animaapp.com/mn4bql9mR7qaS3/img/uploaded-asset-1774690916032-1.png",
-    fallback: "Banque Atlantique",
-    bg: "#E07B00",
-    text: "BANQUE\nATLANTIQUE",
-  },
+  { name: "Ecobank",           logo: logoEcobank,    bg: "#00529B", text: "ECOBANK"           },
+  { name: "Bridge Bank Group", logo: logoBridgeBank, bg: "#C04A1A", text: "BRIDGE\nBANK"      },
+  { name: "Banque Atlantique", logo: logoBanqueAtl,  bg: "#E07B00", text: "BANQUE\nATLANTIQUE" },
 ];
 
-const PartnerCard = ({ p, i }: { p: { name: string; logo: string; fallback: string; bg: string; text: string }; i: number }) => {
+const ReferenceCard = ({ name, logo, color, index }: { name: string; logo?: string; color?: string; index: number }) => {
+  const [failed, setFailed] = useState(false);
+  const initials = name.split(" ").slice(0, 2).map((w) => w[0]).join("").toUpperCase();
+
+  return (
+    <div className={`animate-on-scroll stagger-${(index % 3) + 1} group flex flex-col items-center justify-center gap-3 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all p-5`}>
+      <div className="w-24 h-14 flex items-center justify-center">
+        {logo && !failed ? (
+          <img
+            src={logo}
+            alt={name}
+            className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+            onError={() => setFailed(true)}
+          />
+        ) : (
+          <div
+            className="w-14 h-14 rounded-xl flex items-center justify-center text-white font-black text-lg select-none"
+            style={{ backgroundColor: color || "#2563eb" }}
+          >
+            {initials}
+          </div>
+        )}
+      </div>
+      <span className="text-gray-600 text-xs font-medium text-center leading-tight">{name}</span>
+    </div>
+  );
+};
+
+const PartnerCard = ({ p, i }: { p: { name: string; logo?: string; bg: string; text: string }; i: number }) => {
   const [imgFailed, setImgFailed] = React.useState(false);
   const showFallback = imgFailed || !p.logo;
 
@@ -128,11 +129,7 @@ export const BCAPartenairesPage = () => {
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {REFERENCES.map((ref, i) => (
-              <div key={i} className={`animate-on-scroll stagger-${(i % 3) + 1} group flex items-center justify-center bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg hover:border-blue-200 transition-all p-5`}>
-                <div className="w-24 h-16 flex items-center justify-center">
-                  <img src={ref.logo} alt={ref.name} className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300" onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }} />
-                </div>
-              </div>
+              <ReferenceCard key={i} index={i} name={ref.name} logo={ref.logo} color={ref.color} />
             ))}
           </div>
           <p className="mt-10 text-center text-gray-400 text-sm">Et bien d&#39;autres entreprises en Côte d&#39;Ivoire et en Afrique de l&#39;Ouest…</p>
@@ -147,7 +144,7 @@ export const BCAPartenairesPage = () => {
             <div className="w-1 h-8 bg-orange-500 rounded-full" />
             <h2 className="text-2xl font-bold text-gray-800">Partenaires Techniques</h2>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
             {TECHNICAL_PARTNERS.map((p, i) => (
               <PartnerCard key={i} p={p} i={i} />
             ))}

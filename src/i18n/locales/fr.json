@@ -9,8 +9,8 @@
     "references": "RÉFÉRENCES",
     "partenaires": "PARTENAIRES",
     "actualites": "ACTUALITÉS",
-    "more": "Plus",
-    "partners": "Partenaires",
+    "more": "PLUS",
+    "partners": "PARTENAIRES",
     "news": "Actualités",
     "faq": "FAQ",
     "contact_btn": "Contactez-nous",
@@ -44,13 +44,28 @@
     "subtitle": "Trois domaines clés pour transformer votre infrastructure technologique.",
     "fiber_title": "Fibre Optique",
     "fiber_subtitle": "Déploiement de réseaux fibre optique haute performance pour connecter entreprises et institutions.",
-    "fiber_items": ["FTTH, FTTB, FTTC, FTTN", "Réseaux GPON", "Voix, Vidéo & Données", "Maintenance & Support"],
+    "fiber_items": [
+      "FTTH, FTTB, FTTC, FTTN",
+      "Réseaux GPON",
+      "Voix, Vidéo & Données",
+      "Maintenance & Support"
+    ],
     "security_title": "Sécurité Professionnelle",
     "security_subtitle": "Solutions complètes de sécurité électronique pour la protection de vos locaux et actifs.",
-    "security_items": ["Interphones vidéo Wi-Fi", "Ouvre-portes GSM", "Contrôle d'accès biométrique", "Systèmes anti-intrusion"],
+    "security_items": [
+      "Interphones vidéo Wi-Fi",
+      "Ouvre-portes GSM",
+      "Contrôle d'accès biométrique",
+      "Systèmes anti-intrusion"
+    ],
     "smart_title": "Solutions Intelligentes",
     "smart_subtitle": "Automatisation et IoT pour des bâtiments intelligents et une agriculture connectée.",
-    "smart_items": ["Domotique & BMS", "Agriculture intelligente", "Objets connectés IoT", "Contrôle d'accès automatisé"]
+    "smart_items": [
+      "Domotique & BMS",
+      "Agriculture intelligente",
+      "Objets connectés IoT",
+      "Contrôle d'accès automatisé"
+    ]
   },
   "homestats": {
     "renewal_label": "Taux de renouvellement clients",
@@ -122,22 +137,52 @@
     "page_subtitle": "Un large spectre de compétences technologiques au service des entreprises africaines.",
     "telecom_title": "Télécommunications",
     "telecom_desc": "Fourniture, installation et maintenance de réseaux télécoms haute performance.",
-    "telecom_items": ["Déploiement fibre optique", "Câblage structuré", "Réseaux Wi-Fi Enterprise", "VoIP & Téléphonie IP"],
+    "telecom_items": [
+      "Déploiement fibre optique",
+      "Câblage structuré",
+      "Réseaux Wi-Fi Enterprise",
+      "VoIP & Téléphonie IP"
+    ],
     "it_title": "Informatique & Électronique",
     "it_desc": "Équipements IT de pointe et solutions électroniques pour votre infrastructure.",
-    "it_items": ["Serveurs & Stockage", "Postes de travail", "Switches & Routeurs", "Matériel bureautique"],
+    "it_items": [
+      "Serveurs & Stockage",
+      "Postes de travail",
+      "Switches & Routeurs",
+      "Matériel bureautique"
+    ],
     "security_title": "Sécurité Électronique",
     "security_desc": "Protection complète de vos locaux et de votre patrimoine.",
-    "security_items": ["Vidéosurveillance CCTV", "Contrôle d'accès biométrique", "Alarmes & Détection", "Sécurité périmétrique"],
+    "security_items": [
+      "Vidéosurveillance CCTV",
+      "Contrôle d'accès biométrique",
+      "Alarmes & Détection",
+      "Sécurité périmétrique"
+    ],
     "domotique_title": "Domotique & BMS",
     "domotique_desc": "Automatisation intelligente pour vos bâtiments résidentiels et tertiaires.",
-    "domotique_items": ["Gestion éclairage", "Climatisation automatisée", "Gestion énergétique", "Smart Building"],
+    "domotique_items": [
+      "Gestion éclairage",
+      "Climatisation automatisée",
+      "Gestion énergétique",
+      "Smart Building"
+    ],
     "import_title": "Import & Export",
     "import_desc": "Logistique internationale et conformité réglementaire pour vos achats mondiaux.",
-    "import_items": ["Sourcing Amérique du Nord", "Dédouanement", "Livraison B2B", "Conformité CEDEAO"],
+    "import_items": [
+      "Sourcing Amérique du Nord",
+      "Dédouanement",
+      "Livraison B2B",
+      "Conformité CEDEAO"
+    ],
     "energy_title": "Équipements Électriques",
     "energy_desc": "Solutions d'éclairage et équipements électriques pour tous vos projets.",
-    "energy_items": ["Éclairage LED industriel", "Tableaux électriques", "Câbles & Accessoires", "Énergies renouvelables"]
+    "energy_items": [
+      "Éclairage LED industriel",
+      "Tableaux électriques",
+      "Câbles & Accessoires",
+      "Énergies renouvelables"
+    ]
   },
   "solutions": {
     "badge": "Nos Offres",
@@ -149,12 +194,36 @@
     "cta_btn": "Nous contacter",
     "about_btn": "En savoir plus sur BCA",
     "items": [
-      { "icon": "📡", "title": "Télécommunications", "description": "Fourniture et installation de matériels télécoms de haute performance, déploiement d'infrastructures réseau et solutions de connectivité adaptées à vos besoins." },
-      { "icon": "💻", "title": "Informatiques & Électroniques", "description": "Équipements informatiques et électroniques de pointe — serveurs, postes de travail, switches, routeurs et tout le matériel nécessaire à votre infrastructure IT." },
-      { "icon": "🔒", "title": "Systèmes de Sécurité", "description": "Solutions de sécurité complètes : vidéosurveillance CCTV, contrôle d'accès biométrique, alarmes, détection incendie et sécurité périmétrique." },
-      { "icon": "🏠", "title": "Domotique", "description": "Solutions domotiques intégrées pour vos espaces résidentiels et commerciaux — automatisation éclairage, climatisation, sécurité et gestion énergétique." },
-      { "icon": "🌍", "title": "Import & Export", "description": "Services d'import-export associant expertise logistique internationale et conformité réglementaire pour faciliter votre accès aux marchés mondiaux." },
-      { "icon": "⚡", "title": "Équipements Électriques", "description": "Fourniture d'équipements électriques et de luminaires pour projets résidentiels ou commerciaux, alliant esthétique et performance énergétique." }
+      {
+        "icon": "📡",
+        "title": "Télécommunications",
+        "description": "Fourniture et installation de matériels télécoms de haute performance, déploiement d'infrastructures réseau et solutions de connectivité adaptées à vos besoins."
+      },
+      {
+        "icon": "💻",
+        "title": "Informatiques & Électroniques",
+        "description": "Équipements informatiques et électroniques de pointe — serveurs, postes de travail, switches, routeurs et tout le matériel nécessaire à votre infrastructure IT."
+      },
+      {
+        "icon": "🔒",
+        "title": "Systèmes de Sécurité",
+        "description": "Solutions de sécurité complètes : vidéosurveillance CCTV, contrôle d'accès biométrique, alarmes, détection incendie et sécurité périmétrique."
+      },
+      {
+        "icon": "🏠",
+        "title": "Domotique",
+        "description": "Solutions domotiques intégrées pour vos espaces résidentiels et commerciaux — automatisation éclairage, climatisation, sécurité et gestion énergétique."
+      },
+      {
+        "icon": "🌍",
+        "title": "Import & Export",
+        "description": "Services d'import-export associant expertise logistique internationale et conformité réglementaire pour faciliter votre accès aux marchés mondiaux."
+      },
+      {
+        "icon": "⚡",
+        "title": "Équipements Électriques",
+        "description": "Fourniture d'équipements électriques et de luminaires pour projets résidentiels ou commerciaux, alliant esthétique et performance énergétique."
+      }
     ],
     "services": {
       "telecom": {
@@ -172,7 +241,7 @@
             "title": "Expertise & Ingénierie",
             "items": [
               "Études et travaux de génie civil : Analyse de terrain et préparation des infrastructures.",
-              "Conception & Réalisation : Maîtrise d&#39;œuvre complète de vos projets de connectivité.",
+              "Conception & Réalisation : Maîtrise d'œuvre complète de vos projets de connectivité.",
               "Architecture Réseau : Conception de solutions fiables et transparentes pour le déploiement de services voix, vidéo et données de dernière génération."
             ]
           },
@@ -189,8 +258,8 @@
             "title": "Maintenance & Performance",
             "items": [
               "Maintenance Préventive et Curative : Suivi rigoureux des réseaux de transport optique pour garantir une disponibilité maximale.",
-              "Tests et Mesures de Haute Précision : Utilisation d&#39;équipements EXFO pour des solutions intelligentes, automatisées et testées sur le terrain.",
-              "Optimisation de Qualité : Garantie d&#39;un niveau de qualité élevé pour toutes vos infrastructures de transport et de distribution."
+              "Tests et Mesures de Haute Précision : Utilisation d'équipements EXFO pour des solutions intelligentes, automatisées et testées sur le terrain.",
+              "Optimisation de Qualité : Garantie d'un niveau de qualité élevé pour toutes vos infrastructures de transport et de distribution."
             ]
           }
         ]
@@ -210,12 +279,12 @@
             "title": "Vidéosurveillance Intelligente (CCTV)",
             "items": [
               "Installation de caméras IP haute définition (4K) avec analyse vidéo intégrée.",
-              "Détection de franchissement de ligne, d&#39;objets abandonnés et reconnaissance faciale.",
+              "Détection de franchissement de ligne, d'objets abandonnés et reconnaissance faciale.",
               "Solutions de stockage hybrides (NVR local et Cloud sécurisé)."
             ]
           },
           {
-            "title": "Contrôle d&#39;Accès de Haute Sécurité",
+            "title": "Contrôle d'Accès de Haute Sécurité",
             "items": [
               "Lecteurs biométriques (empreintes, reconnaissance palmaire ou faciale).",
               "Gestion des accès par badges RFID et solutions de déverrouillage via smartphone.",
@@ -223,11 +292,11 @@
             ]
           },
           {
-            "title": "Systèmes d&#39;Alarme et Détection d&#39;Intrusion",
+            "title": "Systèmes d'Alarme et Détection d'Intrusion",
             "items": [
-              "Centrales d&#39;alarme connectées avec levée de doute vidéo immédiate.",
+              "Centrales d'alarme connectées avec levée de doute vidéo immédiate.",
               "Capteurs périmétriques, détecteurs de mouvement double technologie et barrières infrarouges.",
-              "Systèmes anti-agression et boutons d&#39;alerte silencieux."
+              "Systèmes anti-agression et boutons d'alerte silencieux."
             ]
           },
           {
@@ -257,22 +326,22 @@
               "Intégration et interconnexion de capteurs intelligents pour une gestion automatisée de vos infrastructures.",
               "Smart Building & Office : Transformation des espaces de travail en environnements connectés pour optimiser la productivité et réduire les coûts opérationnels.",
               "Réseaux Unifiés : Convergence des flux voix, données et vidéo sur une infrastructure réseau unique, robuste et sécurisée.",
-              "Gestion de l&#39;Énergie Connectée : Déploiement de compteurs et systèmes de monitoring intelligents pour une maîtrise en temps réel de votre empreinte énergétique."
+              "Gestion de l'Énergie Connectée : Déploiement de compteurs et systèmes de monitoring intelligents pour une maîtrise en temps réel de votre empreinte énergétique."
             ]
           },
           {
             "title": "Interfaces et Expérience Utilisateur",
             "items": [
-              "Tableaux de Bord Centralisés : Visualisation globale de l&#39;état de vos systèmes (sécurité, réseau, énergie) sur une interface ergonomique unique.",
+              "Tableaux de Bord Centralisés : Visualisation globale de l'état de vos systèmes (sécurité, réseau, énergie) sur une interface ergonomique unique.",
               "Contrôle à Distance & Mobilité : Accès total à vos installations via des applications mobiles sécurisées, où que vous soyez dans le monde.",
-              "Automatisation Prédictive : Utilisation de l&#39;intelligence artificielle pour anticiper les besoins du bâtiment (climatisation, maintenance préventive)."
+              "Automatisation Prédictive : Utilisation de l'intelligence artificielle pour anticiper les besoins du bâtiment (climatisation, maintenance préventive)."
             ]
           },
           {
             "title": "Services à Forte Valeur Ajoutée",
             "items": [
-              "Audit de Connectivité : Analyse de vos installations existantes pour identifier les leviers de modernisation et d&#39;optimisation technologique.",
-              "Ingénierie de Déploiement : Accompagnement de A à Z, de l&#39;étude de faisabilité à la mise en service de vos solutions connectées.",
+              "Audit de Connectivité : Analyse de vos installations existantes pour identifier les leviers de modernisation et d'optimisation technologique.",
+              "Ingénierie de Déploiement : Accompagnement de A à Z, de l'étude de faisabilité à la mise en service de vos solutions connectées.",
               "Support Technique & Infogérance : Assistance proactive pour garantir la continuité de service de vos technologies intelligentes."
             ]
           }
@@ -282,7 +351,7 @@
         "badge": "Agriculture Intelligente",
         "title": "La technologie au service de vos terres",
         "tagline": "Agriculture Intelligente — Équipements de précision pilotables depuis un ordinateur ou un smartphone",
-        "description": "BCA Technologies accompagne les producteurs agricoles et l&#39;agro-industrie avec des équipements de précision pilotables depuis un ordinateur ou un smartphone :",
+        "description": "BCA Technologies accompagne les producteurs agricoles et l'agro-industrie avec des équipements de précision pilotables depuis un ordinateur ou un smartphone :",
         "cta": "Équiper mon exploitation",
         "kpi": [
           { "value": "5", "label": "Couches de capteurs sol" },
@@ -291,9 +360,9 @@
         ],
         "subSections": [
           {
-            "title": "Capteurs de température et d&#39;humidité du sol à 5 couches",
+            "title": "Capteurs de température et d'humidité du sol à 5 couches",
             "items": [
-              "Mesure précise et continue de l&#39;état hydrique de vos parcelles à différentes profondeurs."
+              "Mesure précise et continue de l'état hydrique de vos parcelles à différentes profondeurs."
             ]
           },
           {
@@ -305,7 +374,7 @@
           {
             "title": "Irrigation optimale assistée par ordinateur et smartphone",
             "items": [
-              "Pilotage automatique et intelligent de l&#39;arrosage grâce à l&#39;analyse croisée des données sol et météo, pour économiser l&#39;eau et maximiser les rendements."
+              "Pilotage automatique et intelligent de l'arrosage grâce à l'analyse croisée des données sol et météo, pour économiser l'eau et maximiser les rendements."
             ]
           }
         ]
@@ -314,7 +383,7 @@
         "badge": "Import / Export",
         "title": "Import & Export",
         "tagline": "Accédez aux marchés mondiaux avec sérénité",
-        "description": "Fort de son ancrage international, BCA Technologies facilite vos achats en Amérique du Nord et en Europe, en gérant l&#39;ensemble de la chaîne logistique : sourcing, dédouanement, transport et livraison B2B en Afrique de l&#39;Ouest.",
+        "description": "Fort de son ancrage international, BCA Technologies facilite vos achats en Amérique du Nord et en Europe, en gérant l'ensemble de la chaîne logistique : sourcing, dédouanement, transport et livraison B2B en Afrique de l'Ouest.",
         "cta": "Demander un sourcing",
         "kpi": [
           { "value": "6", "label": "Pays desservis" },
@@ -334,7 +403,7 @@
         "badge": "Énergie",
         "title": "Équipements Électriques",
         "tagline": "Éclairage et énergie pour tous vos projets",
-        "description": "Fourniture et installation d&#39;équipements électriques et de luminaires pour projets résidentiels ou commerciaux. BCA Technologies propose des solutions LED basse consommation et des équipements conformes aux normes en vigueur.",
+        "description": "Fourniture et installation d'équipements électriques et de luminaires pour projets résidentiels ou commerciaux. BCA Technologies propose des solutions LED basse consommation et des équipements conformes aux normes en vigueur.",
         "cta": "Projet électrique",
         "kpi": [
           { "value": "50%", "label": "Réduction consomm." },
@@ -369,9 +438,27 @@
     "title": "NOS EXPERTS",
     "subtitle": "Une équipe passionnée et qualifiée, dédiée à l'excellence technologique pour nos clients.",
     "members": [
-      { "name": "Gbran Georges Poiret ANGAHI", "role": "Fondateur & CEO", "bio": "Visionnaire et entrepreneur, M. ANGAHI a fondé BCA Technologies en 2017 avec l'ambition de connecter l'Afrique aux meilleures technologies mondiales.", "initials": "GA", "color": "from-blue-600 to-blue-800" },
-      { "name": "Direction Technique", "role": "Ingénierie & Déploiement", "bio": "Une équipe d'ingénieurs certifiés spécialisés dans le déploiement d'infrastructures télécoms, réseaux et systèmes de sécurité complexes.", "initials": "IT", "color": "from-indigo-600 to-purple-700" },
-      { "name": "Direction Commerciale", "role": "Ventes & Partenariats", "bio": "Des experts en développement commercial qui cultivent des partenariats stratégiques et accompagnent les clients dans la définition de leurs besoins.", "initials": "DC", "color": "from-cyan-600 to-blue-700" }
+      {
+        "name": "Gbran Georges Poiret ANGAHI",
+        "role": "Fondateur & CEO",
+        "bio": "Visionnaire et entrepreneur, M. ANGAHI a fondé BCA Technologies en 2017 avec l'ambition de connecter l'Afrique aux meilleures technologies mondiales.",
+        "initials": "GA",
+        "color": "from-blue-600 to-blue-800"
+      },
+      {
+        "name": "Direction Technique",
+        "role": "Ingénierie & Déploiement",
+        "bio": "Une équipe d'ingénieurs certifiés spécialisés dans le déploiement d'infrastructures télécoms, réseaux et systèmes de sécurité complexes.",
+        "initials": "IT",
+        "color": "from-indigo-600 to-purple-700"
+      },
+      {
+        "name": "Direction Commerciale",
+        "role": "Ventes & Partenariats",
+        "bio": "Des experts en développement commercial qui cultivent des partenariats stratégiques et accompagnent les clients dans la définition de leurs besoins.",
+        "initials": "DC",
+        "color": "from-cyan-600 to-blue-700"
+      }
     ]
   },
   "partners": {
@@ -398,9 +485,24 @@
     "title": "CE QUE DISENT NOS CLIENTS",
     "satisfaction": "85% de taux de renouvellement clients — ils nous font confiance.",
     "items": [
-      { "quote": "BCA Technologies a transformé notre infrastructure réseau avec une efficacité remarquable. Leur équipe est professionnelle, réactive et leurs équipements sont de qualité supérieure.", "name": "Directeur IT", "company": "Banque Régionale d'Abidjan", "initials": "BR" },
-      { "quote": "Nous avons confié à BCA l'installation de notre système de vidéosurveillance campus. Le résultat dépasse nos attentes. Un partenaire de confiance pour nos projets de sécurité.", "name": "Directeur Administratif", "company": "Université de Yamoussoukro", "initials": "UA" },
-      { "quote": "Grâce à BCA Technologies, notre déploiement fibre optique sur la zone industrielle a été réalisé dans les délais et avec une qualité irréprochable. Je les recommande vivement.", "name": "Responsable Infrastructures", "company": "Groupe Industriel CI", "initials": "GI" }
+      {
+        "quote": "BCA Technologies a transformé notre infrastructure réseau avec une efficacité remarquable. Leur équipe est professionnelle, réactive et leurs équipements sont de qualité supérieure.",
+        "name": "Directeur IT",
+        "company": "Banque Régionale d'Abidjan",
+        "initials": "BR"
+      },
+      {
+        "quote": "Nous avons confié à BCA l'installation de notre système de vidéosurveillance campus. Le résultat dépasse nos attentes. Un partenaire de confiance pour nos projets de sécurité.",
+        "name": "Directeur Administratif",
+        "company": "Université de Yamoussoukro",
+        "initials": "UA"
+      },
+      {
+        "quote": "Grâce à BCA Technologies, notre déploiement fibre optique sur la zone industrielle a été réalisé dans les délais et avec une qualité irréprochable. Je les recommande vivement.",
+        "name": "Responsable Infrastructures",
+        "company": "Groupe Industriel CI",
+        "initials": "GI"
+      }
     ]
   },
   "references": {
@@ -417,14 +519,57 @@
     "title": "NOS RÉALISATIONS",
     "subtitle": "Découvrez quelques-uns de nos projets les plus marquants à travers l'Afrique.",
     "all": "Tous",
-    "filters": ["Tous", "Télécoms", "Sécurité", "Informatique", "Domotique", "Énergie"],
+    "filters": [
+      "Tous",
+      "Télécoms",
+      "Sécurité",
+      "Informatique",
+      "Domotique",
+      "Énergie"
+    ],
     "projects": [
-      { "title": "Réseau Fibre Optique — Zone Industrielle", "description": "Déploiement d'un réseau fibre optique haute capacité couvrant une zone industrielle de 150 entreprises à Abidjan.", "category": "Télécoms", "location": "Abidjan, Côte d'Ivoire", "year": "2023" },
-      { "title": "Sécurité Campus Universitaire", "description": "Installation d'un système de vidéosurveillance 360° avec 280 caméras IP et contrôle d'accès biométrique.", "category": "Sécurité", "location": "Yamoussoukro, CI", "year": "2023" },
-      { "title": "Infrastructure IT — Banque Régionale", "description": "Fourniture et déploiement d'une infrastructure IT complète pour 12 agences bancaires dans 3 pays.", "category": "Informatique", "location": "Abidjan / Accra / Bamako", "year": "2022" },
-      { "title": "Smart Building — Immeuble de Bureaux", "description": "Intégration domotique complète d'un immeuble de bureaux de 8 étages avec gestion centralisée.", "category": "Domotique", "location": "Plateau, Abidjan", "year": "2022" },
-      { "title": "Câblage Structuré Complexe Hôtelier", "description": "Câblage structuré et réseau Wi-Fi haute densité pour un complexe hôtelier 5 étoiles de 320 chambres.", "category": "Télécoms", "location": "Grand-Bassam, CI", "year": "2023" },
-      { "title": "Éclairage LED Industriel", "description": "Remplacement et modernisation de l'éclairage industriel avec solutions LED basse consommation.", "category": "Énergie", "location": "Yopougon, Abidjan", "year": "2021" }
+      {
+        "title": "Réseau Fibre Optique — Zone Industrielle",
+        "description": "Déploiement d'un réseau fibre optique haute capacité couvrant une zone industrielle de 150 entreprises à Abidjan.",
+        "category": "Télécoms",
+        "location": "Abidjan, Côte d'Ivoire",
+        "year": "2023"
+      },
+      {
+        "title": "Sécurité Campus Universitaire",
+        "description": "Installation d'un système de vidéosurveillance 360° avec 280 caméras IP et contrôle d'accès biométrique.",
+        "category": "Sécurité",
+        "location": "Yamoussoukro, CI",
+        "year": "2023"
+      },
+      {
+        "title": "Infrastructure IT — Banque Régionale",
+        "description": "Fourniture et déploiement d'une infrastructure IT complète pour 12 agences bancaires dans 3 pays.",
+        "category": "Informatique",
+        "location": "Abidjan / Accra / Bamako",
+        "year": "2022"
+      },
+      {
+        "title": "Smart Building — Immeuble de Bureaux",
+        "description": "Intégration domotique complète d'un immeuble de bureaux de 8 étages avec gestion centralisée.",
+        "category": "Domotique",
+        "location": "Plateau, Abidjan",
+        "year": "2022"
+      },
+      {
+        "title": "Câblage Structuré Complexe Hôtelier",
+        "description": "Câblage structuré et réseau Wi-Fi haute densité pour un complexe hôtelier 5 étoiles de 320 chambres.",
+        "category": "Télécoms",
+        "location": "Grand-Bassam, CI",
+        "year": "2023"
+      },
+      {
+        "title": "Éclairage LED Industriel",
+        "description": "Remplacement et modernisation de l'éclairage industriel avec solutions LED basse consommation.",
+        "category": "Énergie",
+        "location": "Yopougon, Abidjan",
+        "year": "2021"
+      }
     ]
   },
   "why": {
@@ -432,12 +577,36 @@
     "title": "POURQUOI CHOISIR BCA ?",
     "subtitle": "BCA TECHNOLOGIES LIMITED s'engage à vous offrir des solutions de qualité internationale adaptées aux réalités africaines.",
     "items": [
-      { "icon": "🏆", "title": "Normes Nord-Américaines", "description": "Nous importons et proposons uniquement des équipements conformes aux standards de qualité nord-américains et internationaux." },
-      { "icon": "🤝", "title": "Partenariats Stratégiques", "description": "Des partenariats solides avec des fabricants et distributeurs mondiaux reconnus pour garantir des produits fiables et certifiés." },
-      { "icon": "🌐", "title": "Présence Multi-Pays", "description": "Actifs en Côte d'Ivoire, au Canada, au Ghana, au Mali, au Burkina Faso et au Libéria pour une couverture régionale optimale." },
-      { "icon": "⚡", "title": "Expertise Sectorielle", "description": "Une équipe d'experts qualifiés avec une connaissance approfondie des secteurs télécoms, IT, électronique et sécurité." },
-      { "icon": "🚚", "title": "Logistique Efficace", "description": "Un réseau logistique structuré garantissant la livraison rapide et sécurisée de vos équipements du Canada vers l'Afrique." },
-      { "icon": "🎯", "title": "Service Personnalisé", "description": "Une approche sur-mesure pour chaque client, avec un accompagnement dédié de la commande jusqu'à l'installation." }
+      {
+        "icon": "🏆",
+        "title": "Normes Nord-Américaines",
+        "description": "Nous importons et proposons uniquement des équipements conformes aux standards de qualité nord-américains et internationaux."
+      },
+      {
+        "icon": "🤝",
+        "title": "Partenariats Stratégiques",
+        "description": "Des partenariats solides avec des fabricants et distributeurs mondiaux reconnus pour garantir des produits fiables et certifiés."
+      },
+      {
+        "icon": "🌐",
+        "title": "Présence Multi-Pays",
+        "description": "Actifs en Côte d'Ivoire, au Canada, au Ghana, au Mali, au Burkina Faso et au Libéria pour une couverture régionale optimale."
+      },
+      {
+        "icon": "⚡",
+        "title": "Expertise Sectorielle",
+        "description": "Une équipe d'experts qualifiés avec une connaissance approfondie des secteurs télécoms, IT, électronique et sécurité."
+      },
+      {
+        "icon": "🚚",
+        "title": "Logistique Efficace",
+        "description": "Un réseau logistique structuré garantissant la livraison rapide et sécurisée de vos équipements du Canada vers l'Afrique."
+      },
+      {
+        "icon": "🎯",
+        "title": "Service Personnalisé",
+        "description": "Une approche sur-mesure pour chaque client, avec un accompagnement dédié de la commande jusqu'à l'installation."
+      }
     ]
   },
   "contact": {
@@ -492,14 +661,46 @@
     "orgchart_title": "Organigramme",
     "nos_forces_title": "Nos Forces",
     "forces": [
-      { "icon": "⚙️", "title": "Expertise qualifiée", "desc": "Ressources hautement qualifiées avec expertise en déploiement, opérations et maintenance des réseaux fibre optique (Backbone, Metro, FTTx)." },
-      { "icon": "🧰", "title": "Équipements complets", "desc": "Un parc d'équipements performant pour le contrôle, la gestion et l'installation des réseaux fibre optique." },
-      { "icon": "🚐", "title": "Moyens logistiques", "desc": "7 fourgons entièrement équipés pour garantir rapidité et efficacité dans les interventions." },
-      { "icon": "📦", "title": "Projets clés en main", "desc": "Organisation complète couvrant étude, réalisation, test, installation et maintenance." },
-      { "icon": "⭐", "title": "Satisfaction client", "desc": "Système de gestion de qualité rigoureux pour garantir une satisfaction optimale." },
-      { "icon": "🔄", "title": "Flexibilité", "desc": "Adaptation rapide aux évolutions du marché et aux besoins spécifiques des clients." },
-      { "icon": "⚡", "title": "Réactivité", "desc": "Prise de décision rapide et interventions efficaces pour réduire les délais." },
-      { "icon": "🌍", "title": "Couverture étendue", "desc": "Interventions sur toute la Côte d'Ivoire et à l'international." }
+      {
+        "icon": "⚙️",
+        "title": "Expertise qualifiée",
+        "desc": "Ressources hautement qualifiées avec expertise en déploiement, opérations et maintenance des réseaux fibre optique (Backbone, Metro, FTTx)."
+      },
+      {
+        "icon": "🧰",
+        "title": "Équipements complets",
+        "desc": "Un parc d'équipements performant pour le contrôle, la gestion et l'installation des réseaux fibre optique."
+      },
+      {
+        "icon": "🚐",
+        "title": "Moyens logistiques",
+        "desc": "7 fourgons entièrement équipés pour garantir rapidité et efficacité dans les interventions."
+      },
+      {
+        "icon": "📦",
+        "title": "Projets clés en main",
+        "desc": "Organisation complète couvrant étude, réalisation, test, installation et maintenance."
+      },
+      {
+        "icon": "⭐",
+        "title": "Satisfaction client",
+        "desc": "Système de gestion de qualité rigoureux pour garantir une satisfaction optimale."
+      },
+      {
+        "icon": "🔄",
+        "title": "Flexibilité",
+        "desc": "Adaptation rapide aux évolutions du marché et aux besoins spécifiques des clients."
+      },
+      {
+        "icon": "⚡",
+        "title": "Réactivité",
+        "desc": "Prise de décision rapide et interventions efficaces pour réduire les délais."
+      },
+      {
+        "icon": "🌍",
+        "title": "Couverture étendue",
+        "desc": "Interventions sur toute la Côte d'Ivoire et à l'international."
+      }
     ],
     "team_members": [
       { "name": "Gbran G. P. ANGAHI", "role": "Fondateur & PDG" },
@@ -507,7 +708,10 @@
       { "name": "Direction Commerciale", "role": "Ventes & Partenariats" },
       { "name": "Support Technique", "role": "Maintenance & SAV" },
       { "name": "Équipe Logistique", "role": "Import / Export & Livraison" },
-      { "name": "Administration & Finance", "role": "RH, Juridique & Comptabilité" }
+      {
+        "name": "Administration & Finance",
+        "role": "RH, Juridique & Comptabilité"
+      }
     ]
   },
   "home": {
@@ -515,15 +719,30 @@
     "slide1_tag": "Fibre Optique",
     "slide1_title": "Déploiement de réseaux haute performance",
     "slide1_desc": "Connecter entreprises et institutions avec des technologies FTTH, FTTB, GPON.",
-    "slide1_tags": ["FTTH / FTTB / FTTC", "Réseaux GPON", "Voix, Vidéo & Données", "Maintenance & Support"],
+    "slide1_tags": [
+      "FTTH / FTTB / FTTC",
+      "Réseaux GPON",
+      "Voix, Vidéo & Données",
+      "Maintenance & Support"
+    ],
     "slide2_tag": "Sécurité Professionnelle",
     "slide2_title": "Protection complète de vos locaux et actifs",
     "slide2_desc": "Solutions de sécurité électronique adaptées aux entreprises et institutions.",
-    "slide2_tags": ["Interphones vidéo Wi-Fi", "Ouvre-portes GSM", "Contrôle d'accès biométrique", "Anti-intrusion"],
+    "slide2_tags": [
+      "Interphones vidéo Wi-Fi",
+      "Ouvre-portes GSM",
+      "Contrôle d'accès biométrique",
+      "Anti-intrusion"
+    ],
     "slide3_tag": "Solutions Intelligentes",
     "slide3_title": "Bâtiments intelligents et agriculture connectée",
     "slide3_desc": "Automatisation et IoT pour transformer vos espaces et processus.",
-    "slide3_tags": ["Domotique & BMS", "Agriculture intelligente", "Objets connectés IoT", "Contrôle d'accès automatisé"],
+    "slide3_tags": [
+      "Domotique & BMS",
+      "Agriculture intelligente",
+      "Objets connectés IoT",
+      "Contrôle d'accès automatisé"
+    ],
     "references_title": "Nos références",
     "see_all_refs": "Voir toutes nos références →",
     "partners_title": "Nos partenaires",
@@ -540,27 +759,131 @@
     "projects_title": "NOS PROJETS"
   },
   "news_items": [
-    { "date": "Mars 2025", "category": "Partenariat", "title": "BCA Technologies signe un accord stratégique avec Huawei Africa", "excerpt": "Un nouveau partenariat officiel vient renforcer notre capacité à distribuer les équipements Huawei certifiés dans l'ensemble de la sous-région." },
-    { "date": "Février 2025", "category": "Projet", "title": "Déploiement fibre optique zone industrielle de Yopougon", "excerpt": "BCA Technologies finalise un déploiement fibre optique de 45 km dans la zone industrielle de Yopougon, connectant plus de 200 entreprises." },
-    { "date": "Janvier 2025", "category": "Expansion", "title": "Ouverture d'un nouveau bureau au Ghana", "excerpt": "BCA Technologies renforce sa présence régionale avec l'ouverture d'une antenne à Accra pour mieux servir ses clients ghanéens." },
-    { "date": "Décembre 2024", "category": "Certification", "title": "BCA Technologies obtient la certification Cisco Gold Partner", "excerpt": "Après une année d'efforts, notre équipe technique obtient la certification Gold Partner Cisco, garantissant une expertise réseau au plus haut niveau." },
-    { "date": "Novembre 2024", "category": "Événement", "title": "Participation au Forum Technologique d'Abidjan", "excerpt": "BCA Technologies a présenté ses dernières solutions innovantes au premier Forum Technologique d'Abidjan, rassemblant plus de 500 professionnels." },
-    { "date": "Octobre 2024", "category": "Innovation", "title": "Lancement d'une gamme de solutions domotique bas coût", "excerpt": "Pour démocratiser l'accès à la domotique en Afrique, BCA Technologies lance une gamme de solutions intelligentes accessibles aux PME." }
+    {
+      "date": "Mars 2025",
+      "category": "Partenariat",
+      "title": "BCA Technologies signe un accord stratégique avec Huawei Africa",
+      "excerpt": "Un nouveau partenariat officiel vient renforcer notre capacité à distribuer les équipements Huawei certifiés dans l'ensemble de la sous-région."
+    },
+    {
+      "date": "Février 2025",
+      "category": "Projet",
+      "title": "Déploiement fibre optique zone industrielle de Yopougon",
+      "excerpt": "BCA Technologies finalise un déploiement fibre optique de 45 km dans la zone industrielle de Yopougon, connectant plus de 200 entreprises."
+    },
+    {
+      "date": "Janvier 2025",
+      "category": "Expansion",
+      "title": "Ouverture d'un nouveau bureau au Ghana",
+      "excerpt": "BCA Technologies renforce sa présence régionale avec l'ouverture d'une antenne à Accra pour mieux servir ses clients ghanéens."
+    },
+    {
+      "date": "Décembre 2024",
+      "category": "Certification",
+      "title": "BCA Technologies obtient la certification Cisco Gold Partner",
+      "excerpt": "Après une année d'efforts, notre équipe technique obtient la certification Gold Partner Cisco, garantissant une expertise réseau au plus haut niveau."
+    },
+    {
+      "date": "Novembre 2024",
+      "category": "Événement",
+      "title": "Participation au Forum Technologique d'Abidjan",
+      "excerpt": "BCA Technologies a présenté ses dernières solutions innovantes au premier Forum Technologique d'Abidjan, rassemblant plus de 500 professionnels."
+    },
+    {
+      "date": "Octobre 2024",
+      "category": "Innovation",
+      "title": "Lancement d'une gamme de solutions domotique bas coût",
+      "excerpt": "Pour démocratiser l'accès à la domotique en Afrique, BCA Technologies lance une gamme de solutions intelligentes accessibles aux PME."
+    }
   ],
   "gallery_items": [
-    { "category": "Fibre Optique", "title": "Déroulage câble fibre — Zone Industrielle Abidjan", "description": "Pose de 12 km de câble fibre optique souterrain en microcanalisations dans une zone industrielle de 150 entreprises.", "location": "Yopougon, Abidjan", "year": "2023" },
-    { "category": "Sécurité", "title": "Déploiement caméras IP — Campus Universitaire", "description": "Installation de 280 caméras IP Hikvision avec enregistrement centralisé, couverture 360°.", "location": "Yamoussoukro", "year": "2023" },
-    { "category": "Réseau", "title": "Salle réseau — Banque Régionale", "description": "Infrastructure réseau core avec baie de brassage, switches managés et routeurs Cisco pour 12 agences.", "location": "Plateau, Abidjan", "year": "2022" },
-    { "category": "Domotique", "title": "Smart Building — Immeuble de Bureaux 8 étages", "description": "Intégration BMS complète : éclairage automatisé, climatisation centralisée, contrôle d'accès, monitoring énergétique.", "location": "Cocody, Abidjan", "year": "2022" },
-    { "category": "Wi-Fi", "title": "Wi-Fi haute densité — Hôtel 5 étoiles", "description": "Déploiement Wi-Fi 6 pour 320 chambres avec contrôleur centralisé et couverture extérieure piscine & jardins.", "location": "Grand-Bassam", "year": "2023" },
-    { "category": "IoT", "title": "Agriculture connectée — Capteurs IoT", "description": "Déploiement de 200 capteurs IoT LoRaWAN pour monitoring sol, météo et irrigation automatisée en zone rurale.", "location": "Bouaké, CI", "year": "2024" },
-    { "category": "Énergie", "title": "Éclairage LED industriel", "description": "Remplacement et modernisation de 400 luminaires industriels avec solution LED basse consommation (-50% sur la facture).", "location": "Zone Franche, Abidjan", "year": "2021" },
-    { "category": "Fibre Optique", "title": "Backbone fibre — Déploiement inter-sites", "description": "Liaison fibre noire entre 8 sites distants d'une institution publique, entièrement en génie civil.", "location": "Grand Abidjan", "year": "2024" }
+    {
+      "category": "Fibre Optique",
+      "title": "Installation boîtier fibre — Technicien BCA sur poteau",
+      "description": "Technicien BCA Technologies en intervention terrain, pose d'un boîtier de raccordement fibre optique sur poteau.",
+      "location": "Abidjan, CI",
+      "year": "2024"
+    },
+    {
+      "category": "Réseau",
+      "title": "Configuration salle réseau — Câblage & supervision",
+      "description": "Configuration d'équipements réseau en salle technique : brassage, administration des équipements actifs et vérification du plan de câblage.",
+      "location": "Abidjan, CI",
+      "year": "2024"
+    },
+    {
+      "category": "Télécom",
+      "title": "Installation aérienne — Câblage sur poteau",
+      "description": "Montée sur poteau pour fixation et raccordement de câbles télécom aériens dans un quartier résidentiel.",
+      "location": "Côte d'Ivoire",
+      "year": "2024"
+    },
+    {
+      "category": "Fibre Optique",
+      "title": "Génie civil — Fouille pour passage de câble",
+      "description": "Travaux de génie civil : ouverture de tranchées pour la pose de microcanalisations fibre optique souterraine.",
+      "location": "Côte d'Ivoire",
+      "year": "2024"
+    },
+    {
+      "category": "Télécom",
+      "title": "Montée en hauteur — Installation infrastructure",
+      "description": "Technicien en intervention sur infrastructure télécom aérienne, fixation et raccordement de boîtiers de dérivation.",
+      "location": "Côte d'Ivoire",
+      "year": "2024"
+    },
+    {
+      "category": "Fibre Optique",
+      "title": "Intervention terrain — Équipe BCA en chantier",
+      "description": "Équipe BCA Technologies en intervention sur un point de raccordement au sol, vérification et maintenance d'un regard de génie civil.",
+      "location": "Abidjan, CI",
+      "year": "2024"
+    },
+    {
+      "category": "Fibre Optique",
+      "title": "Équipe BCA — Travaux de raccordement",
+      "description": "L'équipe terrain de BCA Technologies lors de travaux de raccordement fibre optique en milieu urbain.",
+      "location": "Abidjan, CI",
+      "year": "2024"
+    },
+    {
+      "category": "Fibre Optique",
+      "title": "Génie civil — Perçage et tranchée",
+      "description": "Ouverture manuelle de tranchées pour passage de câbles en microcanalisation, phase préparatoire au déroulage fibre.",
+      "location": "Côte d'Ivoire",
+      "year": "2024"
+    },
+    {
+      "category": "Fibre Optique",
+      "title": "Chantier fibre — Équipe en fouille urbaine",
+      "description": "Deux techniciens en plein travaux de génie civil urbain pour le déploiement d'un réseau fibre optique de quartier.",
+      "location": "Côte d'Ivoire",
+      "year": "2024"
+    },
+    {
+      "category": "Fibre Optique",
+      "title": "Travaux de canalisations souterraines",
+      "description": "Creusement et pose de canalisations pour le passage de câbles fibre optique souterrains dans un secteur résidentiel.",
+      "location": "Côte d'Ivoire",
+      "year": "2024"
+    },
+    {
+      "category": "Équipe",
+      "title": "Techniciens BCA — Prêts pour le chantier",
+      "description": "Deux techniciens de BCA Technologies en tenue de terrain officielle, prêts à intervenir sur un chantier de déploiement fibre.",
+      "location": "Abidjan, CI",
+      "year": "2024"
+    }
   ],
-  "gallery_filters": ["Tous", "Fibre Optique", "Sécurité", "Réseau", "Domotique", "Wi-Fi", "IoT", "Énergie"],
+  "gallery_filters": ["Tous", "Fibre Optique", "Télécom", "Réseau", "Équipe"],
   "partenaires_page": {
     "technical_title": "Partenaires Techniques",
     "financial_title": "Partenaires Financiers"
+  },
+  "header": {
+    "ticker_hours":   "🕘 Lundi - Vendredi : 8h00 - 17h30",
+    "ticker_address": "📍 Angré Château, Cocody, Abidjan",
+    "ticker_tagline": "💡 Votre partenaire technologique pour un futur numérique"
   },
   "footer": {
     "tagline": "Innover, sécuriser, connecter : l'Afrique en mouvement",
@@ -575,6 +898,12 @@
     "follow": "Suivez-nous",
     "copyright": "© 2026 BCA Technologies Limited. Tous droits réservés.",
     "links": ["Accueil", "À propos", "Solutions", "Réalisations", "Contact"],
-    "services_list": ["Télécommunications", "Informatique & Électronique", "Systèmes de Sécurité", "Domotique", "Import & Export"]
+    "services_list": [
+      "Télécommunications",
+      "Informatique & Électronique",
+      "Systèmes de Sécurité",
+      "Domotique",
+      "Import & Export"
+    ]
   }
 }
