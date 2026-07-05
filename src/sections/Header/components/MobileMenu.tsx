@@ -51,7 +51,7 @@ export const MobileMenu = () => {
               href="en/index.html%3Felementor_library=liquid-kit-2%252F.html#"
               className="relative text-black text-base font-medium items-center box-border caret-transparent flex grow tracking-[0.01px] text-nowrap z-[1] px-5 py-[15px]"
             >
-              Nos offres
+              Nos Services
             </a>
             <span
               role="button"

@@ -3,7 +3,7 @@
     "home": "HOME",
     "about": "ABOUT",
     "activites": "ACTIVITIES",
-    "offres": "OFFERS",
+    "offres": "SERVICES",
     "solutions": "SOLUTIONS",
     "realisations": "PROJECTS",
     "references": "REFERENCES",
@@ -50,21 +50,23 @@
       "Voice, Video & Data",
       "Maintenance & Support"
     ],
-    "security_title": "Professional Security",
-    "security_subtitle": "Complete electronic security solutions for the protection of your premises and assets.",
+    "security_title": "Professional Security & Smart Solutions",
+    "security_subtitle": "Security systems, video surveillance, access control and smart solutions combined for optimal protection of your infrastructure.",
     "security_items": [
       "Wi-Fi video intercoms",
-      "GSM door openers",
       "Biometric access control",
-      "Anti-intrusion systems"
-    ],
-    "smart_title": "Smart Solutions",
-    "smart_subtitle": "Automation and IoT for smart buildings and connected agriculture.",
-    "smart_items": [
+      "Anti-intrusion systems",
       "Home Automation & BMS",
       "Smart Agriculture",
-      "IoT Connected Devices",
-      "Automated Access Control"
+      "IoT Connected Devices"
+    ],
+    "smart_title": "Solar Energy",
+    "smart_subtitle": "Solar energy solutions for autonomous and sustainable power supply of your installations and infrastructure.",
+    "smart_items": [
+      "Solar panel installation",
+      "Autonomous power solutions",
+      "Solar surveillance towers",
+      "Maintenance & monitoring"
     ]
   },
   "homestats": {
@@ -607,7 +609,7 @@
     "title": "CONTACT US",
     "subtitle": "Our team is available to answer all your questions and study your project.",
     "address_label": "Address",
-    "address": "Angré Château, Cocody, Abidjan, Côte d'Ivoire",
+    "address": "Cocody Angré, 9ème Tranche, Abidjan, Côte d'Ivoire",
     "phone_label": "Phone",
     "phone1": "+225 01 50 57 57 57",
     "phone2": "+225 07 99 57 57 57",
@@ -871,8 +873,9 @@
     "financial_title": "Financial Partners"
   },
   "header": {
-    "ticker_hours":   "🕘 Monday - Friday: 8:00 AM - 5:30 PM",
-    "ticker_address": "📍 Angré Château, Cocody, Abidjan",
+    "ticker_hours":   "🕘 Office hours Mon – Fri: 8:00 AM – 5:30 PM",
+    "ticker_support": "🔧 Technical support & services available 24/7",
+    "ticker_address": "📍 Cocody Angré, 9ème Tranche, Abidjan",
     "ticker_tagline": "💡 Your technology partner for a digital future"
   },
   "footer": {

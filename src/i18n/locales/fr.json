@@ -3,7 +3,7 @@
     "home": "ACCUEIL",
     "about": "À PROPOS",
     "activites": "ACTIVITÉS",
-    "offres": "OFFRES",
+    "offres": "SERVICES",
     "solutions": "SOLUTIONS",
     "realisations": "RÉALISATIONS",
     "references": "RÉFÉRENCES",
@@ -50,21 +50,23 @@
       "Voix, Vidéo & Données",
       "Maintenance & Support"
     ],
-    "security_title": "Sécurité Professionnelle",
-    "security_subtitle": "Solutions complètes de sécurité électronique pour la protection de vos locaux et actifs.",
+    "security_title": "Sécurité Professionnelle & Solutions Intelligentes",
+    "security_subtitle": "Systèmes de sécurité, vidéosurveillance, contrôle d'accès et solutions intelligentes combinés pour une protection optimale de vos infrastructures.",
     "security_items": [
       "Interphones vidéo Wi-Fi",
-      "Ouvre-portes GSM",
       "Contrôle d'accès biométrique",
-      "Systèmes anti-intrusion"
-    ],
-    "smart_title": "Solutions Intelligentes",
-    "smart_subtitle": "Automatisation et IoT pour des bâtiments intelligents et une agriculture connectée.",
-    "smart_items": [
+      "Systèmes anti-intrusion",
       "Domotique & BMS",
       "Agriculture intelligente",
-      "Objets connectés IoT",
-      "Contrôle d'accès automatisé"
+      "Objets connectés IoT"
+    ],
+    "smart_title": "Énergie Solaire",
+    "smart_subtitle": "Solutions d'énergie solaire pour l'alimentation autonome et durable de vos installations et infrastructures.",
+    "smart_items": [
+      "Installation de panneaux solaires",
+      "Solutions d'alimentation autonome",
+      "Tours de surveillance solaires",
+      "Maintenance & monitoring"
     ]
   },
   "homestats": {
@@ -614,7 +616,7 @@
     "title": "CONTACTEZ-NOUS",
     "subtitle": "Notre équipe est à votre disposition pour répondre à toutes vos questions et étudier votre projet.",
     "address_label": "Adresse",
-    "address": "Angré Château, Cocody, Abidjan, Côte d'Ivoire",
+    "address": "Cocody Angré, 9ème Tranche, Abidjan, Côte d'Ivoire",
     "phone_label": "Téléphone",
     "phone1": "+225 01 50 57 57 57",
     "phone2": "+225 07 99 57 57 57",
@@ -881,8 +883,9 @@
     "financial_title": "Partenaires Financiers"
   },
   "header": {
-    "ticker_hours":   "🕘 Lundi - Vendredi : 8h00 - 17h30",
-    "ticker_address": "📍 Angré Château, Cocody, Abidjan",
+    "ticker_hours":   "🕘 Bureaux ouverts Lun – Ven : 8h00 – 17h30",
+    "ticker_support": "🔧 Support technique & prestations disponibles 24h/24 et 7j/7",
+    "ticker_address": "📍 Cocody Angré, 9ème Tranche, Abidjan",
     "ticker_tagline": "💡 Votre partenaire technologique pour un futur numérique"
   },
   "footer": {

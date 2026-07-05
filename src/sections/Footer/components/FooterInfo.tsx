@@ -10,7 +10,7 @@ export const FooterInfo = () => {
         </strong>
       </p>
       <p className="text-neutral-300 text-[15.2px] box-border caret-transparent leading-[24.32px] break-words text-center mb-4 md:text-left">
-        Angré CNPS, Abidjan
+        Cocody Angré, 9ème Tranche, Abidjan, Côte d'Ivoire
       </p>
       <div className="box-border caret-transparent break-words text-center mt-[15px] md:text-left">
         <a

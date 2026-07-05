@@ -423,12 +423,12 @@ const Expertise = ({ navigate }: Props) => {
     },
     {
       page: "activites" as PageId,
-      accentColor: "border-l-blue-400",
+      accentColor: "border-l-yellow-500",
       title: t("expertise.smart_title"),
       subtitle: t("expertise.smart_subtitle"),
       items: t("expertise.smart_items", { returnObjects: true }) as string[],
-      image: "https://images.unsplash.com/photo-1558002038-1055907df827?w=600&q=80",
-      imageAlt: "Maison intelligente IoT connectée",
+      image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80",
+      imageAlt: "Panneaux solaires énergie renouvelable",
     },
   ];
 

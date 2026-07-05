@@ -74,6 +74,7 @@ export const BCAHeader = ({ currentPage, navigate }: HeaderProps) => {
 
   const tickerBase = [
     t("header.ticker_hours"),
+    t("header.ticker_support"),
     t("header.ticker_address"),
     t("header.ticker_tagline"),
   ];
