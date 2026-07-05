@@ -230,78 +230,136 @@ const CEOMessage = () => {
 /* ── Présentation (Mission / Vision / Valeurs) ── */
 const Presentation = () => {
   const { t } = useTranslation();
+
+  const mvv = [
+    {
+      accent: "bg-blue-600",
+      border: "border-blue-100",
+      textAccent: "text-blue-600",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5">
+          <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+      ),
+      title: t("presentation.mission_title"),
+      text: t("presentation.mission_text"),
+    },
+    {
+      accent: "bg-indigo-600",
+      border: "border-indigo-100",
+      textAccent: "text-indigo-600",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5">
+          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+        </svg>
+      ),
+      title: t("presentation.vision_title"),
+      text: t("presentation.vision_text"),
+    },
+    {
+      accent: "bg-violet-600",
+      border: "border-violet-100",
+      textAccent: "text-violet-600",
+      icon: (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      ),
+      title: t("presentation.values_title"),
+      text: t("presentation.values_text"),
+    },
+  ];
+
+  const groups = [
+    {
+      label: "Notre Histoire",
+      color: "bg-blue-600",
+      paragraphs: [t("presentation.text1"), t("presentation.text2")],
+    },
+    {
+      label: "Nos Domaines d'Excellence",
+      color: "bg-indigo-600",
+      paragraphs: [t("presentation.text3")],
+    },
+    {
+      label: "Notre Groupe International",
+      color: "bg-violet-600",
+      paragraphs: [t("presentation.text4"), t("presentation.text5"), t("presentation.text6")],
+    },
+  ];
+
   return (
-    <section className="bg-gray-50 py-20 px-6 relative overflow-hidden">
+    <section className="bg-gray-50 py-16 sm:py-20 px-4 sm:px-6 relative overflow-hidden">
       <FiberBg variant="subtle" />
       <div className="relative z-10 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
-          <div className="space-y-5 text-gray-700 leading-relaxed text-base">
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900">
-                {t("presentation.title")}
-              </h2>
-              <div className="mt-2 w-8 h-0.5 bg-blue-600" />
-            </div>
-            <p>{t("presentation.text1")}</p>
-            <p>{t("presentation.text2")}</p>
-            <p>{t("presentation.text3")}</p>
-            <p>{t("presentation.text4")}</p>
-            <p>{t("presentation.text5")}</p>
-            <p>{t("presentation.text6")}</p>
-            <div className="pt-2 grid grid-cols-3 gap-3">
-              {[
-                {
-                  label: t("presentation.founded_label"),
-                  value: "1er juill. 2026",
-                },
-                { label: t("presentation.hq_label"), value: "Cocody, Abidjan" },
-                {
-                  label: t("presentation.founder_label"),
-                  value: "G. P. ANGAHI",
-                },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="bg-white border border-gray-200 rounded p-3 flex flex-col gap-0.5"
-                >
-                  <span className="text-gray-400 text-[10px] uppercase tracking-wider">
-                    {item.label}
-                  </span>
-                  <span className="text-gray-900 font-semibold text-sm">
-                    {item.value}
-                  </span>
-                </div>
-              ))}
-            </div>
+
+        {/* En-tête */}
+        <div className="mb-10">
+          <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-4">
+            {t("presentation.title")}
           </div>
-          <div className="space-y-3">
-            {[
-              {
-                title: t("presentation.mission_title"),
-                text: t("presentation.mission_text"),
-              },
-              {
-                title: t("presentation.vision_title"),
-                text: t("presentation.vision_text"),
-              },
-              {
-                title: t("presentation.values_title"),
-                text: t("presentation.values_text"),
-              },
-            ].map((card, i) => (
-              <div
-                key={i}
-                className="border-l-4 border-l-blue-600 bg-gray-50 p-5"
-              >
-                <h3 className="font-semibold text-gray-900 text-sm mb-1">
-                  {card.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {card.text}
-                </p>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+            BCA Technologies Limited
+          </h2>
+          <p className="text-gray-500 text-sm max-w-2xl">{t("presentation.text1_short")}</p>
+          <div className="mt-4 w-8 h-0.5 bg-blue-600" />
+        </div>
+
+        {/* Barre de faits clés */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10">
+          {[
+            { label: t("presentation.founded_label"), value: "1er juill. 2026", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> },
+            { label: t("presentation.hq_label"),      value: "Cocody, Abidjan", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> },
+            { label: t("presentation.founder_label"), value: "G. P. ANGAHI",     icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> },
+            { label: "Secteur",                        value: "Tech & Énergie",   icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> },
+          ].map((f, i) => (
+            <div key={i} className="bg-white rounded-xl border border-gray-200 px-4 py-3 flex items-center gap-3">
+              <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0">
+                {f.icon}
+              </div>
+              <div className="min-w-0">
+                <p className="text-gray-400 text-[10px] uppercase tracking-wider truncate">{f.label}</p>
+                <p className="text-gray-900 font-semibold text-xs sm:text-sm truncate">{f.value}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Corps : texte groupé + MVV */}
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-14 items-start">
+
+          {/* Texte en 3 groupes thématiques (3/5) */}
+          <div className="lg:col-span-3 space-y-8">
+            {groups.map((g, gi) => (
+              <div key={gi}>
+                <div className="flex items-center gap-2 mb-3">
+                  <span className={`w-2 h-2 rounded-full ${g.color} flex-shrink-0`} />
+                  <h3 className="text-xs font-bold uppercase tracking-widest text-gray-400">{g.label}</h3>
+                </div>
+                <div className="space-y-3 pl-4 border-l border-gray-200">
+                  {g.paragraphs.map((p, pi) => (
+                    <p key={pi} className="text-gray-600 text-sm leading-relaxed">{p}</p>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
+
+          {/* Mission / Vision / Valeurs (2/5) */}
+          <div className="lg:col-span-2 space-y-4">
+            {mvv.map((card, i) => (
+              <div key={i} className={`bg-white rounded-2xl border ${card.border} p-5 shadow-sm`}>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className={`w-8 h-8 rounded-lg ${card.accent} text-white flex items-center justify-center flex-shrink-0`}>
+                    {card.icon}
+                  </div>
+                  <h3 className={`font-bold text-sm ${card.textAccent}`}>{card.title}</h3>
+                </div>
+                <p className="text-gray-600 text-sm leading-relaxed">{card.text}</p>
+              </div>
+            ))}
+          </div>
+
         </div>
       </div>
     </section>
