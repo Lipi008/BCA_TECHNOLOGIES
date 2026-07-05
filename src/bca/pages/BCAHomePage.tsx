@@ -88,7 +88,7 @@ const Hero = ({ navigate }: Props) => {
     <section className="relative w-full bg-white overflow-hidden">
 
       {/* ── SLIDER : logo/image pleine largeur ── */}
-      <div className="relative w-full" style={{ aspectRatio: "16/7" }}>
+      <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[16/7]">
         {!(HERO_SLIDES[slide] as any).noImage && (
           <img
             src={HERO_SLIDES[slide].src}
@@ -118,7 +118,7 @@ const Hero = ({ navigate }: Props) => {
         {/* Caption slide (label + description + items) */}
         {slide !== 0 && HERO_SLIDES[slide].label && (
           <div
-            className="absolute bottom-14 left-0 right-0 px-8 md:px-16 transition-all duration-500 z-10"
+            className="absolute bottom-6 sm:bottom-14 left-0 right-0 px-4 sm:px-8 md:px-16 transition-all duration-500 z-10"
             style={{ opacity: fading ? 0 : 1, transform: fading ? "translateY(8px)" : "translateY(0)" }}
           >
             {slide === 1 && (
@@ -582,38 +582,178 @@ const Actualites = ({ navigate }: Props) => {
 };
 
 /* ─────────────────────────────────────────────
-   TÉMOIGNAGES
+   TÉMOIGNAGES + COMMENTAIRES VISITEURS
 ───────────────────────────────────────────── */
+type UserComment = { name: string; company: string; message: string; rating: number; date: string };
+
+const STORAGE_KEY = "bca_visitor_comments";
+
+const loadComments = (): UserComment[] => {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]"); }
+  catch { return []; }
+};
+
+const StarRating = ({ value, onChange }: { value: number; onChange?: (v: number) => void }) => (
+  <div className="flex gap-1">
+    {[1, 2, 3, 4, 5].map((s) => (
+      <button
+        key={s}
+        type="button"
+        onClick={() => onChange?.(s)}
+        className={`text-xl transition-colors ${s <= value ? "text-yellow-400" : "text-gray-300"} ${onChange ? "hover:text-yellow-300 cursor-pointer" : "cursor-default"}`}
+        aria-label={`${s} étoile${s > 1 ? "s" : ""}`}
+      >★</button>
+    ))}
+  </div>
+);
+
 const Testimonials = () => {
   const { t } = useTranslation();
   const items = t("testimonials.items", { returnObjects: true }) as Array<{ quote: string; name: string; company: string; initials: string }>;
+  const [comments, setComments] = React.useState<UserComment[]>(loadComments);
+  const [form, setForm] = React.useState({ name: "", company: "", message: "", rating: 5 });
+  const [submitted, setSubmitted] = React.useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!form.name.trim() || !form.message.trim()) return;
+    const newComment: UserComment = {
+      ...form,
+      date: new Date().toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }),
+    };
+    const updated = [newComment, ...comments];
+    setComments(updated);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
+    setForm({ name: "", company: "", message: "", rating: 5 });
+    setSubmitted(true);
+    setTimeout(() => setSubmitted(false), 3000);
+  };
 
   return (
-    <section className="bg-white py-20 px-6 border-t border-gray-100">
-      <div className="max-w-6xl mx-auto">
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900">{t("testimonials.title")}</h2>
-          <p className="mt-1 text-gray-500 text-sm">{t("testimonials.satisfaction")}</p>
-          <div className="mt-3 w-8 h-0.5 bg-blue-600" />
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {items.map((item, i) => (
-            <div key={i} className="bg-gray-50 border border-gray-200 rounded-lg p-6">
-              <p className="text-gray-700 text-sm leading-relaxed italic mb-5">&ldquo;{item.quote}&rdquo;</p>
-              <div className="flex items-center gap-3 pt-3 border-t border-gray-100">
-                <div className="w-9 h-9 rounded-full bg-blue-700 flex items-center justify-center text-white font-bold text-xs flex-shrink-0">
-                  {item.initials}
-                </div>
-                <div>
-                  <p className="text-gray-900 font-semibold text-sm">{item.name}</p>
-                  <p className="text-gray-400 text-xs">{item.company}</p>
+    <>
+      {/* Témoignages clients (existants) */}
+      <section className="bg-white py-20 px-6 border-t border-gray-100">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900">{t("testimonials.title")}</h2>
+            <p className="mt-1 text-gray-500 text-sm">{t("testimonials.satisfaction")}</p>
+            <div className="mt-3 w-8 h-0.5 bg-blue-600" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {items.map((item, i) => (
+              <div key={i} className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+                <p className="text-gray-700 text-sm leading-relaxed italic mb-5">&ldquo;{item.quote}&rdquo;</p>
+                <div className="flex items-center gap-3 pt-3 border-t border-gray-100">
+                  <div className="w-9 h-9 rounded-full bg-blue-700 flex items-center justify-center text-white font-bold text-xs flex-shrink-0">
+                    {item.initials}
+                  </div>
+                  <div>
+                    <p className="text-gray-900 font-semibold text-sm">{item.name}</p>
+                    <p className="text-gray-400 text-xs">{item.company}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Commentaires visiteurs */}
+      <section className="bg-gray-50 py-20 px-6 border-t border-gray-100">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900">Partagez votre expérience</h2>
+            <p className="mt-1 text-gray-500 text-sm">Votre avis nous aide à améliorer nos services. Il sera affiché directement sur cette page.</p>
+            <div className="mt-3 w-8 h-0.5 bg-blue-600" />
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Formulaire */}
+            <div className="bg-white rounded-xl border border-gray-200 p-8 shadow-sm">
+              <h3 className="font-semibold text-gray-900 text-base mb-6">Laisser un commentaire</h3>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-600 uppercase tracking-wider mb-1.5">Nom *</label>
+                    <input
+                      type="text"
+                      required
+                      value={form.name}
+                      onChange={(e) => setForm({ ...form, name: e.target.value })}
+                      placeholder="Votre nom"
+                      className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-200 transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-600 uppercase tracking-wider mb-1.5">Société</label>
+                    <input
+                      type="text"
+                      value={form.company}
+                      onChange={(e) => setForm({ ...form, company: e.target.value })}
+                      placeholder="Votre société (optionnel)"
+                      className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-200 transition-all"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold text-gray-600 uppercase tracking-wider mb-1.5">Note</label>
+                  <StarRating value={form.rating} onChange={(v) => setForm({ ...form, rating: v })} />
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold text-gray-600 uppercase tracking-wider mb-1.5">Commentaire *</label>
+                  <textarea
+                    required
+                    rows={4}
+                    value={form.message}
+                    onChange={(e) => setForm({ ...form, message: e.target.value })}
+                    placeholder="Partagez votre expérience avec BCA Technologies..."
+                    className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-200 transition-all resize-none"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-blue-700 hover:bg-blue-600 text-white font-semibold py-3 rounded-lg text-sm transition-colors"
+                >
+                  Publier mon commentaire
+                </button>
+                {submitted && (
+                  <p className="text-green-600 text-sm font-medium text-center">✓ Merci ! Votre commentaire a été publié.</p>
+                )}
+              </form>
+            </div>
+
+            {/* Commentaires publiés */}
+            <div className="space-y-4 max-h-[520px] overflow-y-auto pr-1">
+              {comments.length === 0 ? (
+                <div className="text-center py-16 text-gray-400 text-sm">
+                  <p className="text-3xl mb-3">💬</p>
+                  <p>Soyez le premier à laisser un commentaire.</p>
+                </div>
+              ) : (
+                comments.map((c, i) => (
+                  <div key={i} className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+                    <div className="flex items-start justify-between gap-3 mb-3">
+                      <div className="flex items-center gap-3">
+                        <div className="w-9 h-9 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-xs flex-shrink-0">
+                          {c.name.split(" ").map((w) => w[0]).join("").slice(0, 2).toUpperCase()}
+                        </div>
+                        <div>
+                          <p className="text-gray-900 font-semibold text-sm">{c.name}</p>
+                          {c.company && <p className="text-gray-400 text-xs">{c.company}</p>}
+                        </div>
+                      </div>
+                      <StarRating value={c.rating} />
+                    </div>
+                    <p className="text-gray-600 text-sm leading-relaxed italic">&ldquo;{c.message}&rdquo;</p>
+                    <p className="text-gray-300 text-xs mt-3">{c.date}</p>
+                  </div>
+                ))
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
@@ -671,6 +811,47 @@ const CtaBanner = ({ navigate }: Props) => {
 };
 
 /* ─────────────────────────────────────────────
+   EXPERTISE GROUPE BCA — chiffres Best Africa
+───────────────────────────────────────────── */
+const GroupExpertiseStats = () => {
+  const { t } = useTranslation();
+  const items = t("group_stats.items", { returnObjects: true }) as Array<{ value: string; label: string; period: string }>;
+
+  return (
+    <section className="px-4 sm:px-6 py-10">
+      <div className="max-w-6xl mx-auto">
+        <div
+          className="rounded-2xl px-6 sm:px-10 py-10"
+          style={{ background: "linear-gradient(135deg, #0f2c6f 0%, #1a3f9c 60%, #0f2c6f 100%)" }}
+        >
+          {/* En-tête */}
+          <div className="text-center mb-8">
+            <h3 className="text-white font-bold text-lg sm:text-xl">{t("group_stats.title")}</h3>
+            <p className="text-blue-200 text-xs sm:text-sm mt-1.5 max-w-xl mx-auto leading-relaxed">
+              {t("group_stats.subtitle")}
+            </p>
+          </div>
+
+          {/* Grille de chiffres */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-px bg-white/10 rounded-xl overflow-hidden">
+            {items.map((s, i) => (
+              <div
+                key={i}
+                className="flex flex-col items-center justify-center text-center px-3 py-5 bg-transparent hover:bg-white/5 transition-colors"
+              >
+                <span className="text-white font-black text-lg sm:text-xl leading-tight">{s.value}</span>
+                <span className="text-blue-100 text-[11px] sm:text-xs font-medium mt-1.5 leading-tight">{s.label}</span>
+                <span className="text-blue-300/70 text-[10px] mt-1">{s.period}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+/* ─────────────────────────────────────────────
    PAGE PRINCIPALE
 ───────────────────────────────────────────── */
 export const BCAHomePage = ({ navigate }: Props) => {
@@ -679,7 +860,7 @@ export const BCAHomePage = ({ navigate }: Props) => {
       <Hero navigate={navigate} />
       <Presentation navigate={navigate} />
       <Expertise navigate={navigate} />
-      <StatsStrip />
+      <GroupExpertiseStats />
       <ReferencesSlider navigate={navigate} />
       <BCAWhyUs />
       <PartnersSlider navigate={navigate} />

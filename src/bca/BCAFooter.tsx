@@ -19,11 +19,13 @@ export const BCAFooter = ({ navigate }: FooterProps) => {
   const [newsletterSent, setNewsletterSent] = useState(false);
 
   const footerPageLinks: { label: string; page: PageId }[] = [
-    { label: lang === "fr" ? "Accueil" : "Home", page: "accueil" },
-    { label: lang === "fr" ? "À propos" : "About", page: "about" },
-    { label: lang === "fr" ? "Activités" : "Activities", page: "activites" },
-    { label: lang === "fr" ? "Réalisations" : "Projects", page: "realisations" },
-    { label: "Contact", page: "contact" },
+    { label: lang === "fr" ? "Accueil"                   : "Home",                    page: "accueil"      },
+    { label: lang === "fr" ? "À propos"                  : "About",                   page: "about"        },
+    { label: lang === "fr" ? "Services"                  : "Services",                page: "offres"       },
+    { label: lang === "fr" ? "Réalisations"              : "Projects",                page: "realisations" },
+    { label: lang === "fr" ? "Références & Partenaires"  : "References & Partners",   page: "partenaires"  },
+    { label: lang === "fr" ? "Actualités"                : "News",                    page: "actualites"   },
+    { label: "Contact",                                                                page: "contact"      },
   ];
 
   const socials = [

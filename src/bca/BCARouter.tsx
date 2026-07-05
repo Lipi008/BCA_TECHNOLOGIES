@@ -71,7 +71,7 @@ export const BCARouter = () => {
   const pages: Record<PageId, JSX.Element> = {
     accueil: <BCAHomePage navigate={navigate} />,
     about: <BCAAboutPage />,
-    activites: <BCAActivitiesPage />,
+    activites: <BCAActivitiesPage navigate={navigate} />,
     offres: <BCAOffresPage navigate={navigate} />,
     realisations: <BCARealisationsPage />,
     references: <BCAReferencesPage />,

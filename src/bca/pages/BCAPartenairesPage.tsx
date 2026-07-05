@@ -11,12 +11,6 @@ import logoCanalPlus     from "../../img/image_a_use/Canal_+_Afrique_logo.jpg";
 import logoBicici        from "../../img/image_a_use/Bicici.png";
 import logoBollore       from "../../img/image_a_use/Bolloré_Transport_Logistics.png";
 import logoSocGen        from "../../img/image_a_use/SocieteGenerale.jpg";
-import logoEXFO          from "../../img/image_a_use/exfo.png";
-import logoInfractive    from "../../img/image_a_use/infractive-01.jpg";
-import logo3M            from "../../img/image_a_use/m3.png";
-import logoEcobank       from "../../img/image_a_use/Ecobank CI.jpg";
-import logoBridgeBank    from "../../img/image_a_use/bridge_bank.png";
-import logoBanqueAtl     from "../../img/image_a_use/Banque_Atlantique.png";
 
 const PageHero = ({ badge, title, subtitle }: { badge: string; title: string; subtitle?: string }) => (
   <section className="relative py-24 px-6 overflow-hidden" style={{ background: "linear-gradient(135deg, #2563eb 0%, #4f46e5 50%, #7c3aed 100%)" }}>
@@ -41,19 +35,6 @@ const REFERENCES: { name: string; logo?: string; color?: string }[] = [
   { name: "Université FHB",          color: "#006837"    },
   { name: "TOTAL Énergies CI",       logo: logoTotal     },
   { name: "Bolloré Logistics",       logo: logoBollore   },
-];
-
-const TECHNICAL_PARTNERS = [
-  { name: "DACOM FARM",  logo: undefined,       bg: "#F5A623", text: "DACOM\nFARM"  },
-  { name: "EXFO",        logo: logoEXFO,        bg: "#005BAA", text: "EXFO"         },
-  { name: "Infractive",  logo: logoInfractive,  bg: "#7B2D8B", text: "INFRACTIVE"  },
-  { name: "3M",          logo: logo3M,          bg: "#FF0000", text: "3M"           },
-];
-
-const FINANCIAL_PARTNERS = [
-  { name: "Ecobank",           logo: logoEcobank,    bg: "#00529B", text: "ECOBANK"           },
-  { name: "Bridge Bank Group", logo: logoBridgeBank, bg: "#C04A1A", text: "BRIDGE\nBANK"      },
-  { name: "Banque Atlantique", logo: logoBanqueAtl,  bg: "#E07B00", text: "BANQUE\nATLANTIQUE" },
 ];
 
 const ReferenceCard = ({ name, logo, color, index }: { name: string; logo?: string; color?: string; index: number }) => {
@@ -84,40 +65,12 @@ const ReferenceCard = ({ name, logo, color, index }: { name: string; logo?: stri
   );
 };
 
-const PartnerCard = ({ p, i }: { p: { name: string; logo?: string; bg: string; text: string }; i: number }) => {
-  const [imgFailed, setImgFailed] = React.useState(false);
-  const showFallback = imgFailed || !p.logo;
-
-  return (
-    <div className={`animate-on-scroll stagger-${(i % 3) + 1} group flex flex-col items-center justify-center bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg hover:border-orange-200 transition-all p-6 gap-3`}>
-      <div className="w-28 h-16 flex items-center justify-center overflow-hidden">
-        {!showFallback ? (
-          <img
-            src={p.logo}
-            alt={p.name}
-            className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-            onError={() => setImgFailed(true)}
-          />
-        ) : (
-          <div
-            className="w-full h-full flex items-center justify-center rounded-lg text-white font-black text-sm text-center leading-tight px-2"
-            style={{ backgroundColor: p.bg, whiteSpace: "pre-line" }}
-          >
-            {p.text}
-          </div>
-        )}
-      </div>
-      <span className="text-xs text-gray-400 font-medium text-center leading-tight">{p.name}</span>
-    </div>
-  );
-};
-
 export const BCAPartenairesPage = () => {
   const { t } = useTranslation();
 
   return (
     <>
-      <PageHero badge="Références & Partenaires" title="Nos Références & Partenaires" subtitle="Les entreprises qui nous font confiance et les partenaires qui renforcent notre expertise" />
+      <PageHero badge="Références & Partenaires" title="Nos Références & Partenaires" subtitle="Les entreprises qui nous font confiance et notre partenaire stratégique officiel" />
 
       {/* Références clients */}
       <section className="bg-white py-20 px-6 relative overflow-hidden">
@@ -136,33 +89,56 @@ export const BCAPartenairesPage = () => {
         </div>
       </section>
 
-      {/* Partenaires techniques */}
+      {/* Partenaire officiel — BCA Multiservices Inc. */}
       <section className="bg-gray-50 py-20 px-6 relative overflow-hidden">
         <FiberBg variant="subtle" />
         <div className="relative z-10 max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-10">
-            <div className="w-1 h-8 bg-orange-500 rounded-full" />
-            <h2 className="text-2xl font-bold text-gray-800">Partenaires Techniques</h2>
+            <div className="w-1 h-8 bg-blue-700 rounded-full" />
+            <h2 className="text-2xl font-bold text-gray-800">Notre Partenaire Officiel</h2>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-            {TECHNICAL_PARTNERS.map((p, i) => (
-              <PartnerCard key={i} p={p} i={i} />
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Partenaires financiers */}
-      <section className="bg-gray-50 py-20 px-6 relative overflow-hidden">
-        <div className="relative z-10 max-w-5xl mx-auto">
-          <div className="flex items-center gap-3 mb-10">
-            <div className="w-1 h-8 bg-blue-600 rounded-full" />
-            <h2 className="text-2xl font-bold text-gray-800">Partenaires Financiers</h2>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-lg">
-            {FINANCIAL_PARTNERS.map((p, i) => (
-              <PartnerCard key={i} p={p} i={i} />
-            ))}
+          <div className="bg-white rounded-2xl border border-blue-100 shadow-md overflow-hidden">
+            {/* En-tête de la carte */}
+            <div className="flex flex-col sm:flex-row sm:items-center gap-6 p-8 border-b border-gray-100">
+              {/* Logo / monogramme */}
+              <div className="flex-shrink-0 flex items-center justify-center w-24 h-24 rounded-2xl text-white font-black text-2xl select-none"
+                style={{ background: "linear-gradient(135deg, #1d4ed8 0%, #7c3aed 100%)" }}>
+                BCA
+              </div>
+              <div>
+                <div className="inline-flex items-center gap-1.5 bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1 rounded-full mb-2 uppercase tracking-wide border border-blue-200">
+                  ★ Partenaire officiel
+                </div>
+                <h3 className="text-xl font-black text-gray-900">BCA Multiservices Inc.</h3>
+                <p className="text-gray-500 text-sm mt-0.5">Sorel-Tracy, Québec — Canada</p>
+              </div>
+            </div>
+
+            {/* Description */}
+            <div className="p-8 space-y-4 text-gray-600 text-sm leading-relaxed">
+              <p>
+                Principal partenaire officiel de BCA Technologies, <strong className="text-gray-900">BCA Multiservices Inc</strong> est la maison mère canadienne du groupe BCA. Fondée en <strong>février 2016</strong> et basée à <strong>Sorel-Tracy (Québec, Canada)</strong>, la société joue le rôle de <strong>centrale d'achat du groupe</strong> : elle regroupe et mutualise les achats de l'ensemble de ses filiales afin de négocier de meilleurs prix et conditions, tout en sécurisant des tarifs compétitifs ainsi que des services logistiques et promotionnels, transformant ainsi l'approvisionnement en véritable levier de croissance.
+              </p>
+              <p>
+                Présente au <strong>Canada</strong> et en <strong>Afrique de l'Ouest</strong> (Côte d'Ivoire, Mali, Ghana, Burkina Faso), elle s'adresse principalement aux opérateurs de réseaux mobiles, aux fournisseurs d'accès Internet (FAI) et aux installateurs télécom, sur les segments <strong>B2C et B2B</strong>.
+              </p>
+            </div>
+
+            {/* Méta-infos */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-0 border-t border-gray-100">
+              {[
+                { label: "Fondée en", value: "Février 2016" },
+                { label: "Siège", value: "Sorel-Tracy, Québec" },
+                { label: "Marchés", value: "B2C & B2B" },
+                { label: "Présence", value: "Canada + Afrique de l'Ouest" },
+              ].map((item, i) => (
+                <div key={i} className="flex flex-col gap-0.5 px-6 py-4 border-r last:border-r-0 border-gray-100">
+                  <span className="text-gray-400 text-[10px] uppercase tracking-widest">{item.label}</span>
+                  <span className="text-gray-900 font-semibold text-sm">{item.value}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

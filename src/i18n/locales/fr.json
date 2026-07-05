@@ -77,6 +77,20 @@
     "devices_label": "Équipements connectés installés",
     "recommends_label": "Entreprises recommandent BCA"
   },
+  "group_stats": {
+    "title": "L'expertise du groupe BCA",
+    "subtitle": "Illustration avec Best Africa Limited (Mali), notre entreprise sœur experte en fibre optique",
+    "items": [
+      { "value": "76 475",     "label": "Études réalisées",        "period": "2021 – 2026" },
+      { "value": "41 904",     "label": "Installations réalisées", "period": "2021 – 2026" },
+      { "value": "57 226 014", "label": "Dérangements traités",    "period": "2021 – 2026" },
+      { "value": "542 014",    "label": "Câble FO déployé",        "period": "2025 – 2026" },
+      { "value": "120 104",    "label": "Câble FO maintenu",       "period": "2024 – 2026" },
+      { "value": "4 135",      "label": "PCO déployés",            "period": "2025 – 2026" },
+      { "value": "851",        "label": "Sites maintenus",         "period": "2024 – 2026" },
+      { "value": ">98%",       "label": "Taux de réalisation",     "period": "2021 – 2026" }
+    ]
+  },
   "home_news": {
     "badge": "Actualités",
     "title": "DERNIÈRES NOUVELLES",
@@ -140,54 +154,58 @@
   "activites": {
     "page_title": "NOS ACTIVITÉS",
     "page_subtitle": "Un large spectre de compétences technologiques au service des entreprises africaines.",
-    "telecom_title": "Télécommunications",
+    "telecom_title": "Télécommunications & Fibre Optique",
     "telecom_desc": "Fourniture, installation et maintenance de réseaux télécoms haute performance.",
+    "telecom_long": "BCA Technologies Limited conçoit, déploie et maintient des infrastructures de télécommunications à très haut débit adaptées aux besoins des entreprises, des opérateurs et des institutions. Spécialisée dans la fibre optique (FTTH, FTTB, FTTC, FTTN, GPON), nous assurons la conception complète des réseaux — du génie civil jusqu'à la livraison clé en main — en passant par les tests OTDR, le raccordement et la gestion de la connectivité voix, vidéo et données.",
     "telecom_items": [
-      "Déploiement fibre optique",
-      "Câblage structuré",
+      "Déploiement FTTH / FTTB / FTTC / FTTN",
+      "Réseaux GPON & câblage structuré",
       "Réseaux Wi-Fi Enterprise",
-      "VoIP & Téléphonie IP"
+      "VoIP & Téléphonie IP",
+      "Tests OTDR & maintenance préventive"
     ],
     "it_title": "Informatique & Électronique",
     "it_desc": "Équipements IT de pointe et solutions électroniques pour votre infrastructure.",
+    "it_long": "Nous fournissons des équipements informatiques et électroniques de marques référencées (Dell, HP, Cisco, Huawei, Samsung), adaptés aux infrastructures professionnelles. Notre équipe assure également le déploiement, la configuration et la maintenance de vos parcs informatiques, en garantissant des performances optimales et une sécurité renforcée pour vos données et systèmes.",
     "it_items": [
-      "Serveurs & Stockage",
-      "Postes de travail",
-      "Switches & Routeurs",
-      "Matériel bureautique"
+      "Serveurs & stockage (NAS, SAN)",
+      "Postes de travail & périphériques",
+      "Switches, routeurs & pare-feu",
+      "Matériel bureautique professionnel",
+      "Audit & maintenance du parc IT"
     ],
     "security_title": "Sécurité Électronique",
     "security_desc": "Protection complète de vos locaux et de votre patrimoine.",
+    "security_long": "BCA Technologies Limited intègre des solutions de sécurité électronique complètes pour la protection de vos locaux, actifs et données. De la vidéosurveillance IP au contrôle d'accès biométrique, en passant par les systèmes d'alarme et la détection d'intrusion, nous concevons des dispositifs sur mesure — robustes, évolutifs et compatibles avec les standards internationaux.",
     "security_items": [
-      "Vidéosurveillance CCTV",
+      "Vidéosurveillance CCTV / IP HD",
       "Contrôle d'accès biométrique",
-      "Alarmes & Détection",
-      "Sécurité périmétrique"
+      "Alarmes & détection d'intrusion",
+      "Sécurité périmétrique",
+      "Interphones vidéo Wi-Fi"
     ],
     "domotique_title": "Domotique & BMS",
     "domotique_desc": "Automatisation intelligente pour vos bâtiments résidentiels et tertiaires.",
+    "domotique_long": "Nous automatisons la gestion de vos bâtiments grâce à des solutions BMS (Building Management System) et domotique de dernière génération. Contrôle de l'éclairage, climatisation intelligente, gestion énergétique et sécurité intégrée : vos installations deviennent plus efficaces, plus confortables et moins énergivores, tout en étant pilotables à distance via smartphone ou tablette.",
     "domotique_items": [
-      "Gestion éclairage",
-      "Climatisation automatisée",
-      "Gestion énergétique",
-      "Smart Building"
+      "Gestion intelligente de l'éclairage",
+      "Climatisation & chauffage automatisés",
+      "Gestion énergétique & comptage",
+      "Smart Building & IoT intégré",
+      "Pilotage à distance (smartphone / tablette)"
     ],
-    "import_title": "Import & Export",
-    "import_desc": "Logistique internationale et conformité réglementaire pour vos achats mondiaux.",
-    "import_items": [
-      "Sourcing Amérique du Nord",
-      "Dédouanement",
-      "Livraison B2B",
-      "Conformité CEDEAO"
-    ],
-    "energy_title": "Équipements Électriques",
-    "energy_desc": "Solutions d'éclairage et équipements électriques pour tous vos projets.",
+    "energy_title": "Énergie Solaire",
+    "energy_desc": "Étude, fourniture, installation et maintenance de systèmes photovoltaïques pour particuliers, entreprises et collectivités.",
+    "energy_long": "BCA Technologies Limited propose des solutions d'énergie solaire complètes pour assurer l'alimentation autonome et durable de vos installations. De l'étude de faisabilité à l'installation et à la maintenance des systèmes photovoltaïques, nous accompagnons particuliers, entreprises et collectivités dans leur transition énergétique — en Côte d'Ivoire et dans toute l'Afrique de l'Ouest. Nos solutions incluent également des tours de surveillance solaires pour les zones reculées.",
     "energy_items": [
-      "Éclairage LED industriel",
-      "Tableaux électriques",
-      "Câbles & Accessoires",
-      "Énergies renouvelables"
-    ]
+      "Étude de faisabilité & dimensionnement",
+      "Installation de panneaux solaires",
+      "Systèmes photovoltaïques autonomes (off-grid)",
+      "Tours de surveillance solaires",
+      "Maintenance & monitoring à distance"
+    ],
+    "cta_devis": "Demander un devis",
+    "cta_contact": "Nous contacter"
   },
   "solutions": {
     "badge": "Nos Offres",

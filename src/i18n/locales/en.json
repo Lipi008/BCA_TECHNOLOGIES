@@ -77,6 +77,20 @@
     "devices_label": "Connected devices installed",
     "recommends_label": "Companies recommend BCA"
   },
+  "group_stats": {
+    "title": "The BCA Group's Expertise",
+    "subtitle": "Illustrated by Best Africa Limited (Mali), our sister company expert in fiber optics",
+    "items": [
+      { "value": "76 475",     "label": "Studies completed",       "period": "2021 – 2026" },
+      { "value": "41 904",     "label": "Installations completed", "period": "2021 – 2026" },
+      { "value": "57 226 014", "label": "Faults resolved",         "period": "2021 – 2026" },
+      { "value": "542 014",    "label": "Fiber cable deployed",     "period": "2025 – 2026" },
+      { "value": "120 104",    "label": "Fiber cable maintained",   "period": "2024 – 2026" },
+      { "value": "4 135",      "label": "PCOs deployed",            "period": "2025 – 2026" },
+      { "value": "851",        "label": "Sites maintained",         "period": "2024 – 2026" },
+      { "value": ">98%",       "label": "Completion rate",          "period": "2021 – 2026" }
+    ]
+  },
   "home_news": {
     "badge": "Latest News",
     "title": "LATEST NEWS",
@@ -140,8 +154,9 @@
   "activites": {
     "page_title": "OUR ACTIVITIES",
     "page_subtitle": "A broad spectrum of technology expertise serving African businesses.",
-    "telecom_title": "Telecommunications",
+    "telecom_title": "Telecommunications & Fiber Optics",
     "telecom_desc": "Supply, installation, and maintenance of high-performance telecom networks.",
+    "telecom_long": "BCA Technologies Limited designs, deploys, and maintains very high-speed telecommunications infrastructure tailored to the needs of businesses, operators, and institutions. Specializing in fiber optics (FTTH, FTTB, FTTC, FTTN, GPON), we handle the complete network design — from civil works to turnkey delivery — including OTDR testing, splicing, and voice, video & data connectivity management.",
     "telecom_items": [
       "Fiber optic deployment",
       "Structured cabling",
@@ -150,44 +165,46 @@
     ],
     "it_title": "IT & Electronics",
     "it_desc": "State-of-the-art IT equipment and electronic solutions for your infrastructure.",
+    "it_long": "We supply IT and electronic equipment from leading brands (Dell, HP, Cisco, Huawei, Samsung) tailored to professional infrastructure. Our team also handles the deployment, configuration, and maintenance of your IT assets, ensuring optimal performance and enhanced security for your data and systems.",
     "it_items": [
-      "Servers & Storage",
-      "Workstations",
-      "Switches & Routers",
-      "Office equipment"
+      "Servers & storage (NAS, SAN)",
+      "Workstations & peripherals",
+      "Switches, routers & firewalls",
+      "Professional office equipment",
+      "IT audit & asset maintenance"
     ],
     "security_title": "Electronic Security",
     "security_desc": "Complete protection for your premises and assets.",
+    "security_long": "BCA Technologies Limited integrates comprehensive electronic security solutions to protect your premises, assets, and data. From IP video surveillance to biometric access control, alarm systems, and intrusion detection, we design custom systems that are robust, scalable, and compliant with international standards.",
     "security_items": [
-      "CCTV Surveillance",
+      "CCTV / IP HD video surveillance",
       "Biometric access control",
-      "Alarms & Detection",
-      "Perimeter security"
+      "Alarms & intrusion detection",
+      "Perimeter security",
+      "Wi-Fi video intercoms"
     ],
     "domotique_title": "Home Automation & BMS",
     "domotique_desc": "Smart automation for residential and commercial buildings.",
+    "domotique_long": "We automate building management using the latest BMS (Building Management System) and home automation solutions. Smart lighting control, intelligent HVAC, energy management, and integrated security — your facilities become more efficient, comfortable, and energy-efficient, all controllable remotely via smartphone or tablet.",
     "domotique_items": [
-      "Lighting management",
-      "Automated HVAC",
-      "Energy management",
-      "Smart Building"
+      "Smart lighting management",
+      "Automated HVAC & heating",
+      "Energy management & metering",
+      "Smart Building & integrated IoT",
+      "Remote control (smartphone / tablet)"
     ],
-    "import_title": "Import & Export",
-    "import_desc": "International logistics and regulatory compliance for global procurement.",
-    "import_items": [
-      "North American sourcing",
-      "Customs clearance",
-      "B2B delivery",
-      "ECOWAS compliance"
-    ],
-    "energy_title": "Electrical Equipment",
-    "energy_desc": "Lighting and electrical solutions for all your projects.",
+    "energy_title": "Solar Energy",
+    "energy_desc": "Study, supply, installation, and maintenance of photovoltaic systems for individuals, businesses, and communities.",
+    "energy_long": "BCA Technologies Limited provides complete solar energy solutions to ensure autonomous and sustainable power supply for your installations. From feasibility studies to installation and maintenance of photovoltaic systems, we support individuals, businesses, and communities in their energy transition — across Côte d'Ivoire and throughout West Africa. Our solutions also include solar surveillance towers for remote areas.",
     "energy_items": [
-      "Industrial LED lighting",
-      "Electrical panels",
-      "Cables & Accessories",
-      "Renewable energy"
-    ]
+      "Feasibility study & system sizing",
+      "Solar panel installation",
+      "Autonomous photovoltaic systems (off-grid)",
+      "Solar surveillance towers",
+      "Remote maintenance & monitoring"
+    ],
+    "cta_devis": "Request a quote",
+    "cta_contact": "Contact us"
   },
   "solutions": {
     "badge": "Our Offers",

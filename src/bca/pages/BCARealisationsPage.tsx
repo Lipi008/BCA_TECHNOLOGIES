@@ -119,14 +119,14 @@ const GallerySection = () => {
       {/* Modal lightbox */}
       {selected && (
         <div
-          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-6"
           onClick={() => setSelected(null)}
         >
           <div
-            className="bg-white rounded-3xl overflow-hidden max-w-2xl w-full shadow-2xl"
+            className="bg-white rounded-2xl sm:rounded-3xl overflow-hidden max-w-2xl w-full shadow-2xl max-h-[90vh] flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative h-72 overflow-hidden">
+            <div className="relative h-48 sm:h-72 overflow-hidden flex-shrink-0">
               <img src={selected.image} alt={selected.title} className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
               <div className="absolute top-4 left-4 flex gap-2">
@@ -140,10 +140,10 @@ const GallerySection = () => {
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
               </button>
             </div>
-            <div className="p-6">
-              <h3 className="font-black text-gray-900 text-xl leading-tight">{selected.title}</h3>
+            <div className="p-5 sm:p-6 overflow-y-auto">
+              <h3 className="font-black text-gray-900 text-lg sm:text-xl leading-tight">{selected.title}</h3>
               <div className="flex items-center gap-2 mt-2 text-gray-400 text-sm">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 {selected.location}
               </div>
               <p className="mt-4 text-gray-600 text-sm leading-relaxed">{selected.description}</p>

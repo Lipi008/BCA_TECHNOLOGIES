@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { FiberBg } from "../FiberBg";
+import type { PageId } from "../BCARouter";
 
 const PageHero = ({ badge, title, subtitle }: { badge: string; title: string; subtitle?: string }) => (
   <section className="relative py-24 px-6 overflow-hidden" style={{ background: "linear-gradient(135deg, #2563eb 0%, #4f46e5 50%, #7c3aed 100%)" }}>
@@ -11,50 +11,60 @@ const PageHero = ({ badge, title, subtitle }: { badge: string; title: string; su
   </section>
 );
 
-export const BCAActivitiesPage = () => {
+interface Props { navigate: (p: PageId) => void; }
+
+export const BCAActivitiesPage = ({ navigate }: Props) => {
   const { t } = useTranslation();
 
   const domains = [
     {
+      key: "telecom",
       icon: "📡",
       gradient: "from-blue-600 to-blue-800",
+      accentBg: "bg-blue-600",
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop",
       title: t("activites.telecom_title"),
-      desc: t("activites.telecom_desc"),
+      long: t("activites.telecom_long"),
       items: t("activites.telecom_items", { returnObjects: true }) as string[],
     },
     {
+      key: "it",
       icon: "💻",
       gradient: "from-indigo-600 to-blue-700",
+      accentBg: "bg-indigo-600",
+      image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&auto=format&fit=crop",
       title: t("activites.it_title"),
-      desc: t("activites.it_desc"),
+      long: t("activites.it_long"),
       items: t("activites.it_items", { returnObjects: true }) as string[],
     },
     {
+      key: "security",
       icon: "🔒",
       gradient: "from-purple-600 to-indigo-700",
+      accentBg: "bg-purple-600",
+      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&auto=format&fit=crop",
       title: t("activites.security_title"),
-      desc: t("activites.security_desc"),
+      long: t("activites.security_long"),
       items: t("activites.security_items", { returnObjects: true }) as string[],
     },
     {
+      key: "domotique",
       icon: "🏠",
       gradient: "from-violet-600 to-purple-700",
+      accentBg: "bg-violet-600",
+      image: "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&auto=format&fit=crop",
       title: t("activites.domotique_title"),
-      desc: t("activites.domotique_desc"),
+      long: t("activites.domotique_long"),
       items: t("activites.domotique_items", { returnObjects: true }) as string[],
     },
     {
-      icon: "🌍",
-      gradient: "from-cyan-600 to-teal-700",
-      title: t("activites.import_title"),
-      desc: t("activites.import_desc"),
-      items: t("activites.import_items", { returnObjects: true }) as string[],
-    },
-    {
-      icon: "⚡",
-      gradient: "from-orange-500 to-red-600",
+      key: "energy",
+      icon: "☀️",
+      gradient: "from-yellow-500 to-orange-500",
+      accentBg: "bg-yellow-500",
+      image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&auto=format&fit=crop",
       title: t("activites.energy_title"),
-      desc: t("activites.energy_desc"),
+      long: t("activites.energy_long"),
       items: t("activites.energy_items", { returnObjects: true }) as string[],
     },
   ];
@@ -63,33 +73,66 @@ export const BCAActivitiesPage = () => {
     <>
       <PageHero badge={t("nav.activites")} title={t("activites.page_title")} subtitle={t("activites.page_subtitle")} />
 
-      <section className="bg-white py-20 px-6 relative overflow-hidden">
-        <FiberBg variant="subtle" />
-        <div className="relative z-10 max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {domains.map((d, i) => (
-              <div key={i} className={`animate-on-scroll stagger-${(i % 3) + 1} group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl overflow-hidden transition-all duration-300`}>
-                <div className={`h-2 w-full bg-gradient-to-r ${d.gradient}`} />
-                <div className="p-6">
-                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${d.gradient} flex items-center justify-center text-3xl mb-5 shadow-md group-hover:scale-110 transition-transform`}>
-                    {d.icon}
+      <div className="bg-white">
+        {domains.map((d, i) => {
+          const isEven = i % 2 === 0;
+          return (
+            <section key={d.key} className={`py-16 sm:py-24 ${isEven ? "bg-white" : "bg-gray-50"}`}>
+              <div className="max-w-6xl mx-auto px-4 sm:px-6">
+                <div className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} gap-10 lg:gap-16 items-center`}>
+
+                  {/* Image */}
+                  <div className={`w-full lg:w-1/2 ${isEven ? "animate-on-scroll-left" : "animate-on-scroll-right"}`}>
+                    <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
+                      <img src={d.image} alt={d.title} className="w-full h-full object-cover" />
+                      <div className={`absolute inset-0 bg-gradient-to-br ${d.gradient} opacity-20`} />
+                      <div className={`absolute bottom-5 left-5 w-14 h-14 rounded-2xl bg-gradient-to-br ${d.gradient} flex items-center justify-center text-3xl shadow-xl`}>
+                        {d.icon}
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="font-black text-gray-900 text-xl mb-2 group-hover:text-blue-700 transition-colors">{d.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed mb-5">{d.desc}</p>
-                  <ul className="space-y-2">
-                    {d.items.map((item, j) => (
-                      <li key={j} className="flex items-start gap-2 text-sm text-gray-600">
-                        <span className="mt-1 w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+
+                  {/* Text */}
+                  <div className={`w-full lg:w-1/2 ${isEven ? "animate-on-scroll-right" : "animate-on-scroll-left"}`}>
+                    <div className={`inline-flex items-center gap-2 ${d.accentBg} text-white text-xs font-bold px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest`}>
+                      {d.icon}&nbsp;{d.title}
+                    </div>
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-gray-900 mb-5 leading-tight">
+                      {d.title}
+                    </h2>
+                    <p className="text-gray-600 text-base leading-relaxed mb-7">
+                      {d.long}
+                    </p>
+                    <ul className="space-y-3 mb-8">
+                      {d.items.map((item, j) => (
+                        <li key={j} className="flex items-start gap-3 text-sm text-gray-700">
+                          <span className={`mt-1.5 w-2 h-2 rounded-full ${d.accentBg} flex-shrink-0`} />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="flex flex-wrap gap-3">
+                      <button
+                        onClick={() => navigate("contact")}
+                        className={`bg-gradient-to-r ${d.gradient} text-white text-sm font-bold px-6 py-3 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200`}
+                      >
+                        {t("activites.cta_devis")}
+                      </button>
+                      <button
+                        onClick={() => navigate("contact")}
+                        className="border border-gray-300 text-gray-700 text-sm font-semibold px-6 py-3 rounded-xl hover:border-blue-600 hover:text-blue-700 transition-all duration-200"
+                      >
+                        {t("activites.cta_contact")}
+                      </button>
+                    </div>
+                  </div>
+
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </section>
+          );
+        })}
+      </div>
     </>
   );
 };
