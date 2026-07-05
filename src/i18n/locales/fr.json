@@ -120,10 +120,13 @@
   "presentation": {
     "badge": "Présentation",
     "title": "PRÉSENTATION",
-    "text1_short": "Société basée à Abidjan, fondée en 2017, spécialisée dans les solutions technologiques pour l'Afrique.",
-    "text1": "BUSINESS CANADA AFRICA TECHNOLOGIES LIMITED, en abrégé BCA TECHNOLOGIES LIMITED, est une société basée à Abidjan, dans la commune de Cocody. Fondée en 2017 par Monsieur Gbran Georges Poiret ANGAHI, l'entreprise est née d'une vision ambitieuse : contribuer activement au développement technologique du continent africain à travers des solutions innovantes et adaptées aux réalités locales.",
-    "text2": "Spécialisée dans la fourniture de matériels télécoms, informatiques et électroniques, ainsi que de systèmes de sécurité et d'équipements divers, BCA TECHNOLOGIES LIMITED propose des solutions fiables et performantes destinées aux entreprises, institutions et particuliers.",
-    "text3": "Portée par des valeurs d'excellence, d'innovation et d'intégrité, l'entreprise s'est positionnée comme un acteur incontournable du secteur technologique en Côte d'Ivoire, avec des ambitions sous-régionales affirmées.",
+    "text1_short": "Entreprise de services technologiques fondée le 1er juillet 2026, spécialisée dans la transformation numérique et énergétique en Afrique de l'Ouest.",
+    "text1": "Fondée le 1er juillet 2026 et basée à Abidjan, dans la commune de Cocody, BCA Technologies Limited est une entreprise de services technologiques spécialisée dans la transformation numérique et énergétique en Afrique de l'Ouest.",
+    "text2": "Créée sous l'impulsion de son fondateur, M. Georges Poiret Angahi, ingénieur en télécommunications bénéficiant de plus de vingt (20) années d'expérience dans les secteurs des télécommunications, des infrastructures et des nouvelles technologies, l'entreprise met son expertise au service des entreprises, des administrations et des collectivités en proposant des solutions innovantes, fiables et adaptées aux réalités du continent africain.",
+    "text3": "Résolument orientée vers les prestations de services, BCA Technologies Limited intervient dans quatre domaines d'excellence : la fibre optique (conception, déploiement, raccordement, maintenance et exploitation d'infrastructures de télécommunications à très haut débit) ; la sécurité électronique et la domotique (intégration de solutions de vidéosurveillance, contrôle d'accès, détection d'intrusion et gestion intelligente des bâtiments) ; l'énergie solaire (étude, fourniture, installation et maintenance de systèmes photovoltaïques pour une transition énergétique durable) ; et l'agriculture intelligente (Smart Agriculture) — développement et intégration de solutions connectées permettant d'optimiser les performances agricoles grâce aux technologies numériques, à l'IoT et à l'automatisation.",
+    "text4": "La force de BCA Technologies Limited repose également sur son appartenance à un groupe international solidement structuré. L'entreprise bénéficie du soutien stratégique de sa société mère, BCA Multiservices Inc., basée à Sorel-Tracy, au Québec (Canada). Véritable centrale d'achat du groupe, cette dernière mutualise les approvisionnements de l'ensemble des filiales afin de négocier auprès des fabricants les meilleures conditions commerciales, garantissant ainsi des équipements de qualité à des prix compétitifs.",
+    "text5": "BCA Technologies Limited évolue aux côtés de deux sociétés sœurs complémentaires : BCA Business Canada Africa Import & Export, basée à Abidjan, spécialisée dans la fourniture d'équipements de télécommunications, informatiques, électroniques et de solutions technologiques ; et Best Africa Limited, implantée au Mali depuis 2018, spécialisée dans les activités de déploiement et de maintenance des réseaux de fibre optique.",
+    "text6": "Grâce à cette synergie internationale et à une équipe portée par une forte culture de l'innovation, BCA Technologies Limited ambitionne de devenir un acteur de référence de la transformation numérique et énergétique en Afrique de l'Ouest, en contribuant au développement d'infrastructures modernes, durables et créatrices de valeur pour ses partenaires et ses clients.",
     "founded_label": "Fondée en",
     "hq_label": "Siège",
     "founder_label": "Fondateur",
@@ -577,7 +580,7 @@
   "why": {
     "badge": "Pourquoi nous",
     "title": "POURQUOI CHOISIR BCA ?",
-    "subtitle": "BCA TECHNOLOGIES LIMITED s'engage à vous offrir des solutions de qualité internationale adaptées aux réalités africaines.",
+    "subtitle": "BCA Technologies Limited s'engage à vous offrir des prestations de services de qualité, respectant les normes internationales, avec la rigueur du SLA.",
     "items": [
       {
         "icon": "🏆",
@@ -648,7 +651,7 @@
   },
   "about": {
     "ceo_title": "Mot du Directeur Général",
-    "ceo_founded": "Fondé en 2017",
+    "ceo_founded": "Fondé le 1er juillet 2026",
     "ceo_location": "Cocody, Abidjan, CI",
     "ceo_education": "Ingénierie & Entrepreneuriat",
     "ceo_badge": "Fondateur & PDG",

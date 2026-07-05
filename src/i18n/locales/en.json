@@ -120,10 +120,13 @@
   "presentation": {
     "badge": "About Us",
     "title": "ABOUT US",
-    "text1_short": "Company based in Abidjan, founded in 2017, specializing in technology solutions for Africa.",
-    "text1": "BUSINESS CANADA AFRICA TECHNOLOGIES LIMITED, abbreviated BCA TECHNOLOGIES LIMITED, is a company based in Abidjan, in the municipality of Cocody. Founded in 2017 by Mr. Gbran Georges Poiret ANGAHI, the company was born from an ambitious vision: to actively contribute to the technological development of the African continent through innovative solutions adapted to local realities.",
-    "text2": "Specializing in the supply of telecom, IT, and electronic equipment, as well as security systems and various equipment, BCA TECHNOLOGIES LIMITED offers reliable and high-performance solutions for businesses, institutions, and individuals.",
-    "text3": "Guided by values of excellence, innovation, and integrity, the company has positioned itself as a key player in the technology sector in Côte d'Ivoire, with strong sub-regional ambitions.",
+    "text1_short": "Technology services company founded on July 1, 2026, specializing in digital and energy transformation in West Africa.",
+    "text1": "Founded on July 1, 2026 and based in Abidjan, in the municipality of Cocody, BCA Technologies Limited is a technology services company specializing in digital and energy transformation in West Africa.",
+    "text2": "Created under the leadership of its founder, Mr. Georges Poiret Angahi, a telecommunications engineer with over twenty (20) years of experience in the telecommunications, infrastructure, and new technology sectors, the company puts its expertise at the service of businesses, administrations, and local authorities by offering innovative, reliable solutions adapted to the realities of the African continent.",
+    "text3": "Resolutely focused on service delivery, BCA Technologies Limited operates in four areas of excellence: fiber optics (design, deployment, connection, maintenance, and operation of very high-speed telecommunications infrastructure); electronic security and building automation (integration of video surveillance, access control, intrusion detection, and intelligent building management solutions); solar energy (study, supply, installation, and maintenance of photovoltaic systems for a sustainable energy transition); and Smart Agriculture — development and integration of connected solutions to optimize agricultural performance through digital technologies, IoT, and automation.",
+    "text4": "BCA Technologies Limited's strength also lies in its membership in a solidly structured international group. The company benefits from the strategic support of its parent company, BCA Multiservices Inc., based in Sorel-Tracy, Quebec (Canada). As the group's purchasing hub, it consolidates supplies for all subsidiaries to negotiate the best commercial conditions with manufacturers, thereby guaranteeing quality equipment at competitive prices.",
+    "text5": "BCA Technologies Limited works alongside two complementary sister companies: BCA Business Canada Africa Import & Export, based in Abidjan, specializing in the supply of telecommunications, IT, and electronic equipment and technology solutions; and Best Africa Limited, established in Mali since 2018, specializing in the deployment and maintenance of fiber optic networks.",
+    "text6": "Thanks to this international synergy and a team driven by a strong culture of innovation, BCA Technologies Limited aims to become a reference player in digital and energy transformation in West Africa, contributing to the development of modern, sustainable infrastructure that creates value for its partners and clients.",
     "founded_label": "Founded in",
     "hq_label": "Headquarters",
     "founder_label": "Founder",
@@ -570,7 +573,7 @@
   "why": {
     "badge": "Why us",
     "title": "WHY CHOOSE BCA?",
-    "subtitle": "BCA TECHNOLOGIES LIMITED is committed to delivering international-quality solutions adapted to African realities.",
+    "subtitle": "BCA Technologies Limited is committed to providing quality service delivery, meeting international standards, with SLA rigor.",
     "items": [
       {
         "icon": "🏆",
@@ -641,7 +644,7 @@
   },
   "about": {
     "ceo_title": "Message from the General Manager",
-    "ceo_founded": "Founded in 2017",
+    "ceo_founded": "Founded on July 1, 2026",
     "ceo_location": "Cocody, Abidjan, CI",
     "ceo_education": "Engineering & Entrepreneurship",
     "ceo_badge": "Founder & CEO",

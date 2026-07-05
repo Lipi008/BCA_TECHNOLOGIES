@@ -83,7 +83,7 @@ const CEOMessage = () => {
               <p className="text-gray-400 text-xs mt-2 uppercase tracking-wider">BCA Technologies Limited</p>
               <div className="mt-4 flex flex-col gap-2">
                 <div className="flex items-center justify-center gap-2 text-gray-500 text-xs">
-                  <span>📅</span> Fondé en 2017
+                  <span>📅</span> Fondé le 1er juillet 2026
                 </div>
                 <div className="flex items-center justify-center gap-2 text-gray-500 text-xs">
                   <span>📍</span> Cocody, Abidjan, CI
@@ -140,9 +140,12 @@ const Presentation = () => {
             <p>{t("presentation.text1")}</p>
             <p>{t("presentation.text2")}</p>
             <p>{t("presentation.text3")}</p>
+            <p>{t("presentation.text4")}</p>
+            <p>{t("presentation.text5")}</p>
+            <p>{t("presentation.text6")}</p>
             <div className="pt-2 grid grid-cols-3 gap-3">
               {[
-                { label: t("presentation.founded_label"), value: "2017" },
+                { label: t("presentation.founded_label"), value: "1er juill. 2026" },
                 { label: t("presentation.hq_label"), value: "Cocody, Abidjan" },
                 { label: t("presentation.founder_label"), value: "G. P. ANGAHI" },
               ].map((item, i) => (

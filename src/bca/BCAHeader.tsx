@@ -65,7 +65,7 @@ export const BCAHeader = ({ currentPage, navigate }: HeaderProps) => {
 
   const moreLinks: { label: string; page: PageId }[] = [
     {
-      label: t("nav.realisations") + " & " + t("nav.partenaires"),
+      label: t("nav.references") + " & " + t("nav.partenaires"),
       page: "partenaires",
     },
     { label: t("nav.actualites"), page: "actualites" },

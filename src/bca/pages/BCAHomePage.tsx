@@ -224,10 +224,13 @@ const Presentation = ({ navigate }: Props) => {
             <p className="text-gray-600 text-base leading-relaxed">{t("presentation.text1")}</p>
             <p className="text-gray-600 text-base leading-relaxed">{t("presentation.text2")}</p>
             <p className="text-gray-600 text-base leading-relaxed">{t("presentation.text3")}</p>
+            <p className="text-gray-600 text-base leading-relaxed">{t("presentation.text4")}</p>
+            <p className="text-gray-600 text-base leading-relaxed">{t("presentation.text5")}</p>
+            <p className="text-gray-600 text-base leading-relaxed">{t("presentation.text6")}</p>
 
             <div className="grid grid-cols-3 gap-3 pt-2">
               {[
-                { label: t("presentation.founded_label"), value: "2017" },
+                { label: t("presentation.founded_label"), value: "1er juill. 2026" },
                 { label: t("presentation.hq_label"), value: "Cocody, Abidjan" },
                 { label: t("presentation.founder_label"), value: "G. P. ANGAHI" },
               ].map((item, i) => (

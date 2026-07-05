@@ -24,10 +24,13 @@ export const BCAPresentation = () => {
               <p className="animate-on-scroll stagger-1">{t("presentation.text1")}</p>
               <p className="animate-on-scroll stagger-2">{t("presentation.text2")}</p>
               <p className="animate-on-scroll stagger-3">{t("presentation.text3")}</p>
+              <p className="animate-on-scroll stagger-4">{t("presentation.text4")}</p>
+              <p className="animate-on-scroll stagger-4">{t("presentation.text5")}</p>
+              <p className="animate-on-scroll stagger-4">{t("presentation.text6")}</p>
 
               <div className="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 animate-on-scroll stagger-4">
                 {[
-                  { icon: "📅", label: t("presentation.founded_label"), value: "2017" },
+                  { icon: "📅", label: t("presentation.founded_label"), value: "1er juill. 2026" },
                   { icon: "📍", label: t("presentation.hq_label"), value: "Cocody, Abidjan" },
                   { icon: "👤", label: t("presentation.founder_label"), value: "G. P. ANGAHI" },
                 ].map((item, i) => (
