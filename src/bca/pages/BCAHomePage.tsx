@@ -88,7 +88,7 @@ const Hero = ({ navigate }: Props) => {
     <section className="relative w-full bg-white overflow-hidden">
 
       {/* ── SLIDER : logo/image pleine largeur ── */}
-      <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] md:aspect-[16/7]">
+      <div className="relative w-full h-[440px] sm:h-auto sm:aspect-[16/9] md:aspect-[16/7]">
         {!(HERO_SLIDES[slide] as any).noImage && (
           <img
             src={HERO_SLIDES[slide].src}
@@ -112,47 +112,47 @@ const Hero = ({ navigate }: Props) => {
 
         {/* Overlay gradient bas pour les slides non-logo */}
         {slide !== 0 && (
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none" />
         )}
 
         {/* Caption slide (label + description + items) */}
         {slide !== 0 && HERO_SLIDES[slide].label && (
           <div
-            className="absolute bottom-6 sm:bottom-14 left-0 right-0 px-4 sm:px-8 md:px-16 transition-all duration-500 z-10"
+            className="absolute bottom-10 left-0 right-0 px-5 sm:px-8 md:px-16 transition-all duration-500 z-10"
             style={{ opacity: fading ? 0 : 1, transform: fading ? "translateY(8px)" : "translateY(0)" }}
           >
             {slide === 1 && (
               <div className="max-w-3xl">
-                <p className="text-blue-300 text-xs font-semibold uppercase tracking-widest mb-1">{t("home.slide1_tag")}</p>
-                <h2 className="text-white text-2xl md:text-3xl font-bold leading-snug mb-2">{t("home.slide1_title")}</h2>
-                <p className="text-white/80 text-sm mb-3">{t("home.slide1_desc")}</p>
-                <div className="flex flex-wrap gap-2">
+                <p className="text-blue-300 text-xs font-semibold uppercase tracking-widest mb-1.5">{t("home.slide1_tag")}</p>
+                <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-bold leading-snug mb-2">{t("home.slide1_title")}</h2>
+                <p className="text-white/75 text-xs sm:text-sm mb-3 hidden sm:block">{t("home.slide1_desc")}</p>
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {(t("home.slide1_tags", { returnObjects: true }) as string[]).map((tag, i) => (
-                    <span key={i} className="bg-white/15 border border-white/25 text-white text-xs px-3 py-1 rounded-full">{tag}</span>
+                    <span key={i} className={`bg-white/15 border border-white/25 text-white text-xs px-2.5 sm:px-3 py-1 rounded-full${i >= 3 ? " hidden sm:inline" : ""}`}>{tag}</span>
                   ))}
                 </div>
               </div>
             )}
             {slide === 2 && (
               <div className="max-w-3xl">
-                <p className="text-slate-300 text-xs font-semibold uppercase tracking-widest mb-1">{t("home.slide2_tag")}</p>
-                <h2 className="text-white text-2xl md:text-3xl font-bold leading-snug mb-2">{t("home.slide2_title")}</h2>
-                <p className="text-white/80 text-sm mb-3">{t("home.slide2_desc")}</p>
-                <div className="flex flex-wrap gap-2">
+                <p className="text-slate-300 text-xs font-semibold uppercase tracking-widest mb-1.5">{t("home.slide2_tag")}</p>
+                <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-bold leading-snug mb-2">{t("home.slide2_title")}</h2>
+                <p className="text-white/75 text-xs sm:text-sm mb-3 hidden sm:block">{t("home.slide2_desc")}</p>
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {(t("home.slide2_tags", { returnObjects: true }) as string[]).map((tag, i) => (
-                    <span key={i} className="bg-white/15 border border-white/25 text-white text-xs px-3 py-1 rounded-full">{tag}</span>
+                    <span key={i} className={`bg-white/15 border border-white/25 text-white text-xs px-2.5 sm:px-3 py-1 rounded-full${i >= 3 ? " hidden sm:inline" : ""}`}>{tag}</span>
                   ))}
                 </div>
               </div>
             )}
             {slide === 3 && (
               <div className="max-w-3xl">
-                <p className="text-cyan-300 text-xs font-semibold uppercase tracking-widest mb-1">{t("home.slide3_tag")}</p>
-                <h2 className="text-white text-2xl md:text-3xl font-bold leading-snug mb-2">{t("home.slide3_title")}</h2>
-                <p className="text-white/80 text-sm mb-3">{t("home.slide3_desc")}</p>
-                <div className="flex flex-wrap gap-2">
+                <p className="text-cyan-300 text-xs font-semibold uppercase tracking-widest mb-1.5">{t("home.slide3_tag")}</p>
+                <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-bold leading-snug mb-2">{t("home.slide3_title")}</h2>
+                <p className="text-white/75 text-xs sm:text-sm mb-3 hidden sm:block">{t("home.slide3_desc")}</p>
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {(t("home.slide3_tags", { returnObjects: true }) as string[]).map((tag, i) => (
-                    <span key={i} className="bg-white/15 border border-white/25 text-white text-xs px-3 py-1 rounded-full">{tag}</span>
+                    <span key={i} className={`bg-white/15 border border-white/25 text-white text-xs px-2.5 sm:px-3 py-1 rounded-full${i >= 3 ? " hidden sm:inline" : ""}`}>{tag}</span>
                   ))}
                 </div>
               </div>
