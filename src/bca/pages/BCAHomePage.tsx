@@ -206,63 +206,127 @@ const Hero = ({ navigate }: Props) => {
 };
 
 /* ─────────────────────────────────────────────
-   PRÉSENTATION — vrai texte + fondateur
+   PRÉSENTATION — intro + mission/vision/valeurs
 ───────────────────────────────────────────── */
 const Presentation = ({ navigate }: Props) => {
   const { t } = useTranslation();
-  return (
-    <section className="bg-white py-20 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
-          {/* Texte gauche */}
-          <div className="space-y-5">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-snug">
+  const mvvCards = [
+    {
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+          <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+        </svg>
+      ),
+      accent: "bg-blue-600",
+      title: t("presentation.mission_title"),
+      text: t("presentation.mission_text"),
+    },
+    {
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+        </svg>
+      ),
+      accent: "bg-indigo-600",
+      title: t("presentation.vision_title"),
+      text: t("presentation.vision_text"),
+    },
+    {
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      ),
+      accent: "bg-violet-600",
+      title: t("presentation.values_title"),
+      text: t("presentation.values_text"),
+    },
+  ];
+
+  const meta = [
+    { label: t("presentation.founded_label"), value: "1er juill. 2026", icon: "📅" },
+    { label: t("presentation.hq_label"),      value: "Cocody, Abidjan",  icon: "📍" },
+    { label: t("presentation.founder_label"), value: "G. P. ANGAHI",     icon: "👤" },
+  ];
+
+  return (
+    <section className="bg-white py-16 sm:py-20 px-4 sm:px-6 border-t border-gray-100">
+      <div className="max-w-6xl mx-auto">
+
+        {/* ── Intro : badge + titre + 2 paragraphes ── */}
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-start mb-12">
+
+          {/* Texte (3/5) */}
+          <div className="lg:col-span-3 space-y-5">
+            <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest">
               {t("presentation.title")}
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-snug">
+              BCA Technologies Limited
             </h2>
             <div className="w-8 h-0.5 bg-blue-600" />
             <p className="text-gray-600 text-base leading-relaxed">{t("presentation.text1")}</p>
             <p className="text-gray-600 text-base leading-relaxed">{t("presentation.text2")}</p>
-            <p className="text-gray-600 text-base leading-relaxed">{t("presentation.text3")}</p>
-            <p className="text-gray-600 text-base leading-relaxed">{t("presentation.text4")}</p>
-            <p className="text-gray-600 text-base leading-relaxed">{t("presentation.text5")}</p>
-            <p className="text-gray-600 text-base leading-relaxed">{t("presentation.text6")}</p>
-
-            <div className="grid grid-cols-3 gap-3 pt-2">
-              {[
-                { label: t("presentation.founded_label"), value: "1er juill. 2026" },
-                { label: t("presentation.hq_label"), value: "Cocody, Abidjan" },
-                { label: t("presentation.founder_label"), value: "G. P. ANGAHI" },
-              ].map((item, i) => (
-                <div key={i} className="border border-gray-200 rounded p-3 flex flex-col gap-0.5 bg-white">
-                  <span className="text-gray-400 text-[10px] uppercase tracking-wider">{item.label}</span>
-                  <span className="text-gray-900 font-semibold text-sm">{item.value}</span>
-                </div>
-              ))}
-            </div>
-
             <button
               onClick={() => navigate("about")}
-              className="text-blue-700 font-medium text-sm hover:underline mt-2"
+              className="inline-flex items-center gap-2 text-blue-700 font-semibold text-sm hover:underline mt-1"
             >
-              {t("home.learn_more_bca")}
+              {t("home.learn_more_bca")} →
             </button>
           </div>
 
-          {/* Cards droite — Mission / Vision / Valeurs */}
-          <div className="space-y-4">
-            {[
-              { title: t("presentation.mission_title"), text: t("presentation.mission_text") },
-              { title: t("presentation.vision_title"), text: t("presentation.vision_text") },
-              { title: t("presentation.values_title"), text: t("presentation.values_text") },
-            ].map((card, i) => (
-              <div key={i} className="border-l-4 border-l-blue-600 bg-gray-50 p-5">
-                <h3 className="font-semibold text-gray-900 text-sm mb-1">{card.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{card.text}</p>
+          {/* Meta + domaines (2/5) */}
+          <div className="lg:col-span-2 flex flex-col gap-4">
+            {/* Fiche identité */}
+            <div className="bg-gray-50 rounded-2xl border border-gray-100 p-5 space-y-3">
+              {meta.map((m, i) => (
+                <div key={i} className="flex items-center gap-3">
+                  <span className="text-lg">{m.icon}</span>
+                  <div>
+                    <p className="text-gray-400 text-[10px] uppercase tracking-wider">{m.label}</p>
+                    <p className="text-gray-900 font-semibold text-sm">{m.value}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            {/* Domaines clés */}
+            <div className="bg-blue-700 rounded-2xl p-5 text-white">
+              <p className="text-blue-200 text-[10px] uppercase tracking-widest font-semibold mb-3">Domaines clés</p>
+              <div className="space-y-2">
+                {["📡 Télécommunications & Fibre optique", "🔒 Sécurité & Domotique", "☀️ Énergie Solaire", "💻 Informatique & Équipements"].map((d, i) => (
+                  <div key={i} className="flex items-center gap-2 text-sm text-blue-100">
+                    <span className="w-1 h-1 rounded-full bg-blue-300 flex-shrink-0" />
+                    {d}
+                  </div>
+                ))}
               </div>
-            ))}
+              <button
+                onClick={() => navigate("activites")}
+                className="mt-4 text-xs text-blue-300 hover:text-white font-medium transition-colors"
+              >
+                {t("home.learn_more_bca")} →
+              </button>
+            </div>
           </div>
         </div>
+
+        {/* ── Mission / Vision / Valeurs ── */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+          {mvvCards.map((card, i) => (
+            <div key={i} className="group relative bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md overflow-hidden transition-shadow">
+              <div className={`h-1 w-full ${card.accent}`} />
+              <div className="p-6">
+                <div className={`w-10 h-10 rounded-xl ${card.accent} text-white flex items-center justify-center mb-4`}>
+                  {card.icon}
+                </div>
+                <h3 className="font-bold text-gray-900 text-base mb-2">{card.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{card.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   );
