@@ -10,7 +10,9 @@ const BCALogoImg = () => (
   />
 );
 
-interface FooterProps { navigate: (p: PageId) => void; }
+interface FooterProps {
+  navigate: (p: PageId) => void;
+}
 
 export const BCAFooter = ({ navigate }: FooterProps) => {
   const { i18n } = useTranslation();
@@ -19,13 +21,20 @@ export const BCAFooter = ({ navigate }: FooterProps) => {
   const [newsletterSent, setNewsletterSent] = useState(false);
 
   const footerPageLinks: { label: string; page: PageId }[] = [
-    { label: lang === "fr" ? "Accueil"                   : "Home",                    page: "accueil"      },
-    { label: lang === "fr" ? "À propos"                  : "About",                   page: "about"        },
-    { label: lang === "fr" ? "Services"                  : "Services",                page: "offres"       },
-    { label: lang === "fr" ? "Réalisations"              : "Projects",                page: "realisations" },
-    { label: lang === "fr" ? "Références & Partenaires"  : "References & Partners",   page: "partenaires"  },
-    { label: lang === "fr" ? "Actualités"                : "News",                    page: "actualites"   },
-    { label: "Contact",                                                                page: "contact"      },
+    { label: lang === "fr" ? "Accueil" : "Home", page: "accueil" },
+    { label: lang === "fr" ? "À propos" : "About", page: "about" },
+    { label: lang === "fr" ? "Services" : "Services", page: "offres" },
+    {
+      label: lang === "fr" ? "Réalisations" : "Projects",
+      page: "realisations",
+    },
+    {
+      label:
+        lang === "fr" ? "Références & Partenaires" : "References & Partners",
+      page: "partenaires",
+    },
+    { label: lang === "fr" ? "Actualités" : "News", page: "actualites" },
+    { label: "Contact", page: "contact" },
   ];
 
   const socials = [
@@ -34,7 +43,7 @@ export const BCAFooter = ({ navigate }: FooterProps) => {
       title: "Facebook",
       svg: (
         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
         </svg>
       ),
     },
@@ -43,7 +52,7 @@ export const BCAFooter = ({ navigate }: FooterProps) => {
       title: "X",
       svg: (
         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
         </svg>
       ),
     },
@@ -52,8 +61,8 @@ export const BCAFooter = ({ navigate }: FooterProps) => {
       title: "LinkedIn",
       svg: (
         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/>
-          <circle cx="4" cy="4" r="2"/>
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
+          <circle cx="4" cy="4" r="2" />
         </svg>
       ),
     },
@@ -72,7 +81,6 @@ export const BCAFooter = ({ navigate }: FooterProps) => {
       <div className="max-w-6xl mx-auto">
         {/* Top grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="mb-5">
@@ -80,7 +88,7 @@ export const BCAFooter = ({ navigate }: FooterProps) => {
             </div>
             <p className="text-gray-500 text-sm leading-relaxed mb-5">
               {lang === "fr"
-                ? "Innover, sécuriser, connecter : l&#39;Afrique en mouvement."
+                ? "Innover, sécuriser, connecter : l'Afrique en mouvement."
                 : "Innovate, secure, connect: Africa in motion."}
             </p>
             <div className="flex gap-2">
@@ -125,16 +133,34 @@ export const BCAFooter = ({ navigate }: FooterProps) => {
               {lang === "fr" ? "Contact" : "Contact"}
             </h4>
             <div className="space-y-4">
-              <a href="tel:+2250150575757" className="flex items-start gap-3 text-gray-600 hover:text-blue-700 text-sm transition-colors">
-                <svg className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42C1.39 2.28 2.26 1 3.61 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81L8.09 7.91a16 16 0 0 0 8 8l2.19-2.19c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              <a
+                href="tel:+2250150575757"
+                className="flex items-start gap-3 text-gray-600 hover:text-blue-700 text-sm transition-colors"
+              >
+                <svg
+                  className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42C1.39 2.28 2.26 1 3.61 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81L8.09 7.91a16 16 0 0 0 8 8l2.19-2.19c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
                 </svg>
                 +225 01 50 57 57 57
               </a>
-              <a href="mailto:info@bcamultiservices.com" className="flex items-start gap-3 text-gray-600 hover:text-blue-700 text-sm transition-colors">
-                <svg className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                  <polyline points="22,6 12,13 2,6"/>
+              <a
+                href="mailto:info@bcamultiservices.com"
+                className="flex items-start gap-3 text-gray-600 hover:text-blue-700 text-sm transition-colors"
+              >
+                <svg
+                  className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
                 </svg>
                 info@bcamultiservices.com
               </a>
@@ -143,16 +169,22 @@ export const BCAFooter = ({ navigate }: FooterProps) => {
 
           {/* Newsletter */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Newsletter</h4>
+            <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
+              Newsletter
+            </h4>
             <p className="text-gray-500 text-xs mb-4">
-              {lang === "fr" ? "Restez informé de nos dernières actualités." : "Stay informed about our latest news."}
+              {lang === "fr"
+                ? "Restez informé de nos dernières actualités."
+                : "Stay informed about our latest news."}
             </p>
             <form onSubmit={handleNewsletter} className="flex flex-col gap-2">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder={lang === "fr" ? "Votre adresse e-mail" : "Your email address"}
+                placeholder={
+                  lang === "fr" ? "Votre adresse e-mail" : "Your email address"
+                }
                 className="border border-gray-200 bg-gray-50 text-gray-800 text-sm px-4 py-2.5 rounded-xl outline-none focus:border-blue-500 focus:bg-white transition-colors placeholder-gray-400"
               />
               <button
@@ -160,8 +192,12 @@ export const BCAFooter = ({ navigate }: FooterProps) => {
                 className="bg-blue-700 hover:bg-blue-800 text-white text-sm font-semibold py-2.5 rounded-xl transition-all duration-200"
               >
                 {newsletterSent
-                  ? (lang === "fr" ? "Merci !" : "Thank you!")
-                  : (lang === "fr" ? "S&#39;inscrire" : "Subscribe")}
+                  ? lang === "fr"
+                    ? "Merci !"
+                    : "Thank you!"
+                  : lang === "fr"
+                    ? "S'inscrire"
+                    : "Subscribe"}
               </button>
             </form>
           </div>
@@ -169,7 +205,10 @@ export const BCAFooter = ({ navigate }: FooterProps) => {
 
         {/* Divider + copyright */}
         <div className="border-t border-gray-200 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-400">
-          <p>© 2026 BCA Technologies Limited. {lang === "fr" ? "Tous droits réservés." : "All rights reserved."}</p>
+          <p>
+            © 2026 BCA Technologies Limited.{" "}
+            {lang === "fr" ? "Tous droits réservés." : "All rights reserved."}
+          </p>
           <span>Business Canada Africa Technologies Limited</span>
         </div>
       </div>

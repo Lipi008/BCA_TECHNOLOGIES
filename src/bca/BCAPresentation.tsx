@@ -1,3 +1,4 @@
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { FiberBg } from "./FiberBg";
 
@@ -30,12 +31,12 @@ export const BCAPresentation = () => {
 
               <div className="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 animate-on-scroll stagger-4">
                 {[
-                  { icon: "📅", label: t("presentation.founded_label"), value: "1er juill. 2026" },
-                  { icon: "📍", label: t("presentation.hq_label"), value: "Cocody, Abidjan" },
-                  { icon: "👤", label: t("presentation.founder_label"), value: "G. P. ANGAHI" },
+                  { icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5 text-blue-400"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>, label: t("presentation.founded_label"), value: "1er juill. 2026" },
+                  { icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5 text-blue-400"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>, label: t("presentation.hq_label"), value: "Cocody, Abidjan" },
+                  { icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5 text-blue-400"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>, label: t("presentation.founder_label"), value: "G. P. ANGAHI" },
                 ].map((item, i) => (
                   <div key={i} className="bg-gray-900 border border-gray-800 rounded-xl p-4 flex flex-col gap-1 hover:border-blue-700/50 transition-colors duration-300">
-                    <span className="text-xl">{item.icon}</span>
+                    <div className="w-5 h-5 text-blue-400">{item.icon}</div>
                     <span className="text-gray-500 text-[10px] uppercase tracking-widest">{item.label}</span>
                     <span className="text-white font-bold text-sm">{item.value}</span>
                   </div>
@@ -46,21 +47,21 @@ export const BCAPresentation = () => {
             <div className="space-y-4 animate-on-scroll-right">
               {[
                 {
-                  icon: "🎯",
+                  icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>,
                   title: t("presentation.mission_title"),
                   text: t("presentation.mission_text"),
                   gradient: "from-blue-600/20 to-blue-800/20",
                   border: "border-blue-700/30",
                 },
                 {
-                  icon: "🔭",
+                  icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>,
                   title: t("presentation.vision_title"),
                   text: t("presentation.vision_text"),
                   gradient: "from-purple-600/20 to-purple-800/20",
                   border: "border-purple-700/30",
                 },
                 {
-                  icon: "💎",
+                  icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><polygon points="12 2 2 7 12 22 22 7 12 2"/><polyline points="2 7 12 12 22 7"/><line x1="12" y1="22" x2="12" y2="12"/></svg>,
                   title: t("presentation.values_title"),
                   text: t("presentation.values_text"),
                   gradient: "from-cyan-600/20 to-teal-800/20",
@@ -69,7 +70,7 @@ export const BCAPresentation = () => {
               ].map((card, i) => (
                 <div key={i} className={`bg-gradient-to-br ${card.gradient} border ${card.border} rounded-2xl p-6`}>
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="text-2xl">{card.icon}</span>
+                    <div className="w-6 h-6 text-white/90">{card.icon}</div>
                     <h3 className="font-bold text-white text-lg">{card.title}</h3>
                   </div>
                   <p className="text-gray-400 text-sm leading-relaxed">{card.text}</p>

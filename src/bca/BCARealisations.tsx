@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FiberBg } from "./FiberBg";
 
@@ -31,12 +31,12 @@ export const BCARealisations = () => {
     "Energy": ["Énergie"],
   };
 
-  const catIcons: Record<string, string> = {
-    "Télécoms": "📡",
-    "Sécurité": "🔒",
-    "Informatique": "💻",
-    "Domotique": "🏠",
-    "Énergie": "⚡",
+  const catIcons: Record<string, React.ReactNode> = {
+    "Télécoms": <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-12 h-12 text-white"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>,
+    "Sécurité": <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-12 h-12 text-white"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>,
+    "Informatique": <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-12 h-12 text-white"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>,
+    "Domotique": <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-12 h-12 text-white"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>,
+    "Énergie": <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-12 h-12 text-white"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>,
   };
 
   const filtered = projects.filter((p) => {
@@ -94,7 +94,7 @@ export const BCARealisations = () => {
                     <path d="M0,105 Q100,65 200,90 T400,70" stroke="#4ECDC4" strokeWidth="2" fill="none" opacity="0.5"/>
                   </svg>
                 </div>
-                <span className="relative text-5xl">{catIcons[project.category] || "🔧"}</span>
+                <div className="relative">{catIcons[project.category] || <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-12 h-12 text-white"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>}</div>
                 <div className="absolute top-3 right-3 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-2.5 py-1 rounded-full">
                   {project.year}
                 </div>

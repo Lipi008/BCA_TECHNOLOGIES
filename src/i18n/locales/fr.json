@@ -81,14 +81,38 @@
     "title": "L'expertise du groupe BCA",
     "subtitle": "Illustration avec Best Africa Limited (Mali), notre entreprise sœur experte en fibre optique",
     "items": [
-      { "value": "76 475",     "label": "Études réalisées",        "period": "2021 – 2026" },
-      { "value": "41 904",     "label": "Installations réalisées", "period": "2021 – 2026" },
-      { "value": "57 226 014", "label": "Dérangements traités",    "period": "2021 – 2026" },
-      { "value": "542 014",    "label": "Câble FO déployé",        "period": "2025 – 2026" },
-      { "value": "120 104",    "label": "Câble FO maintenu",       "period": "2024 – 2026" },
-      { "value": "4 135",      "label": "PCO déployés",            "period": "2025 – 2026" },
-      { "value": "851",        "label": "Sites maintenus",         "period": "2024 – 2026" },
-      { "value": ">98%",       "label": "Taux de réalisation",     "period": "2021 – 2026" }
+      {
+        "value": "76 475",
+        "label": "Études réalisées",
+        "period": "2021 – 2026"
+      },
+      {
+        "value": "41 904",
+        "label": "Installations réalisées",
+        "period": "2021 – 2026"
+      },
+      {
+        "value": "57 226 014",
+        "label": "Dérangements traités",
+        "period": "2021 – 2026"
+      },
+      {
+        "value": "542 014",
+        "label": "Câble FO déployé",
+        "period": "2025 – 2026"
+      },
+      {
+        "value": "120 104",
+        "label": "Câble FO maintenu",
+        "period": "2024 – 2026"
+      },
+      { "value": "4 135", "label": "PCO déployés", "period": "2025 – 2026" },
+      { "value": "851", "label": "Sites maintenus", "period": "2024 – 2026" },
+      {
+        "value": ">98%",
+        "label": "Taux de réalisation",
+        "period": "2021 – 2026"
+      }
     ]
   },
   "home_news": {
@@ -601,32 +625,32 @@
     "subtitle": "BCA Technologies Limited s'engage à vous offrir des prestations de services de qualité, respectant les normes internationales, avec la rigueur du SLA.",
     "items": [
       {
-        "icon": "🏆",
+        "icon": "award",
         "title": "Normes Nord-Américaines",
         "description": "Nous importons et proposons uniquement des équipements conformes aux standards de qualité nord-américains et internationaux."
       },
       {
-        "icon": "🤝",
+        "icon": "users",
         "title": "Partenariats Stratégiques",
         "description": "Des partenariats solides avec des fabricants et distributeurs mondiaux reconnus pour garantir des produits fiables et certifiés."
       },
       {
-        "icon": "🌐",
+        "icon": "globe",
         "title": "Présence Multi-Pays",
         "description": "Actifs en Côte d'Ivoire, au Canada, au Ghana, au Mali, au Burkina Faso et au Libéria pour une couverture régionale optimale."
       },
       {
-        "icon": "⚡",
+        "icon": "zap",
         "title": "Expertise Sectorielle",
         "description": "Une équipe d'experts qualifiés avec une connaissance approfondie des secteurs télécoms, IT, électronique et sécurité."
       },
       {
-        "icon": "🚚",
+        "icon": "truck",
         "title": "Logistique Efficace",
         "description": "Un réseau logistique structuré garantissant la livraison rapide et sécurisée de vos équipements du Canada vers l'Afrique."
       },
       {
-        "icon": "🎯",
+        "icon": "target",
         "title": "Service Personnalisé",
         "description": "Une approche sur-mesure pour chaque client, avec un accompagnement dédié de la commande jusqu'à l'installation."
       }
@@ -770,7 +794,7 @@
     "see_all_refs": "Voir toutes nos références →",
     "partners_title": "Nos partenaires",
     "see_all_partners": "Voir tous nos partenaires →",
-    "learn_more_bca": "En savoir plus sur BCA →",
+    "learn_more_bca": "En savoir plus sur BCA",
     "all_news": "Toutes les actualités →",
     "read_article": "Lire l'article →",
     "read": "Lire →"
@@ -904,9 +928,9 @@
     "financial_title": "Partenaires Financiers"
   },
   "header": {
-    "ticker_hours":   "🕘 Bureaux ouverts Lun – Ven : 8h00 – 17h30",
-    "ticker_support": "🔧 Support technique & prestations disponibles 24h/24 et 7j/7",
-    "ticker_address": "📍 Cocody Angré, 9ème Tranche, Abidjan",
+    "ticker_hours": "Bureaux ouverts Lun – Ven : 8h00 – 17h30",
+    "ticker_support": "Support technique & prestations disponibles 24h/24 et 7j/7",
+    "ticker_address": "Cocody Angré, 9ème Tranche, Abidjan",
     "ticker_tagline": "💡 Votre partenaire technologique pour un futur numérique"
   },
   "footer": {

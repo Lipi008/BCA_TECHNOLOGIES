@@ -35,7 +35,7 @@ export const KeyFiguresSection = () => {
             <p className="text-gray-500 text-sm box-border caret-transparent leading-[21px] text-center mb-4">
               Année après année, 85 % de nos clients renouvellent leur confiance
               en BCA Technologies . Une fidélité qui reflète notre engagement
-              constant pour l&#39;excellence, la qualité de service et la
+              constant pour l'excellence, la qualité de service et la
               satisfaction de chacun de nos partenaires.
             </p>
           </div>

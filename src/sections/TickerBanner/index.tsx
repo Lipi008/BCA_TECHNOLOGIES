@@ -9,9 +9,9 @@ export const TickerBanner = () => {
             rapide en zones urbaines et rurales | Connexion ultra-rapide pour
             streaming et télétravail | Solutions domotiques intelligentes pour
             maisons et bureaux | Innovations technologiques pour fiabilité et
-            couverture | Smart solutions pour une gestion optimisée de
-            l&#39;énergie | Réseaux sécurisés pour entreprises et collectivités
-            | Technologie avancée pour une connectivité durable
+            couverture | Smart solutions pour une gestion optimisée de l'énergie
+            | Réseaux sécurisés pour entreprises et collectivités | Technologie
+            avancée pour une connectivité durable
           </div>
         </div>
       </div>

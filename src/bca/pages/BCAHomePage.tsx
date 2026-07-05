@@ -245,9 +245,9 @@ const Presentation = ({ navigate }: Props) => {
   ];
 
   const meta = [
-    { label: t("presentation.founded_label"), value: "1er juill. 2026", icon: "📅" },
-    { label: t("presentation.hq_label"),      value: "Cocody, Abidjan",  icon: "📍" },
-    { label: t("presentation.founder_label"), value: "G. P. ANGAHI",     icon: "👤" },
+    { label: t("presentation.founded_label"), value: "1er juill. 2026", icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5 text-blue-500"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> },
+    { label: t("presentation.hq_label"),      value: "Cocody, Abidjan",  icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5 text-blue-500"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> },
+    { label: t("presentation.founder_label"), value: "G. P. ANGAHI",     icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-5 h-5 text-blue-500"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> },
   ];
 
   return (
@@ -282,7 +282,7 @@ const Presentation = ({ navigate }: Props) => {
             <div className="bg-gray-50 rounded-2xl border border-gray-100 p-5 space-y-3">
               {meta.map((m, i) => (
                 <div key={i} className="flex items-center gap-3">
-                  <span className="text-lg">{m.icon}</span>
+                  {m.icon}
                   <div>
                     <p className="text-gray-400 text-[10px] uppercase tracking-wider">{m.label}</p>
                     <p className="text-gray-900 font-semibold text-sm">{m.value}</p>
@@ -294,10 +294,15 @@ const Presentation = ({ navigate }: Props) => {
             <div className="bg-blue-700 rounded-2xl p-5 text-white">
               <p className="text-blue-200 text-[10px] uppercase tracking-widest font-semibold mb-3">Domaines clés</p>
               <div className="space-y-2">
-                {["📡 Télécommunications & Fibre optique", "🔒 Sécurité & Domotique", "☀️ Énergie Solaire", "💻 Informatique & Équipements"].map((d, i) => (
+                {[
+                  { icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4 text-blue-300 flex-shrink-0"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>, label: "Télécommunications & Fibre optique" },
+                  { icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4 text-blue-300 flex-shrink-0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>, label: "Sécurité & Domotique" },
+                  { icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4 text-blue-300 flex-shrink-0"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>, label: "Énergie Solaire" },
+                  { icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-4 h-4 text-blue-300 flex-shrink-0"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>, label: "Informatique & Équipements" },
+                ].map((d, i) => (
                   <div key={i} className="flex items-center gap-2 text-sm text-blue-100">
-                    <span className="w-1 h-1 rounded-full bg-blue-300 flex-shrink-0" />
-                    {d}
+                    {d.icon}
+                    {d.label}
                   </div>
                 ))}
               </div>
@@ -790,7 +795,7 @@ const Testimonials = () => {
             <div className="space-y-4 max-h-[520px] overflow-y-auto pr-1">
               {comments.length === 0 ? (
                 <div className="text-center py-16 text-gray-400 text-sm">
-                  <p className="text-3xl mb-3">💬</p>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-12 h-12 mx-auto mb-3 text-gray-300"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                   <p>Soyez le premier à laisser un commentaire.</p>
                 </div>
               ) : (

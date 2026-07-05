@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FiberBg } from "../FiberBg";
 
@@ -14,14 +14,14 @@ const PageHero = ({ badge, title, subtitle }: { badge: string; title: string; su
 
 type Category = "all" | "local" | "afrique" | "international";
 
-const news: { date: string; category: string; scope: Category; title: string; excerpt: string; icon: string; gradient: string }[] = [
+const news: { date: string; category: string; scope: Category; title: string; excerpt: string; icon: React.ReactNode; gradient: string }[] = [
   {
     date: "Février 2025",
     category: "Projet",
     scope: "local",
     title: "Déploiement fibre optique zone industrielle de Yopougon",
     excerpt: "BCA Technologies finalise un déploiement fibre optique de 45 km dans la zone industrielle de Yopougon, connectant plus de 200 entreprises.",
-    icon: "📡",
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-8 h-8 text-white"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>,
     gradient: "from-cyan-600 to-teal-700",
   },
   {
@@ -30,7 +30,7 @@ const news: { date: string; category: string; scope: Category; title: string; ex
     scope: "local",
     title: "Participation au Forum Technologique d'Abidjan",
     excerpt: "BCA Technologies a présenté ses dernières solutions innovantes au premier Forum Technologique d'Abidjan, rassemblant plus de 500 professionnels.",
-    icon: "🎤",
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-8 h-8 text-white"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>,
     gradient: "from-purple-600 to-indigo-700",
   },
   {
@@ -39,7 +39,7 @@ const news: { date: string; category: string; scope: Category; title: string; ex
     scope: "afrique",
     title: "BCA Technologies signe un accord stratégique avec Huawei Africa",
     excerpt: "Un nouveau partenariat officiel vient renforcer notre capacité à distribuer les équipements Huawei certifiés dans l'ensemble de la sous-région.",
-    icon: "🤝",
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-8 h-8 text-white"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>,
     gradient: "from-blue-600 to-blue-800",
   },
   {
@@ -48,7 +48,7 @@ const news: { date: string; category: string; scope: Category; title: string; ex
     scope: "afrique",
     title: "Ouverture d'un nouveau bureau au Ghana",
     excerpt: "BCA Technologies renforce sa présence régionale avec l'ouverture d'une antenne à Accra pour mieux servir ses clients ghanéens.",
-    icon: "🌍",
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-8 h-8 text-white"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>,
     gradient: "from-green-600 to-emerald-700",
   },
   {
@@ -57,7 +57,7 @@ const news: { date: string; category: string; scope: Category; title: string; ex
     scope: "afrique",
     title: "Lancement d'une gamme de solutions domotique bas coût",
     excerpt: "Pour démocratiser l'accès à la domotique en Afrique, BCA Technologies lance une gamme de solutions intelligentes accessibles aux PME.",
-    icon: "🏠",
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-8 h-8 text-white"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>,
     gradient: "from-violet-600 to-purple-700",
   },
   {
@@ -66,7 +66,7 @@ const news: { date: string; category: string; scope: Category; title: string; ex
     scope: "international",
     title: "BCA Technologies obtient la certification Cisco Gold Partner",
     excerpt: "Après une année d'efforts, notre équipe technique obtient la certification Gold Partner Cisco, garantissant une expertise réseau au plus haut niveau.",
-    icon: "🏆",
+    icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-8 h-8 text-white"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>,
     gradient: "from-yellow-500 to-orange-600",
   },
 ];
@@ -123,12 +123,12 @@ export const BCAActualitesPage = () => {
                 <article key={i} className={`animate-on-scroll stagger-${(i % 3) + 1} group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl overflow-hidden transition-all hover:-translate-y-1`}>
                   <div className={`relative h-32 bg-gradient-to-br ${item.gradient} flex items-center justify-center overflow-hidden`}>
                     <FiberBg variant="blue" className="opacity-30" />
-                    <span className="relative text-5xl">{item.icon}</span>
+                    <div className="relative w-8 h-8">{item.icon}</div>
                     <div className="absolute top-3 left-3 bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-2.5 py-1 rounded-full">{item.category}</div>
                     <div className={`absolute top-3 right-3 text-white text-[10px] font-bold px-2 py-0.5 rounded-full ${
                       item.scope === "local" ? "bg-green-500/80" : item.scope === "afrique" ? "bg-orange-500/80" : "bg-purple-500/80"
                     }`}>
-                      {item.scope === "local" ? "🇨🇮 Côte d'Ivoire" : item.scope === "afrique" ? "🌍 Afrique" : "🌐 International"}
+                      {item.scope === "local" ? "Côte d'Ivoire" : item.scope === "afrique" ? "Afrique" : "International"}
                     </div>
                   </div>
                   <div className="p-6">

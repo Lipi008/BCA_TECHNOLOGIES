@@ -11,7 +11,7 @@ You MUST maintain this file to track your work across messages. This is NON-NEGO
 - **Include file paths** of key files modified or discovered
 - **Note patterns/conventions** found in the codebase
 - **Sort entries by date** in DESCENDING order (most recent first)
-- If this file gets corrupted, messy, or unsorted -> re-create it. 
+- If this file gets corrupted, messy, or unsorted -> re-create it.
 - CRITICAL: Updating this file at the END of EVERY response is MANDATORY.
 - CRITICAL: Keep this file under 300 lines. You are allowed to summarize, change the format, delete entries, etc., in order to keep it under the limit.
 
@@ -20,65 +20,81 @@ You MUST maintain this file to track your work across messages. This is NON-NEGO
 <changelog>
 
 ## 2026-04-02 — Section "Nos Forces" ajoutée dans BCAAboutPage après OrgChart (8 cartes fond bleu marine)
+
 - **BCAAboutPage.tsx**: Nouveau composant `NosForces` (grille 4 col, Expertise/Équipements/Logistique/Clés-en-main/Satisfaction/Flexibilité/Réactivité/Couverture)
-- Direction Technique reçoit la 1ère photo générée d&#39;homme noir (generated-image-1775171115483.png)
+- Direction Technique reçoit la 1ère photo générée d'homme noir (generated-image-1775171115483.png)
 
 ## 2026-03-29 — Photo réelle du fondateur G.P. ANGAHI intégrée (uploaded-asset-1774795313606-0.png)
+
 - **BCAAboutPage.tsx**: Remplacement de la photo générée par IA → vraie photo uploadée dans CEOMessage + TeamSection
 
 ## 2026-03-29 — OrgChart remplacé par l'image uploadée directement (hosted PNG, plus de code SVG)
 
 ## 2026-03-29 — OrgChart BCAAboutPage reconstruit avec les vraies données (DG, RT, 6 équipes F.O, Génie Civil, etc.)
+
 - **BCAAboutPage.tsx**: Remplacement organigramme fictif → structure réelle avec Box/V/H components, DG ANGAHI, Co-Gérant KOUASSI, RT ROMBA Kpanta, Chef Projet DAKOURY, Superviseur KOUASSI, 6 équipes Travaux F.O, Équipe Génie Civil, QUALITE, Maintenance, tous les matricules
 
 ## 2026-03-29 — Tous les PageHero uniformisés : gradient bleu→indigo→violet (#2563eb→#4f46e5→#7c3aed), sans FiberBg
+
 - **BCAActivitiesPage, BCAActualitesPage, BCAContactPage, BCAPartenairesPage, BCAReferencesPage, BCAAboutPage, BCAOffresPage, BCARealisationsPage**: PageHero → fond plat `linear-gradient(135deg, #2563eb 0%, #4f46e5 50%, #7c3aed 100%)`, FiberBg supprimé, textes unifiés en blue-200/blue-100
 
 ## 2026-03-29 — Homepage PartnersSlider : cartes plus grandes (140x100), défilement accéléré (20s), logos + noms bien visibles
+
 - **tailwind.config.js**: animation marquee 30s → 20s
 - **BCAHomePage.tsx**: PartnerLogoCard élargi (minWidth 140, height 100), image 24x12, texte xs
 
 ## 2026-03-28 — Partenaires : logos EXFO et Infractive remplacés par les vraies images uploadées
+
 - **BCAPartenairesPage.tsx**: `EXFO` → hosted jpeg (`uploaded-asset-1774691067456-0.jpeg`), `Infractive` → hosted png (`uploaded-asset-1774691067457-1.png`)
 
 ## 2026-03-27 — Offres : bloc "La technologie au service de vos terres" → Agriculture Intelligente (3 équipements : capteurs sol 5 couches, station météo, irrigation pilotée)
+
 - **BCAOffresPage.tsx** service `domotique` → badge "Agriculture Intelligente", icon 🌱, description intro, 3 subSections détaillées, KPIs mis à jour (5 couches / 24/7 / 100% pilotable)
 
 ## 2026-03-27 — Offres : bloc "Connectez, automatisez" enrichi avec 3 groupes (IoT, UX, Services VA) et 9 items
+
 - **BCAOffresPage.tsx** service `security` → badge "IoT & Smart Building", 3 subSections : Écosystèmes IoT / Interfaces UX / Services VA
 - KPIs mis à jour : 30% éco énergie / 80 bâtiments / 100% sur mesure
 
 ## 2026-03-27 — Offres : bloc "Votre sécurité, notre engagement" enrichi avec 4 sous-sections détaillées
+
 - **BCAOffresPage.tsx** service `it` → renommé badge "Sécurité", icon 🔒, 4 subSections : CCTV 4K, Contrôle d'accès biométrique, Alarme & intrusion, Sécurité incendie
 - KPIs conservés : 80 bâtiments / 500+ caméras / 5★ satisfaction
 
 ## 2026-03-27 — Offres : bloc Télécommunications mis à jour avec vrai contenu structuré en 3 sous-sections
+
 - **BCAOffresPage.tsx**: `tagline` → "Votre réseau fibre, pensé avec précision, déployé avec excellence"
 - Ajout `subSections` : Expertise & Ingénierie / Déploiement & Infrastructures / Maintenance & Performance avec items détaillés
 - `ServiceBlock` adapté : affiche `subSections` en priorité si présentes, sinon `features` classiques
 
 ## 2026-03-26 — Hero refait : fond blanc, logo/image 99% largeur, 3 slides, tagline sous le slider
+
 - **BCAHomePage.tsx** `Hero`: suppression du fond dark + FiberBg + halo, slider pleine largeur (aspectRatio 16/7), logo slide 0 objectFit contain, 2 slides photo Unsplash, boutons prev/next blancs, tagline grise en dessous
 - Tagline fixe : "Innover, sécuriser, connecter : l'Afrique en mouvement" sur bg-gray-100
 
 ## 2026-03-25 — Humanisation du site : suppression des tics "IA" dans Home, About, Offres
+
 - **BCAHomePage.tsx**: font-black/uppercase → font-bold, boutons rounded-full → rounded, gradients violets supprimés, FiberBg retiré des sections, emojis retirés des listes partenaires, titres de sections sobres (h2 text-2xl font-bold)
 - **BCAAboutPage.tsx**: PageHero simplifié (bg-blue-800 plat), titres MOT DU PDG/ORGANIGRAMME → h2 font-bold sans uppercase, badges pill supprimés, cards Mission/Vision/Valeurs → border-l simple
 - **BCAOffresPage.tsx**: Hero plat bg-blue-800, ServiceBlock panneau sombre simple sans FiberBg ni rounded-3xl, boutons sans gradients, CTA bg-gray-900 about sans gradient
 
 ## 2026-03-24 — Références & Partenaires : grilles de logos réels (Clearbit) grayscale → couleur au hover
+
 - **BCAReferencesPage.tsx**: 12 logos clients (Orange CI, MTN, SFR, Société Générale…), grille 6 col, grayscale par défaut, onError handler
 - **BCAPartenairesPage.tsx**: 18 logos fournisseurs (Schneider, TP-Link, Dell, Cisco, Huawei…), même système logo-only
 
 ## 2026-03-24 — Fix: suppression du header dupliqué dans BCAContact (badge+titre+sous-titre existaient dans PageHero ET BCAContact)
+
 - **BCAContact.tsx**: Suppression du bloc `{/* Header */}` interne (badge, h2, subtitle, divider) — le titre vient uniquement de `PageHero` dans `BCAContactPage`
 
 ## 2026-03-24 — Contact: fond blanc → dégradé slate-900/blue-950/indigo-950, champs glassmorphism, textes blancs
+
 - **BCAContact.tsx**: `bg-white` → `bg-gradient-to-br from-slate-900 via-blue-950 to-indigo-950` + FiberBg blue + radial glow
 - Cartes info: `bg-white/8 backdrop-blur`, bordures `border-white/10`, textes blancs
 - Champs formulaire: `bg-white/10 text-white placeholder-white/30`, labels `text-blue-200`
 
 ## 2026-03-24 — TeamSection: cartes photo-first (aspect-[3/4], overlay gradient bas, nom+rôle uniquement)
+
 - **BCAAboutPage.tsx**: Suppression texte bio, cartes refondue en portrait plein photo cover, overlay `from-black/80`, bandeau minimal nom+rôle en bas
 
 ## 2026-03-24 — Footer refondu : fond blanc, sans FiberBg, 5 liens rapides, logo 120px, FB/X/LinkedIn, copyright 2026
@@ -153,7 +169,7 @@ You MUST maintain this file to track your work across messages. This is NON-NEGO
 - **BCAPresentation**: Scindé en 3 — About (2 colonnes mission/vision/values), Team (3 cartes), Partners (12 logos grid)
 - **BCARealisations**: Section Témoignages clients ajoutée après les projets
 - **BCASolutions**: CTA banner ajouté en bas + traduction `learn_more`
-- **fr.json + en.json**: Nouvelles clés hero.stat_*, presentation.mission/vision/values, team.*, partners.*, testimonials.*
+- **fr.json + en.json**: Nouvelles clés hero.stat\__, presentation.mission/vision/values, team._, partners._, testimonials._
 
 ## 2026-03-24 — Search fonctionnel + FiberBg sur tous les fonds
 
@@ -180,6 +196,7 @@ You MUST maintain this file to track your work across messages. This is NON-NEGO
 - **index.html**: Titre mis à jour pour BCA Technologies Limited
 
 ## 2026-03-13 — Contact form with validation & success state
+
 ## 2026-03-13 — Contact form with validation & success state
 
 - **src/sections/ContactSection/index.tsx**: Nouveau composant — form 3 champs (name, email, message), validation inline, états touched/error/valid, spinner submit, success card avec reset
@@ -198,7 +215,6 @@ You MUST maintain this file to track your work across messages. This is NON-NEGO
 - **LanguageSwitcher.tsx**: Switcher fonctionnel FR/EN via `i18n.changeLanguage()` + persist localStorage
 - **Tous les composants**: `useTranslation()` + `t()` intégrés (Header, Main, AboutSection, StatsSection, ExpertiseSection, DirectorMessage, RealizationsSection, PartnersSection, PressSection, GallerySection, FooterContact, CICPage, ActivitesPage, RealisationsPage)
 
-
 ## 2026-03-13 — Fix navigation anchors + section Contact
 
 - **Header/index.tsx**: `handleNavClick` redirige vers `/#anchor` si la section est absente de la page courante
@@ -214,7 +230,6 @@ You MUST maintain this file to track your work across messages. This is NON-NEGO
 - **RealisationsPage** (`src/pages/RealisationsPage.tsx`): Hero + Stats banner + 6 projets filtrables par catégorie + modal détail projet
 - **Header/DesktopMenu**: useNavigate pour CIC/Activités/Réalisations, useLocation pour active state; autres liens = anchor scroll
 - **Header/index.tsx**: useNavigate intégré pour les liens page vs anchor
-
 
 ## 2026-03-10 — Full Site Animation, Interactivity & Responsiveness Pass
 

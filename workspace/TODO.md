@@ -2,6 +2,7 @@
 This file powers chat suggestion chips. Keep it focused and actionable.
 
 Rules:
+
 - Each task must be wrapped in "<todo>" and "</todo>" tags.
 - Inside each <todo> block:
   - First line: title (required)
@@ -14,11 +15,11 @@ Rules:
 - Remove or rewrite stale tasks when they are completed, obsolete, duplicated, or clearly lower-priority than current work.
 - Re-rank remaining tasks by current impact and urgency.
 - Prefer specific wording tied to real project scope/files; avoid vague goals.
-</instructions>
+  </instructions>
 
 <todo>
 Ajouter de vraies photos aux galerie et équipe
-Générer des images réalistes pour la galerie de réalisations et les membres de l&#39;équipe (image_generation).
+Générer des images réalistes pour la galerie de réalisations et les membres de l'équipe (image_generation).
 </todo>
 
 <todo>

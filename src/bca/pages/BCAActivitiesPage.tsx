@@ -1,3 +1,4 @@
+import React from "react";
 import { useTranslation } from "react-i18next";
 import type { PageId } from "../BCARouter";
 
@@ -16,10 +17,19 @@ interface Props { navigate: (p: PageId) => void; }
 export const BCAActivitiesPage = ({ navigate }: Props) => {
   const { t } = useTranslation();
 
-  const domains = [
+  const domains: {
+    key: string;
+    icon: React.ReactNode;
+    gradient: string;
+    accentBg: string;
+    image: string;
+    title: string;
+    long: string;
+    items: string[];
+  }[] = [
     {
       key: "telecom",
-      icon: "📡",
+      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-full h-full"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>,
       gradient: "from-blue-600 to-blue-800",
       accentBg: "bg-blue-600",
       image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop",
@@ -29,7 +39,7 @@ export const BCAActivitiesPage = ({ navigate }: Props) => {
     },
     {
       key: "it",
-      icon: "💻",
+      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-full h-full"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>,
       gradient: "from-indigo-600 to-blue-700",
       accentBg: "bg-indigo-600",
       image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&auto=format&fit=crop",
@@ -39,7 +49,7 @@ export const BCAActivitiesPage = ({ navigate }: Props) => {
     },
     {
       key: "security",
-      icon: "🔒",
+      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-full h-full"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>,
       gradient: "from-purple-600 to-indigo-700",
       accentBg: "bg-purple-600",
       image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&auto=format&fit=crop",
@@ -49,7 +59,7 @@ export const BCAActivitiesPage = ({ navigate }: Props) => {
     },
     {
       key: "domotique",
-      icon: "🏠",
+      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-full h-full"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>,
       gradient: "from-violet-600 to-purple-700",
       accentBg: "bg-violet-600",
       image: "https://images.unsplash.com/photo-1558002038-1055907df827?w=800&auto=format&fit=crop",
@@ -59,7 +69,7 @@ export const BCAActivitiesPage = ({ navigate }: Props) => {
     },
     {
       key: "energy",
-      icon: "☀️",
+      icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-full h-full"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>,
       gradient: "from-yellow-500 to-orange-500",
       accentBg: "bg-yellow-500",
       image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&auto=format&fit=crop",
@@ -86,7 +96,7 @@ export const BCAActivitiesPage = ({ navigate }: Props) => {
                     <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
                       <img src={d.image} alt={d.title} className="w-full h-full object-cover" />
                       <div className={`absolute inset-0 bg-gradient-to-br ${d.gradient} opacity-20`} />
-                      <div className={`absolute bottom-5 left-5 w-14 h-14 rounded-2xl bg-gradient-to-br ${d.gradient} flex items-center justify-center text-3xl shadow-xl`}>
+                      <div className={`absolute bottom-5 left-5 w-14 h-14 rounded-2xl bg-gradient-to-br ${d.gradient} flex items-center justify-center shadow-xl p-3 text-white`}>
                         {d.icon}
                       </div>
                     </div>
@@ -95,7 +105,7 @@ export const BCAActivitiesPage = ({ navigate }: Props) => {
                   {/* Text */}
                   <div className={`w-full lg:w-1/2 ${isEven ? "animate-on-scroll-right" : "animate-on-scroll-left"}`}>
                     <div className={`inline-flex items-center gap-2 ${d.accentBg} text-white text-xs font-bold px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest`}>
-                      {d.icon}&nbsp;{d.title}
+                      <span className="w-4 h-4 inline-flex items-center">{d.icon}</span>{d.title}
                     </div>
                     <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-gray-900 mb-5 leading-tight">
                       {d.title}

@@ -14,7 +14,7 @@ export const FooterBottom = () => {
                         className="relative text-stone-300 text-sm items-center box-border caret-transparent flex justify-center min-h-[auto] min-w-[auto] text-center w-full md:justify-normal md:text-start"
                       >
                         <span className="box-border caret-transparent hidden text-center mr-[10.5px] md:text-start"></span>
-                        Conditions Générales D&#39;utilisation{" "}
+                        Conditions Générales D'utilisation{" "}
                       </a>
                     </li>
                     <li className="relative items-center box-border caret-transparent inline-flex flex-wrap text-center mr-5 md:text-start">
@@ -48,8 +48,8 @@ export const FooterBottom = () => {
                 <div className="relative box-border caret-transparent text-center md:text-right">
                   <p className="relative text-white/70 text-sm box-border caret-transparent inline-block text-center align-middle md:text-right">
                     {" "}
-                    © 2023 Côte d&#39;Ivoire Câbles. Tous Droits Réservés.
-                    Designed by Key Agency
+                    © 2023 Côte d'Ivoire Câbles. Tous Droits Réservés. Designed
+                    by Key Agency
                   </p>
                 </div>
               </div>

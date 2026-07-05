@@ -81,14 +81,34 @@
     "title": "The BCA Group's Expertise",
     "subtitle": "Illustrated by Best Africa Limited (Mali), our sister company expert in fiber optics",
     "items": [
-      { "value": "76 475",     "label": "Studies completed",       "period": "2021 – 2026" },
-      { "value": "41 904",     "label": "Installations completed", "period": "2021 – 2026" },
-      { "value": "57 226 014", "label": "Faults resolved",         "period": "2021 – 2026" },
-      { "value": "542 014",    "label": "Fiber cable deployed",     "period": "2025 – 2026" },
-      { "value": "120 104",    "label": "Fiber cable maintained",   "period": "2024 – 2026" },
-      { "value": "4 135",      "label": "PCOs deployed",            "period": "2025 – 2026" },
-      { "value": "851",        "label": "Sites maintained",         "period": "2024 – 2026" },
-      { "value": ">98%",       "label": "Completion rate",          "period": "2021 – 2026" }
+      {
+        "value": "76 475",
+        "label": "Studies completed",
+        "period": "2021 – 2026"
+      },
+      {
+        "value": "41 904",
+        "label": "Installations completed",
+        "period": "2021 – 2026"
+      },
+      {
+        "value": "57 226 014",
+        "label": "Faults resolved",
+        "period": "2021 – 2026"
+      },
+      {
+        "value": "542 014",
+        "label": "Fiber cable deployed",
+        "period": "2025 – 2026"
+      },
+      {
+        "value": "120 104",
+        "label": "Fiber cable maintained",
+        "period": "2024 – 2026"
+      },
+      { "value": "4 135", "label": "PCOs deployed", "period": "2025 – 2026" },
+      { "value": "851", "label": "Sites maintained", "period": "2024 – 2026" },
+      { "value": ">98%", "label": "Completion rate", "period": "2021 – 2026" }
     ]
   },
   "home_news": {
@@ -593,32 +613,32 @@
     "subtitle": "BCA Technologies Limited is committed to providing quality service delivery, meeting international standards, with SLA rigor.",
     "items": [
       {
-        "icon": "🏆",
+        "icon": "award",
         "title": "North American Standards",
         "description": "We import and offer only equipment that meets North American and international quality standards."
       },
       {
-        "icon": "🤝",
+        "icon": "users",
         "title": "Strategic Partnerships",
         "description": "Strong partnerships with recognized global manufacturers and distributors to guarantee reliable, certified products."
       },
       {
-        "icon": "🌐",
+        "icon": "globe",
         "title": "Multi-Country Presence",
         "description": "Active in Côte d'Ivoire, Canada, Ghana, Mali, Burkina Faso, and Liberia for optimal regional coverage."
       },
       {
-        "icon": "⚡",
+        "icon": "zap",
         "title": "Sector Expertise",
         "description": "A team of qualified experts with in-depth knowledge of telecom, IT, electronics, and security sectors."
       },
       {
-        "icon": "🚚",
+        "icon": "truck",
         "title": "Efficient Logistics",
         "description": "A structured logistics network ensuring fast and secure delivery of your equipment from Canada to Africa."
       },
       {
-        "icon": "🎯",
+        "icon": "target",
         "title": "Personalized Service",
         "description": "A tailor-made approach for each client, with dedicated support from order to installation."
       }
@@ -759,7 +779,7 @@
     "see_all_refs": "View all our references →",
     "partners_title": "Our partners",
     "see_all_partners": "View all our partners →",
-    "learn_more_bca": "Learn more about BCA →",
+    "learn_more_bca": "Learn more about BCA",
     "all_news": "All news →",
     "read_article": "Read article →",
     "read": "Read →"
@@ -893,9 +913,9 @@
     "financial_title": "Financial Partners"
   },
   "header": {
-    "ticker_hours":   "🕘 Office hours Mon – Fri: 8:00 AM – 5:30 PM",
-    "ticker_support": "🔧 Technical support & services available 24/7",
-    "ticker_address": "📍 Cocody Angré, 9ème Tranche, Abidjan",
+    "ticker_hours": "Office hours Mon – Fri: 8:00 AM – 5:30 PM",
+    "ticker_support": "Technical support & services available 24/7",
+    "ticker_address": "Cocody Angré, 9ème Tranche, Abidjan",
     "ticker_tagline": "💡 Your technology partner for a digital future"
   },
   "footer": {
