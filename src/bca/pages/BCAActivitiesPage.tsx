@@ -87,7 +87,7 @@ export const BCAActivitiesPage = ({ navigate }: Props) => {
         {domains.map((d, i) => {
           const isEven = i % 2 === 0;
           return (
-            <section key={d.key} className={`py-16 sm:py-24 ${isEven ? "bg-white" : "bg-gray-50"}`}>
+            <section key={d.key} id={d.key} className={`py-16 sm:py-24 ${isEven ? "bg-white" : "bg-gray-50"}`}>
               <div className="max-w-6xl mx-auto px-4 sm:px-6">
                 <div className={`flex flex-col ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"} gap-10 lg:gap-16 items-center`}>
 

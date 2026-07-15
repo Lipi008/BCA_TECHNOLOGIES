@@ -362,7 +362,7 @@ const ReferenceLogoCard = ({ name, logo, color }: { name: string; logo?: string;
     <div className="flex-shrink-0 flex flex-col items-center justify-center gap-2 px-5 py-4 border border-gray-200 rounded-lg bg-white hover:border-blue-300 hover:shadow-md transition-all group" style={{ minWidth: 140, height: 100 }}>
       <div className="w-24 h-12 flex items-center justify-center overflow-hidden">
         {logo && !failed ? (
-          <img src={logo} alt={name} className="max-h-full max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300" onError={() => setFailed(true)} />
+          <img src={logo} alt={name} className="max-h-full max-w-full object-contain transition-all duration-300" onError={() => setFailed(true)} />
         ) : (
           <div className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-black text-sm select-none" style={{ backgroundColor: color || "#2563eb" }}>
             {initials}
@@ -415,7 +415,7 @@ const PartnerLogoCard = ({ name, logo, bg, text }: { name: string; logo?: string
     <div className="flex-shrink-0 flex flex-col items-center justify-center gap-2 px-5 py-4 border border-gray-200 rounded-lg bg-white hover:border-blue-300 hover:shadow-md transition-all group" style={{ minWidth: 140, height: 100 }}>
       <div className="w-24 h-12 flex items-center justify-center overflow-hidden">
         {logo && !failed ? (
-          <img src={logo} alt={name} className="max-h-full max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300" onError={() => setFailed(true)} />
+          <img src={logo} alt={name} className="max-h-full max-w-full object-contain transition-all duration-300" onError={() => setFailed(true)} />
         ) : bg ? (
           <div className="w-full h-full flex items-center justify-center rounded text-white font-bold text-xs text-center leading-tight px-2" style={{ backgroundColor: bg, whiteSpace: "pre-line" }}>{text || name}</div>
         ) : (
@@ -477,6 +477,7 @@ const Expertise = ({ navigate }: Props) => {
   const domains = [
     {
       page: "activites" as PageId,
+      domainKey: "telecom",
       accentColor: "border-l-blue-600",
       title: t("expertise.fiber_title"),
       subtitle: t("expertise.fiber_subtitle"),
@@ -486,6 +487,7 @@ const Expertise = ({ navigate }: Props) => {
     },
     {
       page: "activites" as PageId,
+      domainKey: "security",
       accentColor: "border-l-slate-500",
       title: t("expertise.security_title"),
       subtitle: t("expertise.security_subtitle"),
@@ -495,6 +497,7 @@ const Expertise = ({ navigate }: Props) => {
     },
     {
       page: "activites" as PageId,
+      domainKey: "energy",
       accentColor: "border-l-yellow-500",
       title: t("expertise.smart_title"),
       subtitle: t("expertise.smart_subtitle"),
@@ -539,7 +542,10 @@ const Expertise = ({ navigate }: Props) => {
                   ))}
                 </ul>
                 <button
-                  onClick={() => navigate(d.page)}
+                  onClick={() => {
+                    navigate(d.page);
+                    setTimeout(() => document.getElementById(d.domainKey)?.scrollIntoView({ behavior: "smooth", block: "start" }), 150);
+                  }}
                   className="mt-2 text-blue-700 font-medium text-sm hover:underline text-left"
                 >
                   {t("solutions.learn_more")} →

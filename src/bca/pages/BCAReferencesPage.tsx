@@ -87,7 +87,7 @@ const ReferenceCard = ({
           <img
             src={logo}
             alt={name}
-            className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+            className="max-w-full max-h-full object-contain transition-all duration-300"
             onError={() => setFailed(true)}
           />
         ) : (
