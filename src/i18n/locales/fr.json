@@ -153,7 +153,7 @@
     "title": "UN PROJET ? PARLONS-EN.",
     "subtitle": "Notre équipe d'experts est disponible pour étudier votre projet et vous proposer la solution technologique la plus adaptée.",
     "btn_contact": "Contactez-nous",
-    "btn_offers": "Nos offres"
+    "btn_offers": "Nos services"
   },
   "presentation": {
     "badge": "Présentation",
@@ -232,8 +232,8 @@
     "cta_contact": "Nous contacter"
   },
   "solutions": {
-    "badge": "Nos Offres",
-    "title": "NOS OFFRES",
+    "badge": "Nos services",
+    "title": "NOS SERVICES",
     "subtitle": "Des solutions technologiques innovantes et fiables pour répondre aux besoins de votre entreprise.",
     "learn_more": "En savoir plus",
     "cta_title": "Un projet en tête ?",

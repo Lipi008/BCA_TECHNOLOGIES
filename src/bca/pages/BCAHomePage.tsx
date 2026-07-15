@@ -4,6 +4,15 @@ import { FiberBg } from "../FiberBg";
 import { BCAWhyUs } from "../BCAWhyUs";
 import type { PageId } from "../BCARouter";
 
+import carouselP1 from "../../img/Images et Videos en boucle pour la carousselle de la page d'accueil/photo_2026-07-15_13-21-12.jpg";
+import carouselP2 from "../../img/Images et Videos en boucle pour la carousselle de la page d'accueil/photo_2026-07-15_13-21-22.jpg";
+import carouselP3 from "../../img/Images et Videos en boucle pour la carousselle de la page d'accueil/photo_2026-07-15_13-21-30.jpg";
+import carouselP4 from "../../img/Images et Videos en boucle pour la carousselle de la page d'accueil/photo_2026-07-15_13-22-20.jpg";
+import carouselP5 from "../../img/Images et Videos en boucle pour la carousselle de la page d'accueil/photo_2026-07-15_13-22-26.jpg";
+import carouselP6 from "../../img/Images et Videos en boucle pour la carousselle de la page d'accueil/photo_2026-07-15_13-22-31.jpg";
+import carouselV1 from "../../img/Images et Videos en boucle pour la carousselle de la page d'accueil/doc_2026-07-15_13-22-48.mp4";
+import carouselV2 from "../../img/Images et Videos en boucle pour la carousselle de la page d'accueil/video_2026-07-15_13-23-54.mp4";
+
 import logoOrange      from "../../img/image_a_use/orange.png";
 import logoMTN         from "../../img/image_a_use/mtn.jpg";
 import logoMoov        from "../../img/image_a_use/moov.png";
@@ -25,41 +34,26 @@ interface Props { navigate: (p: PageId) => void; }
 /* ─────────────────────────────────────────────
    HERO — logo 99% largeur + slider fond blanc
 ───────────────────────────────────────────── */
-const HERO_SLIDES = [
+type HeroSlide = { src: string; alt: string; objectFit: "contain" | "cover"; bg: string; isVideo: boolean };
+
+const HERO_SLIDES: HeroSlide[] = [
   {
     src: "https://c.animaapp.com/mn4bql9mR7qaS3/img/uploaded-asset-1774343028758-0.png",
-    alt: "BCA Technologies — Logo principal",
-    objectFit: "contain" as const,
-    label: "",
-    desc: "",
+    alt: "BCA Technologies Limited",
+    objectFit: "contain",
     bg: "#ffffff",
+    isVideo: false,
   },
-  {
-    src: "https://c.animaapp.com/mn4bql9mR7qaS3/img/generated-image-1774521368445.png",
-    alt: "Fibre Optique — Déploiement de réseaux haute performance",
-    objectFit: "cover" as const,
-    label: "Fibre Optique",
-    desc: "Déploiement de réseaux fibre optique haute performance pour connecter entreprises et institutions.",
-    bg: "#000000",
-  },
-  {
-    src: "",
-    alt: "Sécurité Professionnelle — Solutions de sécurité électronique",
-    objectFit: "cover" as const,
-    label: "Sécurité Professionnelle",
-    desc: "Solutions complètes de sécurité électronique pour la protection de vos locaux et actifs.",
-    bg: "#1e293b",
-    noImage: true,
-  },
-  {
-    src: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80",
-    alt: "Solutions Intelligentes — Automatisation et IoT",
-    objectFit: "cover" as const,
-    label: "Solutions Intelligentes",
-    desc: "Automatisation et IoT pour des bâtiments intelligents et une agriculture connectée.",
-    bg: "#0f172a",
-  },
+  { src: carouselP1, alt: "BCA Technologies sur le terrain", objectFit: "cover", bg: "#000", isVideo: false },
+  { src: carouselP2, alt: "BCA Technologies", objectFit: "cover", bg: "#000", isVideo: false },
+  { src: carouselP3, alt: "BCA Technologies", objectFit: "cover", bg: "#000", isVideo: false },
+  { src: carouselP4, alt: "BCA Technologies", objectFit: "cover", bg: "#000", isVideo: false },
+  { src: carouselP5, alt: "BCA Technologies", objectFit: "cover", bg: "#000", isVideo: false },
+  { src: carouselP6, alt: "BCA Technologies", objectFit: "cover", bg: "#000", isVideo: false },
+  { src: carouselV1, alt: "BCA Technologies — vidéo", objectFit: "cover", bg: "#000", isVideo: true },
+  { src: carouselV2, alt: "BCA Technologies — vidéo", objectFit: "cover", bg: "#000", isVideo: true },
 ];
+
 
 const Hero = ({ navigate }: Props) => {
   const { t } = useTranslation();
@@ -87,77 +81,56 @@ const Hero = ({ navigate }: Props) => {
   return (
     <section className="relative w-full bg-white overflow-hidden">
 
-      {/* ── SLIDER : logo/image pleine largeur ── */}
+      {/* ── SLIDER : pleine largeur ── */}
       <div className="relative w-full h-[440px] sm:h-auto sm:aspect-[16/9] md:aspect-[16/7]">
-        {!(HERO_SLIDES[slide] as any).noImage && (
+        {/* Fond blanc pour slide logo */}
+        {slide === 0 && <div className="absolute inset-0 bg-white" />}
+
+        {/* Media : image ou vidéo */}
+        {HERO_SLIDES[slide].isVideo ? (
+          <video
+            key={slide}
+            src={HERO_SLIDES[slide].src}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover select-none transition-opacity duration-500"
+            style={{ opacity: fading ? 0 : 1 }}
+          />
+        ) : slide === 0 ? (
           <img
             src={HERO_SLIDES[slide].src}
             alt={HERO_SLIDES[slide].alt}
             draggable={false}
             className="absolute inset-0 w-full h-full select-none transition-opacity duration-500"
-            style={{
-              opacity: fading ? 0 : 1,
-              objectFit: HERO_SLIDES[slide].objectFit,
-            }}
+            style={{ opacity: fading ? 0 : 1, objectFit: "contain" }}
           />
+        ) : (
+          <>
+            {/* Fond flouté pour remplir sans recadrage brutal */}
+            <img
+              src={HERO_SLIDES[slide].src}
+              aria-hidden
+              draggable={false}
+              className="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl brightness-50 select-none"
+              style={{ opacity: fading ? 0 : 1 }}
+            />
+            {/* Image principale en contain : aucune partie coupée */}
+            <img
+              key={slide}
+              src={HERO_SLIDES[slide].src}
+              alt={HERO_SLIDES[slide].alt}
+              draggable={false}
+              className="absolute inset-0 w-full h-full object-contain select-none transition-opacity duration-500"
+              style={{ opacity: fading ? 0 : 1 }}
+            />
+          </>
         )}
-        <div
-          className="absolute inset-0 transition-opacity duration-500"
-          style={{
-            background: (HERO_SLIDES[slide] as any).bg || "#000000",
-            opacity: (HERO_SLIDES[slide] as any).noImage ? (fading ? 0 : 1) : 0,
-            zIndex: (HERO_SLIDES[slide] as any).noImage ? 0 : -1,
-          }}
-        />
 
-        {/* Overlay gradient bas pour les slides non-logo */}
+        {/* Overlay gradient pour les slides médias */}
         {slide !== 0 && (
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none" />
-        )}
-
-        {/* Caption slide (label + description + items) */}
-        {slide !== 0 && HERO_SLIDES[slide].label && (
-          <div
-            className="absolute bottom-10 left-0 right-0 px-5 sm:px-8 md:px-16 transition-all duration-500 z-10"
-            style={{ opacity: fading ? 0 : 1, transform: fading ? "translateY(8px)" : "translateY(0)" }}
-          >
-            {slide === 1 && (
-              <div className="max-w-3xl">
-                <p className="text-blue-300 text-xs font-semibold uppercase tracking-widest mb-1.5">{t("home.slide1_tag")}</p>
-                <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-bold leading-snug mb-2">{t("home.slide1_title")}</h2>
-                <p className="text-white/75 text-xs sm:text-sm mb-3 hidden sm:block">{t("home.slide1_desc")}</p>
-                <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                  {(t("home.slide1_tags", { returnObjects: true }) as string[]).map((tag, i) => (
-                    <span key={i} className={`bg-white/15 border border-white/25 text-white text-xs px-2.5 sm:px-3 py-1 rounded-full${i >= 3 ? " hidden sm:inline" : ""}`}>{tag}</span>
-                  ))}
-                </div>
-              </div>
-            )}
-            {slide === 2 && (
-              <div className="max-w-3xl">
-                <p className="text-slate-300 text-xs font-semibold uppercase tracking-widest mb-1.5">{t("home.slide2_tag")}</p>
-                <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-bold leading-snug mb-2">{t("home.slide2_title")}</h2>
-                <p className="text-white/75 text-xs sm:text-sm mb-3 hidden sm:block">{t("home.slide2_desc")}</p>
-                <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                  {(t("home.slide2_tags", { returnObjects: true }) as string[]).map((tag, i) => (
-                    <span key={i} className={`bg-white/15 border border-white/25 text-white text-xs px-2.5 sm:px-3 py-1 rounded-full${i >= 3 ? " hidden sm:inline" : ""}`}>{tag}</span>
-                  ))}
-                </div>
-              </div>
-            )}
-            {slide === 3 && (
-              <div className="max-w-3xl">
-                <p className="text-cyan-300 text-xs font-semibold uppercase tracking-widest mb-1.5">{t("home.slide3_tag")}</p>
-                <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-bold leading-snug mb-2">{t("home.slide3_title")}</h2>
-                <p className="text-white/75 text-xs sm:text-sm mb-3 hidden sm:block">{t("home.slide3_desc")}</p>
-                <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                  {(t("home.slide3_tags", { returnObjects: true }) as string[]).map((tag, i) => (
-                    <span key={i} className={`bg-white/15 border border-white/25 text-white text-xs px-2.5 sm:px-3 py-1 rounded-full${i >= 3 ? " hidden sm:inline" : ""}`}>{tag}</span>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none" />
         )}
 
         {/* Bouton prev */}

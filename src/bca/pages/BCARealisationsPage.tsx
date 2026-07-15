@@ -2,18 +2,6 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FiberBg } from "../FiberBg";
 
-import img1  from "../../img/gallery/photo_2026-06-23_19-17-51.jpg";
-import img2  from "../../img/gallery/photo_2026-06-23_19-18-28.jpg";
-import img3  from "../../img/gallery/photo_2026-06-23_19-18-35.jpg";
-import img4  from "../../img/gallery/photo_2026-06-23_19-18-40.jpg";
-import img5  from "../../img/gallery/photo_2026-06-23_19-18-44.jpg";
-import img6  from "../../img/gallery/photo_2026-06-23_19-18-49.jpg";
-import img7  from "../../img/gallery/photo_2026-06-23_19-18-53.jpg";
-import img8  from "../../img/gallery/photo_2026-06-23_19-18-57.jpg";
-import img9  from "../../img/gallery/photo_2026-06-23_19-19-02.jpg";
-import img10 from "../../img/gallery/photo_2026-06-23_19-19-06.jpg";
-import img11 from "../../img/gallery/photo_2026-06-23_19-19-12.jpg";
-
 const PageHero = ({ badge, title, subtitle }: { badge: string; title: string; subtitle?: string }) => (
   <section className="relative py-24 px-6 overflow-hidden" style={{ background: "linear-gradient(135deg, #2563eb 0%, #4f46e5 50%, #7c3aed 100%)" }}>
     <div className="relative z-10 max-w-4xl mx-auto text-center">
@@ -25,38 +13,14 @@ const PageHero = ({ badge, title, subtitle }: { badge: string; title: string; su
 );
 
 
-type GalleryItem = {
-  id: number; image: string; wide: boolean;
-  category: string; title: string; description: string; location: string; year: string;
-};
-
-const IMAGES = [img7, img2, img4, img6, img8, img1, img3, img9, img10, img11, img5];
-const WIDE   = [false, false, true, false, false, false, true, false, false, false, false];
-
 /* ── Galerie composant ── */
 const GallerySection = () => {
-  const { t } = useTranslation();
-  const [activeIdx, setActiveIdx] = useState(0);
-  const [selected, setSelected] = useState<GalleryItem | null>(null);
-
-  const filterLabels = t("gallery_filters", { returnObjects: true }) as string[];
-  const rawData = t("gallery_items", { returnObjects: true }) as Array<{
-    category: string; title: string; description: string; location: string; year: string;
-  }>;
-
-  const items: GalleryItem[] = rawData.map((d, i) => ({
-    id: i + 1, image: IMAGES[i], wide: WIDE[i] ?? false, ...d,
-  }));
-
-  const displayed = activeIdx === 0
-    ? items
-    : items.filter((g) => g.category === filterLabels[activeIdx]);
+  const { t, i18n } = useTranslation();
 
   return (
     <section className="bg-white py-20 px-6 relative overflow-hidden">
       <FiberBg variant="subtle" />
       <div className="relative z-10 max-w-6xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-1.5 rounded-full mb-3 uppercase tracking-widest">
             {t("realizations.gallery_badge")}
@@ -66,91 +30,20 @@ const GallerySection = () => {
           <div className="mt-4 w-14 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mx-auto" />
         </div>
 
-        {/* Filtres */}
-        <div className="flex flex-wrap justify-center gap-2 mb-10">
-          {filterLabels.map((f, i) => (
-            <button
-              key={i}
-              onClick={() => setActiveIdx(i)}
-              className={`px-4 py-2 rounded-full text-xs font-semibold transition-all ${activeIdx === i ? "bg-gradient-to-r from-blue-700 to-purple-700 text-white shadow-md" : "bg-gray-100 text-gray-600 hover:bg-gray-200"}`}
-            >
-              {f}
-            </button>
-          ))}
-        </div>
-
-        {/* Grille masonry-style */}
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
-          {displayed.map((item) => (
-            <div
-              key={item.id}
-              className="break-inside-avoid group cursor-pointer rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              onClick={() => setSelected(item)}
-            >
-              <div className={`relative overflow-hidden ${item.wide ? "h-72" : "h-52"}`}>
-                <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
-                <div className="absolute top-3 left-3">
-                  <span className="bg-black/50 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">{item.category}</span>
-                </div>
-                <div className="absolute top-3 right-3">
-                  <span className="bg-black/50 backdrop-blur-sm text-white text-[10px] font-semibold px-2.5 py-1 rounded-full">{item.year}</span>
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                      <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-white border border-gray-100 p-4">
-                <h3 className="font-bold text-gray-900 text-sm leading-snug group-hover:text-blue-700 transition-colors">{item.title}</h3>
-                <div className="flex items-center gap-1 mt-1.5 text-gray-400 text-xs">
-                  <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                  {item.location}
-                </div>
-              </div>
-            </div>
-          ))}
+        <div className="flex flex-col items-center justify-center py-20 text-center gap-5">
+          <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center">
+            <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+          </div>
+          <p className="text-gray-500 text-sm max-w-sm">
+            {i18n.language?.startsWith("en")
+              ? "Gallery coming soon — photos will be added shortly."
+              : "Galerie en cours de mise à jour — les photos seront ajoutées prochainement."}
+          </p>
         </div>
       </div>
-
-      {/* Modal lightbox */}
-      {selected && (
-        <div
-          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-6"
-          onClick={() => setSelected(null)}
-        >
-          <div
-            className="bg-white rounded-2xl sm:rounded-3xl overflow-hidden max-w-2xl w-full shadow-2xl max-h-[90vh] flex flex-col"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="relative h-48 sm:h-72 overflow-hidden flex-shrink-0">
-              <img src={selected.image} alt={selected.title} className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
-              <div className="absolute top-4 left-4 flex gap-2">
-                <span className="bg-black/50 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-widest">{selected.category}</span>
-                <span className="bg-black/50 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full">{selected.year}</span>
-              </div>
-              <button
-                onClick={() => setSelected(null)}
-                className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm text-white rounded-full p-2 hover:bg-black/70 transition-colors"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
-              </button>
-            </div>
-            <div className="p-5 sm:p-6 overflow-y-auto">
-              <h3 className="font-black text-gray-900 text-lg sm:text-xl leading-tight">{selected.title}</h3>
-              <div className="flex items-center gap-2 mt-2 text-gray-400 text-sm">
-                <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                {selected.location}
-              </div>
-              <p className="mt-4 text-gray-600 text-sm leading-relaxed">{selected.description}</p>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 };
