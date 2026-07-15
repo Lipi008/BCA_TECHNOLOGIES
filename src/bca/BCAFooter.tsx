@@ -39,7 +39,7 @@ export const BCAFooter = ({ navigate }: FooterProps) => {
 
   const socials = [
     {
-      href: "https://facebook.com",
+      href: "https://facebook.com/profile.php?id=61591983830636",
       title: "Facebook",
       svg: (
         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -48,16 +48,7 @@ export const BCAFooter = ({ navigate }: FooterProps) => {
       ),
     },
     {
-      href: "https://x.com",
-      title: "X",
-      svg: (
-        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-        </svg>
-      ),
-    },
-    {
-      href: "https://linkedin.com",
+      href: "https://linkedin.com/company/bca-technologies-limited",
       title: "LinkedIn",
       svg: (
         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -88,8 +79,8 @@ export const BCAFooter = ({ navigate }: FooterProps) => {
             </div>
             <p className="text-gray-500 text-sm leading-relaxed mb-5">
               {lang === "fr"
-                ? "Innover, sécuriser, connecter : l'Afrique en mouvement."
-                : "Innovate, secure, connect: Africa in motion."}
+                ? "Innover, Connecter, Sécuriser l'Afrique à tout moment."
+                : "Innovate, Connect, Secure Africa at all times."}
             </p>
             <div className="flex gap-2">
               {socials.map((s) => (
@@ -133,23 +124,26 @@ export const BCAFooter = ({ navigate }: FooterProps) => {
               {lang === "fr" ? "Contact" : "Contact"}
             </h4>
             <div className="space-y-4">
-              <a
-                href="tel:+2250150575757"
-                className="flex items-start gap-3 text-gray-600 hover:text-blue-700 text-sm transition-colors"
-              >
-                <svg
-                  className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
+              {["+225 01 50 57 57 57", "+225 07 99 57 57 57", "+225 05 65 57 57 57"].map((phone) => (
+                <a
+                  key={phone}
+                  href={`tel:+${phone.replace(/\s/g, "")}`}
+                  className="flex items-start gap-3 text-gray-600 hover:text-blue-700 text-sm transition-colors"
                 >
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42C1.39 2.28 2.26 1 3.61 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81L8.09 7.91a16 16 0 0 0 8 8l2.19-2.19c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
-                </svg>
-                +225 01 50 57 57 57
-              </a>
+                  <svg
+                    className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42C1.39 2.28 2.26 1 3.61 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81L8.09 7.91a16 16 0 0 0 8 8l2.19-2.19c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                  {phone}
+                </a>
+              ))}
               <a
-                href="mailto:info@bcamultiservices.com"
+                href="mailto:infosolutions@bcatechltd.com"
                 className="flex items-start gap-3 text-gray-600 hover:text-blue-700 text-sm transition-colors"
               >
                 <svg
@@ -162,7 +156,7 @@ export const BCAFooter = ({ navigate }: FooterProps) => {
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                   <polyline points="22,6 12,13 2,6" />
                 </svg>
-                info@bcamultiservices.com
+                infosolutions@bcatechltd.com
               </a>
             </div>
           </div>

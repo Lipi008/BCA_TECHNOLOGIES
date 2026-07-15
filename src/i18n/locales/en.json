@@ -625,7 +625,7 @@
       {
         "icon": "globe",
         "title": "Multi-Country Presence",
-        "description": "Active in Côte d'Ivoire, Canada, Ghana, Mali, Burkina Faso, and Liberia for optimal regional coverage."
+        "description": "Active in Canada, Côte d'Ivoire, Mali, and soon Burkina Faso, Ghana, and Liberia for optimal regional coverage."
       },
       {
         "icon": "zap",
@@ -655,7 +655,7 @@
     "phone2": "+225 07 99 57 57 57",
     "phone3": "+225 05 65 57 57 57",
     "email_label": "Email",
-    "email": "info@bcamultiservices.com",
+    "email": "infosolutions@bcatechltd.com",
     "hours_label": "Hours",
     "hours": "Monday – Friday: 8:00 AM – 5:30 PM",
     "form": {
@@ -686,11 +686,11 @@
     "ceo_education": "Engineering & Entrepreneurship",
     "ceo_badge": "Founder & CEO",
     "ceo_name_short": "G.P. ANGAHI",
-    "ceo_name_full": "Gbran Georges Poiret ANGAHI",
+    "ceo_name_full": "Georges Poiret Angahi",
     "ceo_company": "BCA Technologies Limited",
-    "ceo_p1": "Since the creation of BCA Technologies Limited in 2017, our ambition has always been the same: to actively contribute to Africa's digital transformation by bringing world-class technology solutions adapted to the continent's realities and needs.",
-    "ceo_p2": "We chose not to simply distribute equipment, but to support our clients over the long term — from design to implementation, through to maintenance and the evolution of their infrastructures. This added value is what sets us apart and explains our 85% client renewal rate.",
-    "ceo_p3": "Our vision for the coming years: strengthen our sub-regional presence, invest in training local talent, and continue innovating to position BCA Technologies as the reference technology partner in sub-Saharan Africa.",
+    "ceo_p1": "Since the creation of BCA Multiservices Inc. in 2016, our ambition has always been the same: to actively contribute to Africa's digital transformation by bringing world-class technology solutions adapted to the continent's realities and needs.",
+    "ceo_p2": "We chose not to simply distribute equipment, but to offer a turnkey solution and support our clients over the long term — from design to implementation, through to maintenance and the evolution of their infrastructures. This added value is what sets us apart and explains our 85% client renewal rate.",
+    "ceo_p3": "Our vision for the coming years: strengthen our sub-regional presence, invest in training local talent, and continue innovating in our service delivery to position BCA Technologies as the reference technology partner in sub-Saharan Africa.",
     "ceo_p4": "I thank our entire team, our partners, and our clients for their trust, which allows us every day to take on new challenges with passion and commitment.",
     "ceo_signature_role": "Founder & General Manager",
     "orgchart_title": "Organizational Chart",
@@ -709,7 +709,7 @@
       {
         "icon": "🚐",
         "title": "Logistical resources",
-        "desc": "7 fully equipped vans to ensure speed and efficiency in interventions."
+        "desc": "A high-performance logistics fleet: trucks, pickups, vans, double-cab pickups, and management vehicles — a diverse, fully equipped fleet to intervene quickly and efficiently across the territory."
       },
       {
         "icon": "📦",
@@ -747,7 +747,7 @@
     ]
   },
   "home": {
-    "tagline": "Innovate, secure, connect: Africa in motion",
+    "tagline": "Innovate, Connect, Secure Africa at all times.",
     "slide1_tag": "Fiber Optics",
     "slide1_title": "High-performance network deployment",
     "slide1_desc": "Connecting businesses and institutions with FTTH, FTTB, GPON technologies.",
@@ -916,10 +916,10 @@
     "ticker_hours": "Office hours Mon – Fri: 8:00 AM – 5:30 PM",
     "ticker_support": "Technical support & services available 24/7",
     "ticker_address": "Cocody Angré, 9ème Tranche, Abidjan",
-    "ticker_tagline": "💡 Your technology partner for a digital future"
+    "ticker_tagline": "Your technology partner for a digital future"
   },
   "footer": {
-    "tagline": "Innovate, secure, connect: Africa in motion",
+    "tagline": "Innovate, Connect, Secure Africa at all times.",
     "quicklinks": "Quick Links",
     "services": "Our Services",
     "contact_title": "Contact",

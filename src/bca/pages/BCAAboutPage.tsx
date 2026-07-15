@@ -111,7 +111,7 @@ const CEOMessage = () => {
       <div className="relative z-10 max-w-6xl mx-auto">
         <div className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900">
-            Mot du Directeur Général
+            {t("about.ceo_title")}
           </h2>
           <div className="mt-2 w-8 h-0.5 bg-blue-600" />
         </div>
@@ -153,26 +153,26 @@ const CEOMessage = () => {
               </div>
               {/* Badge PDG */}
               <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-700 to-blue-900 text-white text-xs font-bold px-5 py-2 rounded-full shadow-lg whitespace-nowrap">
-                Fondateur &amp; PDG
+                {t("about.ceo_badge")}
               </div>
             </div>
             <div className="pt-4">
-              <h3 className="text-gray-900 font-black text-xl">G.P. ANGAHI</h3>
+              <h3 className="text-gray-900 font-black text-xl">{t("about.ceo_name_short")}</h3>
               <p className="text-blue-600 text-sm font-semibold mt-1">
-                Gbran Georges Poiret ANGAHI
+                {t("about.ceo_name_full")}
               </p>
               <p className="text-gray-400 text-xs mt-2 uppercase tracking-wider">
-                BCA Technologies Limited
+                {t("about.ceo_company")}
               </p>
               <div className="mt-4 flex flex-col gap-2">
                 <div className="flex items-center justify-center gap-2 text-gray-500 text-xs">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4 text-blue-400 flex-shrink-0"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Fondé le 1er juillet 2026
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4 text-blue-400 flex-shrink-0"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> {t("about.ceo_founded")}
                 </div>
                 <div className="flex items-center justify-center gap-2 text-gray-500 text-xs">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4 text-blue-400 flex-shrink-0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Cocody, Abidjan, CI
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4 text-blue-400 flex-shrink-0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> {t("about.ceo_location")}
                 </div>
                 <div className="flex items-center justify-center gap-2 text-gray-500 text-xs">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4 text-blue-400 flex-shrink-0"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> Ingénierie &amp; Entrepreneuriat
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4 text-blue-400 flex-shrink-0"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> {t("about.ceo_education")}
                 </div>
               </div>
             </div>
@@ -183,40 +183,18 @@ const CEOMessage = () => {
             <div className="text-5xl text-blue-200 font-serif leading-none select-none">
               &ldquo;
             </div>
-            <p className="text-gray-700 text-base leading-relaxed -mt-4">
-              Depuis la création de <strong>BCA Technologies Limited</strong> en
-              2017, notre ambition a toujours été la même : contribuer
-              activement à la transformation numérique de l'Afrique en apportant
-              des solutions technologiques de classe mondiale, adaptées aux
-              réalités et aux besoins du continent.
-            </p>
-            <p className="text-gray-700 text-base leading-relaxed">
-              Nous avons choisi de ne pas simplement distribuer des équipements,
-              mais d'accompagner nos clients sur le long terme — de la
-              conception à la mise en œuvre, jusqu'à la maintenance et
-              l'évolution de leurs infrastructures. C'est cette valeur ajoutée
-              qui nous distingue et qui explique notre taux de renouvellement
-              client de <strong>85%</strong>.
-            </p>
-            <p className="text-gray-700 text-base leading-relaxed">
-              Notre vision pour les prochaines années : renforcer notre présence
-              sous-régionale, investir dans la formation de talents locaux, et
-              continuer à innover pour positionner BCA Technologies comme le
-              partenaire technologique de référence en Afrique subsaharienne.
-            </p>
-            <p className="text-gray-700 text-base leading-relaxed">
-              Je remercie l'ensemble de notre équipe, de nos partenaires et de
-              nos clients pour leur confiance qui nous permet chaque jour de
-              relever de nouveaux défis avec passion et engagement.
-            </p>
+            <p className="text-gray-700 text-base leading-relaxed -mt-4">{t("about.ceo_p1")}</p>
+            <p className="text-gray-700 text-base leading-relaxed">{t("about.ceo_p2")}</p>
+            <p className="text-gray-700 text-base leading-relaxed">{t("about.ceo_p3")}</p>
+            <p className="text-gray-700 text-base leading-relaxed">{t("about.ceo_p4")}</p>
             <div className="pt-4 flex items-center gap-4">
               <div className="w-12 h-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full" />
               <div>
                 <p className="text-gray-900 font-black text-base">
-                  G.P. ANGAHI
+                  {t("about.ceo_name_short")}
                 </p>
                 <p className="text-blue-600 text-xs font-semibold uppercase tracking-wider">
-                  Fondateur &amp; Directeur Général
+                  {t("about.ceo_signature_role")}
                 </p>
               </div>
             </div>
@@ -473,7 +451,7 @@ const TeamSection = () => {
   const { t } = useTranslation();
   const members = [
     {
-      name: "Gbran G. P. ANGAHI",
+      name: "Georges Poiret Angahi",
       role: "Fondateur & PDG",
       bio: "Visionnaire et entrepreneur, M. ANGAHI a fondé BCA Technologies en 2017 avec l'ambition de connecter l'Afrique aux meilleures technologies mondiales.",
       initials: "GA",

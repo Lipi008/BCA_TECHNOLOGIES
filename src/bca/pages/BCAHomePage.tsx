@@ -934,7 +934,6 @@ export const BCAHomePage = ({ navigate }: Props) => {
       <BCAWhyUs />
       <PartnersSlider navigate={navigate} />
       <Actualites navigate={navigate} />
-      <Testimonials />
       <CtaBanner navigate={navigate} />
     </>
   );

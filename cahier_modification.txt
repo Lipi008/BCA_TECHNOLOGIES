@@ -1,0 +1,331 @@
+BCA TECHNOLOGIES LIMITED 
+CAHIER DES MODIFICATIONS 
+Site Web — BCA Technologies Limited 
+
+Émetteur : Service Commercial & Marketing — BCA Technologies Limited 
+Objet : Liste consolidée des corrections, ajouts et ajustements à apporter au site institutionnel. 
+SOMMAIRE 
+1. Carrousel d'images — Page d'accueil 12. Corrections — Page Actualité 
+2. Affichage du logo dans l'en-tête du site 13. Logos des références clients 
+3. Liens vers les réseaux sociaux 14. Section « Nos références & partenaires » 
+4. Slogan officiel 15. Section « Contactez-nous » — Horaires 
+5. Adresse complète du siège social 16. Section « Mot du Directeur » 
+6. Nom du fondateur 17. À propos — Nos forces / Moyens logistiques 
+7. Section « Ce que disent nos clients » 18. Bug — Section « Nos Expertises » (Accueil) 
+8. Section « Dernières nouvelles » 19. Bug — Section « Dernières Nouvelles » 
+(Accueil) 
+9. Renommer « NOS OFFRES » en « Services » + 
+Énergie Solaire 
+20. Design — Section « Contactez-nous » 
+10. Section « Pourquoi choisir BCA Technologies 
+Limited » 
+21. À propos — Ajout de l'organigramme BCA CI 
+11. Coordonnées de contact 22. Photos — Illustrations des sections 
+ 
+POINT 1   Carrousel d'images — Page d'accueil 
+Le carrousel de la page d'accueil doit présenter des vidéos et photos en boucle , mettant en 
+avant le groupe BCA . 
+POINT 2   Affichage du logo dans l'en-tête du site 
+Le logo BCA Technologies Limited doit s'afficher dans l'en-tête (header) du site web, sur toutes 
+les pages, de façon visible et cohérente avec la charte graphique. 
+POINT 3   Liens vers les réseaux sociaux 
+Modifications à apporter aux liens externes : 
+• Suppression : retirer le logo et le lien Instagram — le compte n'existe pas. 
+• Ajouter le lien LinkedIn : linkedin.com/company/bca-technologies-limited 
+• Ajouter le lien Facebook : facebook.com/profile.php?id=61591983830636 
+POINT 4   Slogan officiel 
+Le slogan suivant doit être affiché sur le site : 
+« Innover, Connecter, Sécuriser l'Afrique à tout moment. » 
+POINT 5   Adresse complète du siège social 
+Partout où le « siège » est mentionné, afficher l'adresse complète : 
+Cocody Angré 9ème tranche, Abidjan, Côte d'Ivoire 
+POINT 6   Nom du fondateur 
+Modifier le nom du fondateur affiché sur le site : 
+Georges Poiret Angahi 
+POINT 7   Section « Ce que disent nos clients » 
+BCA Technologies Limited ne dispose pas encore de témoignages clients formalisés 
+POINT 8   Section « Dernières nouvelles » 
+Ajouter du contenu d'actualité basé sur les trois domaines d'expertise de BCA Technologies 
+Limited (Fibre Optique, Sécurité & Domotique, Énergie Solaire), avec des articles réels ou 
+représentatifs de l'activité du groupe. 
+ 
+POINT 9
+Renommer « NOS OFFRES » en « Services » + Ajout Énergie Solaire 
+AVANT 
+APRÈS 
+NOS OFFRES 
+Services 
+Ajouter dans cette rubrique une section complète dédiée à l'Énergie Solaire, structurée comme 
+suit : 
+EXPERTISE & INGÉNIERIE 
+• 
+Étude de faisabilité & dimensionnement : 
+analyse des besoins énergétiques et étude 
+d'ensoleillement pour dimensionner la solution optimale. 
+• 
+Conception de systèmes solaires : 
+commerciales et industrielles. 
+• 
+Audit énergétique : 
+ingénierie sur mesure pour installations résidentielles, 
+évaluation de la consommation existante pour identifier le potentiel 
+d'économie et de transition solaire. 
+INSTALLATION & ÉQUIPEMENTS 
+• 
+Installation de panneaux solaires : 
+pose et raccordement par des techniciens certifiés, dans 
+le respect des normes de sécurité internationales. 
+• 
+Systèmes photovoltaïques autonomes (off
+électrique pour sites isolés. 
+• 
+Systèmes hybrides & on
+grid : 
+grid) : 
+solutions indépendantes du réseau 
+intégration au réseau existant avec stockage batterie pour 
+une continuité de service optimale. 
+• 
+Tours de surveillance solaires : 
+alimentation autonome de systèmes de vidéosurveillance 
+pour les zones reculées ou sensibles. 
+• 
+Vente de panneaux & équipements solaires : 
+fourniture d'équipements certifiés (panneaux, 
+onduleurs, batteries) pour projets clés en main ou en revente. 
+MAINTENANCE & PERFORMANCE 
+• 
+Maintenance préventive et curative : 
+durée de vie des installations. 
+• 
+Monitoring à distance : 
+suivi rigoureux pour garantir la performance et la 
+supervision en temps réel de la production et détection proactive 
+des anomalies. 
+• 
+Optimisation de la production : 
+énergétique dans la durée. 
+POINT 10
+ajustements techniques pour maximiser le rendement 
+Section « Pourquoi choisir BCA Technologies Limited » 
+Présence Multi
+Pays 
+— 
+nouveau contenu (en attente de validation DG) : 
+AVANT 
+APRÈS 
+Actifs en Côte d'Ivoire, au Canada, au Ghana, 
+au Mali, au Burkina Faso et au Libéria pour 
+une couverture régionale optimale. 
+Actifs au Canada, en Côte d'Ivoire, au Mali et 
+bientôt au Burkina Faso, au Ghana et au 
+Libéria pour une couverture régionale 
+optimale. 
+Par ailleurs, la rubrique « Pourquoi choisir BCA » affichée en bas de la page « Nos références & 
+partenaires » est actuellement différente de celle affichée sur la page d'accueil. Les deux 
+emplacements doivent afficher exactement le même contenu (mêmes car
+la version de la page d'accueil. 
+POINT 11
+Coordonnées de contact 
+tes, mêmes textes) que 
+Adresse e
+mail : 
+infosolutions@bcatechltd.com 
+Numéros de téléphone : 
+chaque section 
+ajouter les 3 numéros de téléphone en bas de page (pied de page de 
+ou page
+POINT 12
+). 
+Corrections 
+— 
+Page Actualité 
+• 
+Bug 1 
+— 
+Lien article incomplet : 
+lorsqu'on clique sur le bouton « Lire la suite », l'utilisateur 
+doit accéder à l'intégralité de l'article, et non à un extrait. 
+• 
+Bug 2 
+— 
+Compteur de catégories incorrect : 
+le nombre affiché sur chaque catégorie / type 
+d'actualité ne correspond pas au nombre réel d'articles contenus dans cette catégorie. Le 
+compteur doit être corrigé pour refléter le contenu réel. 
+• 
+Bug 3 
+— 
+Boutons non fonctionnels : 
+les boutons / icônes « Lire la suite » présents sur les 
+cartes d'actualité ne sont pas fonctionnels et doivent être corrigés. 
+POINT 13
+Logos des références clients 
+Les logos des références / clients doivent être affichés en couleur (et non en noir et blanc ou 
+grisé). 
+POINT 14
+Section « Nos références & partenaires » 
+Références clients à afficher sur le site 
+• 
+Orange Côte d'Ivoire 
+• 
+Orange Burkina 
+• 
+Orange Liberia 
+• 
+MTN Côte d'Ivoire 
+• 
+Moov Africa Côte d'Ivoire 
+• 
+• 
+Moov Africa Mali (Sotelma) 
+Côte d'Ivoire Câble (CIC) 
+• 
+Data Connect SA 
+• 
+Diginets 
+• 
+Kaydan 
+• 
+Rakall 
+• 
+ITC 
+• 
+Kanvoo 
+• 
+STA 
+• 
+Orange Bank Africa 
+• 
+SocGen / SGCI 
+• 
+BDC (Business Development Bank of Canada) 
+Partenaires techniques & fournisseurs 
+Outre le partenaire officiel et principal BCA Multiservices Inc., les partenaires suivants peuvent 
+être listés : 
+• 
+3M 
+• 
+CISCO 
+• 
+EXFO 
+• 
+INFRACTIVE 
+• 
+SUMITOMO 
+• 
+BAUDCOM 
+• 
+CIRIL Group 
+POINT 15
+Section « Contactez
+nous » 
+— 
+Horaires 
+En complément des horaires déjà affichés, ajouter la mention suivante : 
+Support technique & prestations disponibles 24h/24 et 7j/7. 
+POINT 16
+Section « Mot du Directeur » 
+Remplacer intégralement le texte actuel par le suivant : 
+Depuis la création de BCA Multiservices Inc. en 2016, notre ambition a toujours été la même : 
+contribuer activement à la transformation numérique de l'Afrique en apportant des solutions 
+technologiques de classe mondiale, adaptées aux réalités et aux besoin
+s du continent. 
+Nous avons choisi de ne pas simplement distribuer des équipements, mais d'offrir une 
+solution clé en main et d'accompagner nos clients sur le long terme 
+— 
+de la conception à la 
+mise en œuvre, jusqu'à la maintenance et l'évolution de leurs infrastructures. C'est cette 
+valeur ajoutée qui nous distingue et qui explique notre taux de renouvellement client de 85 %. 
+Notre vision pour les prochaines années : renforcer notre présence sous-régionale, investir 
+dans la formation de talents locaux, et continuer à innover dans la prestation de services pour 
+positionner BCA Technologies comme le partenaire technologique de ré férence en Afrique 
+subsaharienne. 
+Je remercie l'ensemble de notre équipe, de nos partenaires et de nos clients pour leur 
+confiance, qui nous permet chaque jour de relever de nouveaux défis avec passion et 
+engagement. 
+POINT 17   Section « À propos » — Nos forces / Moyens logistiques 
+AVANT APRÈS 
+7 fourgons entièrement équipés pour garantir 
+rapidité et efficacité dans les interventions. 
+Une flotte logistique performante : camions, 
+pickups, fourgonnettes, camionnettes double 
+cabine et véhicules de direction — une flotte 
+diversifiée et entièrement équipée pour 
+intervenir rapidement et efficacement sur tout 
+le territoire. 
+POINT 18   Bug — Section « Nos Expertises » (Accueil) 
+Les liens « En savoir plus » redirigent tous vers le même profil d'expertise, quel que soit le 
+domaine sélectionné (Fibre Optique, Sécurité & Domotique, Énergie Solaire). Chaque lien doit 
+rediriger vers la page correspondant à son propre domaine. 
+POINT 19   Bug — Section « Dernières Nouvelles » (Accueil) 
+Les liens « Lire » doivent rediriger vers la suite complète de l'article correspondant, et non rester 
+sur la page d'accueil ou afficher un contenu tronqué. 
+POINT 20   Design — Section « Contactez-nous » 
+• Couleurs dégradées : l'effet dégradé actuel donne un rendu trop « généré par IA » ; il doit 
+être adouci ou remplacé par une palette plus sobre, cohérente avec la charte graphique BCA 
+(Bleu Royal #143278, Cyan #008CBE). 
+• Couleurs des icônes : les icônes de la section doivent reprendre les couleurs de la charte 
+graphique BCA plutôt que leurs couleurs par défaut. 
+ 
+POINT 21
+Section « À propos » 
+— 
+Ajout de l'organigramme BCA CI 
+Ajouter l'organigramme actualisé de BCA CI dans la rubrique « À propos », en complément des 
+sous
+parties déjà présentes (Nos forces, Moyens logistiques). Le visuel à intégrer est le suivant : 
+POINT 22
+Photos 
+— 
+Illustrations des sections 
+Section « Nos Experts » 
+Dans la section « Nos Experts », les images devront être organisées en trois catégories 
+distinctes 
+en 
+propre titre : 
+• 
+prenant 
+Groupe 1 : 
+en compte les entreprises 
+BCA Technologies Limited. 
+• 
+Groupe 2 : 
+• 
+BEST Africa Mali. 
+Groupe 3 : 
+BCA Import & Export 
+Comportement attendu : 
+sœurs 
+. 
+de BCA technolo
+gies. C
+hacune ayant son 
+un clic sur une catégorie doit permettre d'accéder à l'ensemble des 
+photos de la galerie concernée. 
+Section « Nos Expertises » 
+Associer à chaque domaine d'expertise l'image correspondante (se référer aux photos 
+envoyées) : 
+• 
+Fibre Optique : 
+image d'un de nos techniciens sur l'échelle, en plein raccordement (voir 
+photos envoyées). 
+• 
+• 
+Sécurité Professionnelle & Solutions Intelligentes : 
+image liée à ce domaine parmi les 
+photos envoyées (pas d'image réelle pour l'instant ; à modifier ultérieurement si d'autres 
+images sont disponibles). 
+Énergie Solaire : 
+image liée à ce domaine parmi les photos envoyées (pas d'image réelle 
+pour l'instant ; à modifier ultérieurement si d'autres images sont disponibles). 
+Catégorie « Services » 
+Prévoir une image dédiée pour chaque service, en se fiant aux photos envoyées. 
+Rubrique « Réalisations » 
+— 
+Galerie 
+Suppression : 
+supprimer l'intégralité des photos de la galerie affichées dans la rubrique « 
+Réalisations ». Ces visuels ne respectent pas les consignes de sécurité relatives au port des EPI 
+(Équipements de Protection Individuelle) et ne doivent donc plus figurer sur le 
+site on va les alisser vide pour l'instant.

@@ -18,7 +18,7 @@
     "read_more": "Lire la suite"
   },
   "hero": {
-    "tagline": "Réseaux fiables, solutions intelligentes, performance assurée",
+    "tagline": "Innover, Connecter, Sécuriser l'Afrique à tout moment.",
     "slogan_line1": "Réseaux fiables,",
     "slogan_line2": "solutions intelligentes,",
     "slogan_line3": "performance assurée",
@@ -637,7 +637,7 @@
       {
         "icon": "globe",
         "title": "Présence Multi-Pays",
-        "description": "Actifs en Côte d'Ivoire, au Canada, au Ghana, au Mali, au Burkina Faso et au Libéria pour une couverture régionale optimale."
+        "description": "Actifs au Canada, en Côte d'Ivoire, au Mali et bientôt au Burkina Faso, au Ghana et au Libéria pour une couverture régionale optimale."
       },
       {
         "icon": "zap",
@@ -667,7 +667,7 @@
     "phone2": "+225 07 99 57 57 57",
     "phone3": "+225 05 65 57 57 57",
     "email_label": "Email",
-    "email": "info@bcamultiservices.com",
+    "email": "infosolutions@bcatechltd.com",
     "hours_label": "Horaires",
     "hours": "Lundi – Vendredi : 08h00 – 17h30",
     "form": {
@@ -698,12 +698,12 @@
     "ceo_education": "Ingénierie & Entrepreneuriat",
     "ceo_badge": "Fondateur & PDG",
     "ceo_name_short": "G.P. ANGAHI",
-    "ceo_name_full": "Gbran Georges Poiret ANGAHI",
+    "ceo_name_full": "Georges Poiret Angahi",
     "ceo_company": "BCA Technologies Limited",
-    "ceo_p1": "Depuis la création de BCA Technologies Limited en 2017, notre ambition a toujours été la même : contribuer activement à la transformation numérique de l'Afrique en apportant des solutions technologiques de classe mondiale, adaptées aux réalités et aux besoins du continent.",
-    "ceo_p2": "Nous avons choisi de ne pas simplement distribuer des équipements, mais d'accompagner nos clients sur le long terme — de la conception à la mise en œuvre, jusqu'à la maintenance et l'évolution de leurs infrastructures. C'est cette valeur ajoutée qui nous distingue et qui explique notre taux de renouvellement client de 85%.",
-    "ceo_p3": "Notre vision pour les prochaines années : renforcer notre présence sous-régionale, investir dans la formation de talents locaux, et continuer à innover pour positionner BCA Technologies comme le partenaire technologique de référence en Afrique subsaharienne.",
-    "ceo_p4": "Je remercie l'ensemble de notre équipe, de nos partenaires et de nos clients pour leur confiance qui nous permet chaque jour de relever de nouveaux défis avec passion et engagement.",
+    "ceo_p1": "Depuis la création de BCA Multiservices Inc. en 2016, notre ambition a toujours été la même : contribuer activement à la transformation numérique de l'Afrique en apportant des solutions technologiques de classe mondiale, adaptées aux réalités et aux besoins du continent.",
+    "ceo_p2": "Nous avons choisi de ne pas simplement distribuer des équipements, mais d'offrir une solution clé en main et d'accompagner nos clients sur le long terme — de la conception à la mise en œuvre, jusqu'à la maintenance et l'évolution de leurs infrastructures. C'est cette valeur ajoutée qui nous distingue et qui explique notre taux de renouvellement client de 85 %.",
+    "ceo_p3": "Notre vision pour les prochaines années : renforcer notre présence sous-régionale, investir dans la formation de talents locaux, et continuer à innover dans la prestation de services pour positionner BCA Technologies comme le partenaire technologique de référence en Afrique subsaharienne.",
+    "ceo_p4": "Je remercie l'ensemble de notre équipe, de nos partenaires et de nos clients pour leur confiance, qui nous permet chaque jour de relever de nouveaux défis avec passion et engagement.",
     "ceo_signature_role": "Fondateur & Directeur Général",
     "orgchart_title": "Organigramme",
     "nos_forces_title": "Nos Forces",
@@ -721,7 +721,7 @@
       {
         "icon": "🚐",
         "title": "Moyens logistiques",
-        "desc": "7 fourgons entièrement équipés pour garantir rapidité et efficacité dans les interventions."
+        "desc": "Une flotte logistique performante : camions, pickups, fourgonnettes, camionnettes double cabine et véhicules de direction — une flotte diversifiée et entièrement équipée pour intervenir rapidement et efficacement sur tout le territoire."
       },
       {
         "icon": "📦",
@@ -762,7 +762,7 @@
     ]
   },
   "home": {
-    "tagline": "Innover, sécuriser, connecter : l'Afrique en mouvement",
+    "tagline": "Innover, Connecter, Sécuriser l'Afrique à tout moment.",
     "slide1_tag": "Fibre Optique",
     "slide1_title": "Déploiement de réseaux haute performance",
     "slide1_desc": "Connecter entreprises et institutions avec des technologies FTTH, FTTB, GPON.",
@@ -931,10 +931,10 @@
     "ticker_hours": "Bureaux ouverts Lun – Ven : 8h00 – 17h30",
     "ticker_support": "Support technique & prestations disponibles 24h/24 et 7j/7",
     "ticker_address": "Cocody Angré, 9ème Tranche, Abidjan",
-    "ticker_tagline": "💡 Votre partenaire technologique pour un futur numérique"
+    "ticker_tagline": "Votre partenaire technologique pour un futur numérique"
   },
   "footer": {
-    "tagline": "Innover, sécuriser, connecter : l'Afrique en mouvement",
+    "tagline": "Innover, Connecter, Sécuriser l'Afrique à tout moment.",
     "quicklinks": "Liens Rapides",
     "services": "Nos Services",
     "contact_title": "Contact",
