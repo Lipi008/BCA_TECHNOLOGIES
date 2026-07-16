@@ -11,15 +11,19 @@ const WHY_ICONS: Record<string, React.ReactNode> = {
   target:<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-7 h-7"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>,
 };
 
-import logoOrange from "../../img/image_a_use/orange.png";
-import logoMTN from "../../img/image_a_use/mtn.jpg";
-import logoMoov from "../../img/image_a_use/moov.png";
-import logoTotal from "../../img/image_a_use/total-energies-logo.png";
-import logoCITelecom from "../../img/image_a_use/ci-telecom-logo.png";
-import logoCanalPlus from "../../img/image_a_use/Canal_+_Afrique_logo.jpg";
-import logoBicici from "../../img/image_a_use/Bicici.png";
-import logoBollore from "../../img/image_a_use/Bolloré_Transport_Logistics.png";
-import logoSocGen from "../../img/image_a_use/SocieteGenerale.jpg";
+import logoOrange      from "../../img/image_a_use/orange.png";
+import logoMTN         from "../../img/image_a_use/mtn.jpg";
+import logoMoov        from "../../img/image_a_use/moov.png";
+import logoDataConnect  from "../../img/image_a_use/dataconnect.jpeg";
+import logoKaydan      from "../../img/image_a_use/kaydan.jpeg";
+import logoSocGen      from "../../img/image_a_use/SocieteGenerale.jpg";
+import logoCisco       from "../../img/image_a_use/cisco.png";
+import logoExfo        from "../../img/image_a_use/exfo.png";
+import logoInfractive  from "../../img/image_a_use/infractive-01.jpg";
+import logoSumitomo    from "../../img/image_a_use/Logo-Sumitomo.jpg";
+import logoBaudcom     from "../../img/image_a_use/baudcom.png";
+import logoCiril       from "../../img/image_a_use/logo_ciril_group.png";
+import logo3M          from "../../img/image_a_use/m3.png";
 
 const PageHero = ({
   badge,
@@ -33,8 +37,7 @@ const PageHero = ({
   <section
     className="relative py-24 px-6 overflow-hidden"
     style={{
-      background:
-        "linear-gradient(135deg, #2563eb 0%, #4f46e5 50%, #7c3aed 100%)",
+      background: "linear-gradient(135deg, #143278 0%, #0e2d6e 60%, #008CBE 100%)",
     }}
   >
     <div className="relative z-10 max-w-4xl mx-auto text-center">
@@ -54,18 +57,33 @@ const PageHero = ({
 );
 
 const REFERENCES: { name: string; logo?: string; color?: string }[] = [
-  { name: "Orange CI", logo: logoOrange },
-  { name: "MTN Côte d'Ivoire", logo: logoMTN },
-  { name: "Moov Africa", logo: logoMoov },
-  { name: "SFR", color: "#E4003A" },
-  { name: "Ministère des TIC", color: "#009A44" },
-  { name: "CITélécom", logo: logoCITelecom },
-  { name: "Canal+ Afrique", logo: logoCanalPlus },
-  { name: "Société Générale CI", logo: logoSocGen },
-  { name: "BICICI", logo: logoBicici },
-  { name: "Université FHB", color: "#006837" },
-  { name: "TOTAL Énergies CI", logo: logoTotal },
-  { name: "Bolloré Logistics", logo: logoBollore },
+  { name: "Orange Côte d'Ivoire",     logo: logoOrange },
+  { name: "Orange Burkina",            logo: logoOrange },
+  { name: "Orange Liberia",            logo: logoOrange },
+  { name: "MTN Côte d'Ivoire",        logo: logoMTN },
+  { name: "Moov Africa Côte d'Ivoire",logo: logoMoov },
+  { name: "Moov Africa Mali (Sotelma)",logo: logoMoov },
+  { name: "Côte d'Ivoire Câble (CIC)",color: "#003366" },
+  { name: "Data Connect SA",           logo: logoDataConnect },
+  { name: "Diginets",                  color: "#1E3A8A" },
+  { name: "Kaydan",                    logo: logoKaydan },
+  { name: "Rakall",                    color: "#0369A1" },
+  { name: "ITC",                       color: "#115E59" },
+  { name: "Kanvoo",                    color: "#6D28D9" },
+  { name: "STA",                       color: "#B91C1C" },
+  { name: "Orange Bank Africa",        color: "#FF6600" },
+  { name: "SocGen / SGCI",             logo: logoSocGen },
+  { name: "BDC",                       color: "#C41E3A" },
+];
+
+const PARTNERS_TECH: { name: string; logo?: string; color?: string }[] = [
+  { name: "3M",           logo: logo3M },
+  { name: "CISCO",        logo: logoCisco },
+  { name: "EXFO",         logo: logoExfo },
+  { name: "INFRACTIVE",   logo: logoInfractive },
+  { name: "SUMITOMO",     logo: logoSumitomo },
+  { name: "BAUDCOM",      logo: logoBaudcom },
+  { name: "CIRIL Group",  logo: logoCiril },
 ];
 
 const ReferenceCard = ({
@@ -237,6 +255,22 @@ export const BCAPartenairesPage = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partenaires techniques & fournisseurs */}
+      <section className="bg-white py-20 px-6 relative overflow-hidden">
+        <FiberBg variant="subtle" />
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <div className="flex items-center gap-3 mb-10">
+            <div className="w-1 h-8 rounded-full" style={{ background: "#008CBE" }} />
+            <h2 className="text-2xl font-bold text-gray-800">Partenaires Techniques &amp; Fournisseurs</h2>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6">
+            {PARTNERS_TECH.map((p, i) => (
+              <ReferenceCard key={i} index={i} name={p.name} logo={p.logo} color={p.color} />
+            ))}
           </div>
         </div>
       </section>

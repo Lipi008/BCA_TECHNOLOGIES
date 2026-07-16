@@ -23,7 +23,7 @@ export const BCAFooter = ({ navigate }: FooterProps) => {
   const footerPageLinks: { label: string; page: PageId }[] = [
     { label: lang === "fr" ? "Accueil" : "Home", page: "accueil" },
     { label: lang === "fr" ? "À propos" : "About", page: "about" },
-    { label: lang === "fr" ? "Services" : "Services", page: "offres" },
+    { label: lang === "fr" ? "Services" : "Services", page: "services" },
     {
       label: lang === "fr" ? "Réalisations" : "Projects",
       page: "realisations",

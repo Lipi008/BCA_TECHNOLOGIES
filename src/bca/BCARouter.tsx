@@ -15,7 +15,7 @@ export type PageId =
   | "accueil"
   | "about"
   | "activites"
-  | "offres"
+  | "services"
   | "realisations"
   | "references"
   | "partenaires"
@@ -24,7 +24,7 @@ export type PageId =
 
 function getPageFromHash(): PageId {
   const hash = window.location.hash.replace("#", "").toLowerCase().trim();
-  const valid: PageId[] = ["accueil","about","activites","offres","realisations","references","partenaires","actualites","contact"];
+  const valid: PageId[] = ["accueil","about","activites","services","realisations","references","partenaires","actualites","contact"];
   return valid.includes(hash as PageId) ? (hash as PageId) : "accueil";
 }
 
@@ -72,7 +72,7 @@ export const BCARouter = () => {
     accueil: <BCAHomePage navigate={navigate} />,
     about: <BCAAboutPage />,
     activites: <BCAActivitiesPage navigate={navigate} />,
-    offres: <BCAOffresPage navigate={navigate} />,
+    services: <BCAOffresPage navigate={navigate} />,
     realisations: <BCARealisationsPage />,
     references: <BCAReferencesPage />,
     partenaires: <BCAPartenairesPage />,

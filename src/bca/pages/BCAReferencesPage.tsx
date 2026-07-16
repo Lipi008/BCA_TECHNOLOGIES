@@ -25,7 +25,7 @@ const PageHero = ({
     className="relative py-24 px-6 overflow-hidden"
     style={{
       background:
-        "linear-gradient(135deg, #2563eb 0%, #4f46e5 50%, #7c3aed 100%)",
+        "linear-gradient(135deg, #143278 0%, #0e2d6e 60%, #008CBE 100%)",
     }}
   >
     <div className="relative z-10 max-w-4xl mx-auto text-center">

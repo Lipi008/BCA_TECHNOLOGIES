@@ -669,7 +669,7 @@
     "email_label": "Email",
     "email": "infosolutions@bcatechltd.com",
     "hours_label": "Horaires",
-    "hours": "Lundi – Vendredi : 08h00 – 17h30",
+    "hours": "Lundi – Vendredi : 08h00 – 17h30\nSupport technique & prestations disponibles 24h/24 et 7j/7.",
     "form": {
       "name": "Nom complet",
       "name_placeholder": "Votre nom et prénom",

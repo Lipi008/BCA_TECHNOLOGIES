@@ -25,6 +25,9 @@ import logoSocGen      from "../../img/image_a_use/SocieteGenerale.jpg";
 import logoEXFO        from "../../img/image_a_use/exfo.png";
 import logoInfractive  from "../../img/image_a_use/infractive-01.jpg";
 import logo3M          from "../../img/image_a_use/m3.png";
+import imgFibre        from "../../img/image_a_use/fiberoptiques.jpg";
+import imgSecurite     from "../../img/image_a_use/securité_electorniques.jpg";
+import imgEnergie      from "../../img/image_a_use/energiesolaire.jpg";
 import logoEcobank     from "../../img/image_a_use/Ecobank CI.jpg";
 import logoBridgeBank  from "../../img/image_a_use/bridge_bank.png";
 import logoBanqueAtl   from "../../img/image_a_use/Banque_Atlantique.png";
@@ -455,8 +458,8 @@ const Expertise = ({ navigate }: Props) => {
       title: t("expertise.fiber_title"),
       subtitle: t("expertise.fiber_subtitle"),
       items: t("expertise.fiber_items", { returnObjects: true }) as string[],
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
-      imageAlt: "Câbles fibre optique lumineux",
+      image: imgFibre,
+      imageAlt: "Technicien BCA en plein raccordement fibre optique",
     },
     {
       page: "activites" as PageId,
@@ -465,8 +468,8 @@ const Expertise = ({ navigate }: Props) => {
       title: t("expertise.security_title"),
       subtitle: t("expertise.security_subtitle"),
       items: t("expertise.security_items", { returnObjects: true }) as string[],
-      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80",
-      imageAlt: "Caméra de surveillance professionnelle",
+      image: imgSecurite,
+      imageAlt: "Sécurité professionnelle & solutions intelligentes",
     },
     {
       page: "activites" as PageId,
@@ -475,8 +478,8 @@ const Expertise = ({ navigate }: Props) => {
       title: t("expertise.smart_title"),
       subtitle: t("expertise.smart_subtitle"),
       items: t("expertise.smart_items", { returnObjects: true }) as string[],
-      image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80",
-      imageAlt: "Panneaux solaires énergie renouvelable",
+      image: imgEnergie,
+      imageAlt: "Énergie solaire — solutions photovoltaïques",
     },
   ];
 
@@ -602,7 +605,7 @@ const Actualites = ({ navigate }: Props) => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Grande carte — article principal */}
           <div className="lg:col-span-2 bg-blue-800 rounded-lg overflow-hidden cursor-pointer group hover:bg-blue-900 transition-colors"
-            onClick={() => navigate("actualites")}>
+            onClick={() => { sessionStorage.setItem("openArticle", "0"); navigate("actualites"); }}>
             <div className="p-8 flex flex-col justify-end min-h-[240px]">
               <p className="text-blue-300 text-xs mb-2">{news[0]?.category} · {news[0]?.date}</p>
               <h3 className="text-white font-bold text-xl leading-snug mb-3 group-hover:text-blue-200 transition-colors">{news[0]?.title}</h3>
@@ -615,7 +618,7 @@ const Actualites = ({ navigate }: Props) => {
           <div className="flex flex-col gap-4">
             {news.slice(1, 3).map((item, i) => (
               <div key={i} className="bg-white border border-gray-200 rounded-lg p-5 cursor-pointer hover:border-blue-200 transition-colors flex-1"
-                onClick={() => navigate("actualites")}>
+                onClick={() => { sessionStorage.setItem("openArticle", String(i + 1)); navigate("actualites"); }}>
                 <p className="text-gray-400 text-xs mb-1">{item.category} · {item.date}</p>
                 <h3 className="font-semibold text-gray-900 text-sm leading-snug mb-2">{item.title}</h3>
                 <p className="text-gray-500 text-xs leading-relaxed">{item.excerpt}</p>
@@ -825,7 +828,7 @@ const CtaBanner = ({ navigate }: Props) => {
                 {t("cta.btn_contact")}
               </button>
               <button
-                onClick={() => navigate("offres")}
+                onClick={() => navigate("services")}
                 className="border border-gray-600 hover:border-gray-400 text-gray-300 hover:text-white font-semibold px-6 py-2.5 rounded transition-colors text-sm"
               >
                 {t("cta.btn_offers")}

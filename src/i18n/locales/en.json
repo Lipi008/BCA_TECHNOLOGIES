@@ -657,7 +657,7 @@
     "email_label": "Email",
     "email": "infosolutions@bcatechltd.com",
     "hours_label": "Hours",
-    "hours": "Monday – Friday: 8:00 AM – 5:30 PM",
+    "hours": "Monday – Friday: 8:00 AM – 5:30 PM\nTechnical support & services available 24/7.",
     "form": {
       "name": "Full name",
       "name_placeholder": "Your full name",

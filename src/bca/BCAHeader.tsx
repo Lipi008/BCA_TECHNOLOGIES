@@ -59,7 +59,7 @@ export const BCAHeader = ({ currentPage, navigate }: HeaderProps) => {
   const navLinks: { label: string; page: PageId }[] = [
     { label: t("nav.home"), page: "accueil" },
     { label: t("nav.about"), page: "about" },
-    { label: t("nav.offres"), page: "offres" },
+    { label: t("nav.offres"), page: "services" },
     { label: t("nav.realisations"), page: "realisations" },
   ];
 

@@ -66,68 +66,98 @@ export const BCAContact = () => {
     },
   ];
 
+  const socials = [
+    {
+      label: "Facebook",
+      href: "https://facebook.com/profile.php?id=61591983830636",
+      icon: (
+        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+        </svg>
+      ),
+    },
+    {
+      label: "LinkedIn",
+      href: "https://linkedin.com/company/bca-technologies-limited",
+      icon: (
+        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+        </svg>
+      ),
+    },
+  ];
+
   return (
-    <section id="contact" className="bg-gradient-to-br from-slate-900 via-blue-950 to-indigo-950 py-20 px-6 relative overflow-hidden">
+    <section id="contact" className="py-20 px-6 relative overflow-hidden" style={{ background: "linear-gradient(160deg, #0d1f55 0%, #143278 45%, #0e3a6e 100%)" }}>
       <FiberBg variant="blue" />
-      {/* subtle radial glow */}
-      <div className="absolute inset-0 z-0 pointer-events-none" style={{background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(99,102,241,0.18) 0%, transparent 70%)"}} />
+      {/* Subtle cyan glow top-right */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(0,140,190,0.15) 0%, transparent 70%)" }} />
+      {/* Subtle glow bottom-left */}
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(20,50,120,0.3) 0%, transparent 70%)" }} />
+
       <div className="relative z-10 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
-          {/* Contact Info */}
-          <div className="lg:col-span-2 space-y-4 animate-on-scroll-left">
+
+          {/* ── Info colonne ── */}
+          <div className="lg:col-span-2 space-y-3 animate-on-scroll-left">
             {contactInfo.map((info, i) => (
-              <div key={i} className="flex items-start gap-4 p-4 bg-white/8 backdrop-blur-sm rounded-xl border border-white/10 hover:border-blue-400/30 transition-colors duration-200">
-                <div className="w-10 h-10 flex-shrink-0 rounded-full bg-blue-500/20 text-blue-300 flex items-center justify-center">
+              <div key={i} className="flex items-start gap-4 p-4 rounded-xl border border-white/10 bg-white/5 hover:bg-white/8 transition-colors duration-200">
+                <div className="w-10 h-10 flex-shrink-0 rounded-full flex items-center justify-center" style={{ background: "rgba(0,140,190,0.18)", color: "#008CBE" }}>
                   {info.icon}
                 </div>
                 <div>
-                  <p className="text-xs text-blue-300/70 font-medium uppercase tracking-wide mb-0.5">{info.label}</p>
-                  <p className="text-white font-semibold text-sm leading-relaxed whitespace-pre-line">{info.value}</p>
+                  <p className="text-xs font-semibold uppercase tracking-wide mb-0.5" style={{ color: "#008CBE" }}>{info.label}</p>
+                  <p className="text-white font-medium text-sm leading-relaxed whitespace-pre-line">{info.value}</p>
                 </div>
               </div>
             ))}
 
-            {/* Social links */}
-            <div className="p-4 bg-gradient-to-br from-blue-700 to-purple-700 rounded-xl text-white">
-              <p className="text-sm font-semibold mb-3 text-white/80 uppercase tracking-widest">{t("footer.follow")}</p>
+            {/* Réseaux sociaux */}
+            <div className="p-4 rounded-xl border border-white/10" style={{ background: "rgba(0,140,190,0.12)" }}>
+              <p className="text-xs font-semibold mb-3 uppercase tracking-widest" style={{ color: "#008CBE" }}>{t("footer.follow")}</p>
               <div className="flex gap-3">
-                {[
-                  { label: "f", href: "https://facebook.com" },
-                  { label: "𝕏", href: "https://x.com" },
-                  { label: "in", href: "https://linkedin.com" },
-                  { label: "ig", href: "https://instagram.com" },
-                ].map((s) => (
-                  <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center text-white font-bold text-xs transition-colors duration-200"
+                {socials.map((s) => (
+                  <a
+                    key={s.label}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label={s.label}
+                    className="w-9 h-9 rounded-full flex items-center justify-center text-white transition-colors duration-200"
+                    style={{ background: "rgba(255,255,255,0.12)" }}
+                    onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(0,140,190,0.5)")}
+                    onMouseLeave={(e) => (e.currentTarget.style.background = "rgba(255,255,255,0.12)")}
                   >
-                    {s.label}
+                    {s.icon}
                   </a>
                 ))}
               </div>
             </div>
           </div>
 
-          {/* Form */}
+          {/* ── Formulaire ── */}
           <div className="lg:col-span-3 animate-on-scroll-right">
             {sent ? (
-              <div className="h-full flex flex-col items-center justify-center text-center p-10 bg-green-50 rounded-2xl border border-green-100">
-                <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-3xl mb-4">✓</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{t("contact.form.success_title")}</h3>
-                <p className="text-gray-500 text-sm mb-6">{t("contact.form.success_message")}</p>
+              <div className="h-full flex flex-col items-center justify-center text-center p-10 bg-white/5 rounded-2xl border border-white/10">
+                <div className="w-16 h-16 rounded-full flex items-center justify-center text-3xl mb-4" style={{ background: "rgba(0,140,190,0.2)", color: "#008CBE" }}>✓</div>
+                <h3 className="text-xl font-bold text-white mb-2">{t("contact.form.success_title")}</h3>
+                <p className="text-white/60 text-sm mb-6">{t("contact.form.success_message")}</p>
                 <button
                   onClick={() => { setSent(false); setFormData({ name: "", email: "", subject: "", message: "" }); }}
-                  className="bg-blue-700 text-white font-semibold px-6 py-2.5 rounded-full hover:bg-blue-800 transition-colors duration-200"
+                  className="text-white font-semibold px-6 py-2.5 rounded-full transition-colors duration-200"
+                  style={{ background: "#143278" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.background = "#008CBE")}
+                  onMouseLeave={(e) => (e.currentTarget.style.background = "#143278")}
                 >
                   {t("contact.form.send_another")}
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} noValidate className="bg-white/8 backdrop-blur-md rounded-2xl border border-white/10 p-8 space-y-5">
+              <form onSubmit={handleSubmit} noValidate className="bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-8 space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  {/* Name */}
+                  {/* Nom */}
                   <div>
-                    <label className="block text-xs font-semibold text-blue-200 mb-1.5 uppercase tracking-wide">
+                    <label className="block text-xs font-semibold mb-1.5 uppercase tracking-wide" style={{ color: "#008CBE" }}>
                       {t("contact.form.name")}
                     </label>
                     <input
@@ -135,14 +165,14 @@ export const BCAContact = () => {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder={t("contact.form.name_placeholder")}
-                      className={`w-full border rounded-xl px-4 py-3 text-sm bg-white/10 text-white placeholder-white/30 outline-none focus:border-blue-400 transition-colors ${errors.name ? "border-red-400" : "border-white/20"}`}
+                      className={`w-full border rounded-xl px-4 py-3 text-sm bg-white/8 text-white placeholder-white/30 outline-none transition-colors ${errors.name ? "border-red-400" : "border-white/20 focus:border-[#008CBE]"}`}
                     />
                     {errors.name && <p className="mt-1 text-red-400 text-xs">{errors.name}</p>}
                   </div>
 
                   {/* Email */}
                   <div>
-                    <label className="block text-xs font-semibold text-blue-200 mb-1.5 uppercase tracking-wide">
+                    <label className="block text-xs font-semibold mb-1.5 uppercase tracking-wide" style={{ color: "#008CBE" }}>
                       {t("contact.form.email")}
                     </label>
                     <input
@@ -150,15 +180,15 @@ export const BCAContact = () => {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder={t("contact.form.email_placeholder")}
-                      className={`w-full border rounded-xl px-4 py-3 text-sm bg-white/10 text-white placeholder-white/30 outline-none focus:border-blue-400 transition-colors ${errors.email ? "border-red-400" : "border-white/20"}`}
+                      className={`w-full border rounded-xl px-4 py-3 text-sm bg-white/8 text-white placeholder-white/30 outline-none transition-colors ${errors.email ? "border-red-400" : "border-white/20 focus:border-[#008CBE]"}`}
                     />
                     {errors.email && <p className="mt-1 text-red-400 text-xs">{errors.email}</p>}
                   </div>
                 </div>
 
-                {/* Subject */}
+                {/* Sujet */}
                 <div>
-                  <label className="block text-xs font-semibold text-blue-200 mb-1.5 uppercase tracking-wide">
+                  <label className="block text-xs font-semibold mb-1.5 uppercase tracking-wide" style={{ color: "#008CBE" }}>
                     {t("contact.form.subject")}
                   </label>
                   <input
@@ -166,13 +196,13 @@ export const BCAContact = () => {
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                     placeholder={t("contact.form.subject_placeholder")}
-                    className="w-full border border-white/20 rounded-xl px-4 py-3 text-sm bg-white/10 text-white placeholder-white/30 outline-none focus:border-blue-400 transition-colors"
+                    className="w-full border border-white/20 rounded-xl px-4 py-3 text-sm bg-white/8 text-white placeholder-white/30 outline-none focus:border-[#008CBE] transition-colors"
                   />
                 </div>
 
                 {/* Message */}
                 <div>
-                  <label className="block text-xs font-semibold text-blue-200 mb-1.5 uppercase tracking-wide">
+                  <label className="block text-xs font-semibold mb-1.5 uppercase tracking-wide" style={{ color: "#008CBE" }}>
                     {t("contact.form.message")}
                   </label>
                   <textarea
@@ -180,7 +210,7 @@ export const BCAContact = () => {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder={t("contact.form.message_placeholder")}
-                    className={`w-full border rounded-xl px-4 py-3 text-sm bg-white/10 text-white placeholder-white/30 outline-none resize-none focus:border-blue-400 transition-colors ${errors.message ? "border-red-400" : "border-white/20"}`}
+                    className={`w-full border rounded-xl px-4 py-3 text-sm bg-white/8 text-white placeholder-white/30 outline-none resize-none transition-colors ${errors.message ? "border-red-400" : "border-white/20 focus:border-[#008CBE]"}`}
                   />
                   {errors.message && <p className="mt-1 text-red-400 text-xs">{errors.message}</p>}
                 </div>
@@ -188,7 +218,10 @@ export const BCAContact = () => {
                 <button
                   type="submit"
                   disabled={sending}
-                  className="w-full bg-gradient-to-r from-blue-700 to-purple-700 hover:from-blue-800 hover:to-purple-800 text-white font-semibold py-3.5 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-md hover:shadow-lg disabled:opacity-70"
+                  className="w-full text-white font-semibold py-3.5 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-md hover:shadow-lg disabled:opacity-70"
+                  style={{ background: "linear-gradient(90deg, #143278 0%, #008CBE 100%)" }}
+                  onMouseEnter={(e) => !sending && (e.currentTarget.style.background = "linear-gradient(90deg, #0e2760 0%, #0077a8 100%)")}
+                  onMouseLeave={(e) => !sending && (e.currentTarget.style.background = "linear-gradient(90deg, #143278 0%, #008CBE 100%)")}
                 >
                   {sending ? (
                     <>
