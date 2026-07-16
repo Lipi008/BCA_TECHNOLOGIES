@@ -165,7 +165,8 @@ export const BCAContact = () => {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder={t("contact.form.name_placeholder")}
-                      className={`w-full border rounded-xl px-4 py-3 text-sm bg-white/8 text-white placeholder-white/30 outline-none transition-colors ${errors.name ? "border-red-400" : "border-white/20 focus:border-[#008CBE]"}`}
+                      style={{ background: "rgba(255,255,255,0.1)", color: "white" }}
+                      className={`w-full border rounded-xl px-4 py-3 text-sm placeholder-white/40 outline-none transition-colors ${errors.name ? "border-red-400" : "border-white/20 focus:border-[#008CBE]"}`}
                     />
                     {errors.name && <p className="mt-1 text-red-400 text-xs">{errors.name}</p>}
                   </div>
@@ -180,7 +181,8 @@ export const BCAContact = () => {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder={t("contact.form.email_placeholder")}
-                      className={`w-full border rounded-xl px-4 py-3 text-sm bg-white/8 text-white placeholder-white/30 outline-none transition-colors ${errors.email ? "border-red-400" : "border-white/20 focus:border-[#008CBE]"}`}
+                      style={{ background: "rgba(255,255,255,0.1)", color: "white" }}
+                      className={`w-full border rounded-xl px-4 py-3 text-sm placeholder-white/40 outline-none transition-colors ${errors.email ? "border-red-400" : "border-white/20 focus:border-[#008CBE]"}`}
                     />
                     {errors.email && <p className="mt-1 text-red-400 text-xs">{errors.email}</p>}
                   </div>
@@ -196,7 +198,8 @@ export const BCAContact = () => {
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                     placeholder={t("contact.form.subject_placeholder")}
-                    className="w-full border border-white/20 rounded-xl px-4 py-3 text-sm bg-white/8 text-white placeholder-white/30 outline-none focus:border-[#008CBE] transition-colors"
+                    style={{ background: "rgba(255,255,255,0.1)", color: "white" }}
+                    className="w-full border border-white/20 rounded-xl px-4 py-3 text-sm placeholder-white/40 outline-none focus:border-[#008CBE] transition-colors"
                   />
                 </div>
 
@@ -210,7 +213,8 @@ export const BCAContact = () => {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder={t("contact.form.message_placeholder")}
-                    className={`w-full border rounded-xl px-4 py-3 text-sm bg-white/8 text-white placeholder-white/30 outline-none resize-none transition-colors ${errors.message ? "border-red-400" : "border-white/20 focus:border-[#008CBE]"}`}
+                    style={{ background: "rgba(255,255,255,0.1)", color: "white" }}
+                    className={`w-full border rounded-xl px-4 py-3 text-sm placeholder-white/40 outline-none resize-none transition-colors ${errors.message ? "border-red-400" : "border-white/20 focus:border-[#008CBE]"}`}
                   />
                   {errors.message && <p className="mt-1 text-red-400 text-xs">{errors.message}</p>}
                 </div>
