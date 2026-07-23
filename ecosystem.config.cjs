@@ -5,7 +5,7 @@ module.exports = {
       script: "server.cjs",
       env: {
         NODE_ENV: "production",
-        PORT: 3001,
+        PORT: 3007,
       },
       watch: false,
       restart_delay: 2000,
