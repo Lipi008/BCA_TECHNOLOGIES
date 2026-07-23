@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: "bca-techno",
+      name: "bca-techno-api",
       script: "server.cjs",
       env: {
         NODE_ENV: "production",
