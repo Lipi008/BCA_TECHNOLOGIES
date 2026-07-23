@@ -460,6 +460,96 @@
           "Solar panels & inverters",
           "Energy audit"
         ]
+      },
+      "informatique": {
+        "badge": "IT & Electronics",
+        "title": "Robust, high-performance and secure IT infrastructures",
+        "tagline": "State-of-the-art IT equipment and electronic solutions for your infrastructure",
+        "description": "We supply IT and electronic equipment from leading brands (Dell, HP, Cisco, Huawei, Samsung) tailored to professional infrastructure. Our team also handles the deployment, configuration, and maintenance of your IT assets, ensuring optimal performance and enhanced security for your data and systems.",
+        "cta": "Equip my infrastructure",
+        "kpi": [
+          { "value": "10+", "label": "Partner brands" },
+          { "value": "100%", "label": "Professional" },
+          { "value": "24/7", "label": "Technical support" }
+        ],
+        "subSections": [
+          {
+            "title": "Server & Storage Infrastructure",
+            "items": [
+              "Rack, tower, and blade servers (Dell, HP, Huawei): sizing and deployment tailored to your organization's scale and needs.",
+              "NAS & SAN storage solutions: deployment of centralized high-availability storage arrays for backup and data sharing.",
+              "Virtualization & private cloud: deployment of VMware, Hyper-V, or Proxmox solutions to optimize the use of your physical resources.",
+              "Backup & disaster recovery systems (BCP/DRP): automated backup architectures and continuity plans to protect your critical data."
+            ]
+          },
+          {
+            "title": "Networks, Connectivity & IT Security",
+            "items": [
+              "Managed switches & professional routers: installation and configuration of high-performance, segmented LAN/WAN networks (VLAN).",
+              "Firewalls & UTM solutions: perimeter protection of your network against cyber threats with application filtering and intrusion detection.",
+              "Enterprise Wi-Fi networks: deployment of high-density wireless solutions (Cisco, Ubiquiti, Huawei) for offices, hotels, and industrial sites.",
+              "VPN & secure remote access: implementation of encrypted tunnels for remote work and interconnection of remote sites."
+            ]
+          },
+          {
+            "title": "Workstations & Office Equipment",
+            "items": [
+              "Professional desktops & laptops: supply of Dell, HP, Lenovo workstations configured to your user profiles (standard, graphics, engineering).",
+              "Peripherals & accessories: monitors, multifunction printers, scanners, keyboards, mice, and video conferencing equipment.",
+              "Office & consumer electronics: IP phones, interactive whiteboards, projectors, and wireless presentation systems.",
+              "Software licenses & office suites: consulting and supply of Microsoft 365, antivirus, and productivity tool licenses tailored to your workforce."
+            ]
+          },
+          {
+            "title": "Deployment, Maintenance & Support",
+            "items": [
+              "IT asset audit & inventory: comprehensive assessment of your existing equipment to identify optimization and modernization opportunities.",
+              "Turnkey deployment & configuration: on-site installation, setup, and commissioning of all your IT equipment.",
+              "Preventive & corrective maintenance: tailored maintenance contracts to ensure asset availability and prevent failures.",
+              "Technical support & helpdesk: responsive user assistance to quickly resolve incidents and ensure business continuity."
+            ]
+          }
+        ]
+      },
+      "solar": {
+        "badge": "Solar Energy",
+        "title": "The power of the sun serving your projects",
+        "tagline": "Custom photovoltaic solutions — Expertise, Installation & Performance",
+        "description": "BCA Technologies Limited provides complete solar energy solutions to ensure autonomous and sustainable power supply for your installations. From feasibility studies to the maintenance of photovoltaic systems, we support individuals, businesses, and communities in their energy transition.",
+        "cta": "Request a solar study",
+        "kpi": [
+          { "value": "100%", "label": "Custom-made" },
+          { "value": "25 yrs", "label": "Panel lifespan" },
+          { "value": "24/7", "label": "Monitoring" }
+        ],
+        "subSections": [
+          {
+            "title": "Expertise & Engineering",
+            "items": [
+              "Feasibility study & sizing: analysis of energy needs and solar irradiation study to design the optimal solution.",
+              "Solar system design: custom engineering for residential, commercial, and industrial installations.",
+              "Energy audit: assessment of existing consumption to identify savings potential and solar transition opportunities."
+            ]
+          },
+          {
+            "title": "Installation & Equipment",
+            "items": [
+              "Solar panel installation: installation and connection by certified technicians, in compliance with international safety standards.",
+              "Autonomous photovoltaic systems (off-grid): grid-independent solutions for remote sites.",
+              "Hybrid & on-grid systems: integration with the existing grid with battery storage for optimal service continuity.",
+              "Solar surveillance towers: autonomous power supply for video surveillance systems in remote or sensitive areas.",
+              "Solar panel & equipment sales: supply of certified equipment (panels, inverters, batteries) for turnkey projects or resale."
+            ]
+          },
+          {
+            "title": "Maintenance & Performance",
+            "items": [
+              "Preventive and corrective maintenance: rigorous monitoring to ensure installation performance and longevity.",
+              "Remote monitoring: real-time supervision of production and proactive anomaly detection.",
+              "Production optimization: technical adjustments to maximize energy efficiency over time."
+            ]
+          }
+        ]
       }
     }
   },
@@ -682,7 +772,7 @@
   "about": {
     "ceo_title": "Message from the General Manager",
     "ceo_founded": "Founded on July 1, 2026",
-    "ceo_location": "Cocody, Abidjan, CI",
+    "ceo_location": "Cocody Angré 9ème tranche, Abidjan, Côte d'Ivoire",
     "ceo_education": "Engineering & Entrepreneurship",
     "ceo_badge": "Founder & CEO",
     "ceo_name_short": "G.P. ANGAHI",

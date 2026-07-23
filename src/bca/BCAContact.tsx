@@ -8,6 +8,7 @@ export const BCAContact = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+  const [sendError, setSendError] = useState("");
 
   const validate = () => {
     const e: Record<string, string> = {};
@@ -20,11 +21,28 @@ export const BCAContact = () => {
     return Object.keys(e).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
     setSending(true);
-    setTimeout(() => { setSending(false); setSent(true); }, 1800);
+    setSendError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      if (data.ok) {
+        setSent(true);
+      } else {
+        setSendError(data.error || "Une erreur est survenue. Veuillez réessayer.");
+      }
+    } catch {
+      setSendError("Impossible de joindre le serveur. Veuillez réessayer.");
+    } finally {
+      setSending(false);
+    }
   };
 
   const contactInfo = [
@@ -219,6 +237,9 @@ export const BCAContact = () => {
                   {errors.message && <p className="mt-1 text-red-400 text-xs">{errors.message}</p>}
                 </div>
 
+                {sendError && (
+                  <p className="text-red-400 text-sm text-center">{sendError}</p>
+                )}
                 <button
                   type="submit"
                   disabled={sending}

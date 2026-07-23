@@ -192,6 +192,13 @@ export const BCAActualitesPage = () => {
 
   const filtered = active === "all" ? news : news.filter((n) => n.scope === active);
 
+  const counts: Record<Category, number> = {
+    all: news.length,
+    local: news.filter((n) => n.scope === "local").length,
+    afrique: news.filter((n) => n.scope === "afrique").length,
+    international: news.filter((n) => n.scope === "international").length,
+  };
+
   return (
     <>
       <PageHero badge={t("nav.actualites")} title={t("actualites.title")} subtitle={t("actualites.subtitle")} />
@@ -218,7 +225,7 @@ export const BCAActualitesPage = () => {
                 <span className={`ml-2 text-xs font-bold px-1.5 py-0.5 rounded-full ${
                   active === tab.key ? "bg-white/25" : "bg-gray-100"
                 }`}>
-                  {tab.key === "all" ? news.length : news.filter((n) => n.scope === tab.key).length}
+                  {counts[tab.key]}
                 </span>
               </button>
             ))}

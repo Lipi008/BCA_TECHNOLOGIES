@@ -27,7 +27,7 @@ const importExportPhotos = Object.values(importExportGlob)
   .map((m) => m.default)
   .sort();
 import imgDG from "../../img/image_a_use/dg.jpg";
-import imgOrgChart from "../../img/image_a_use/orgganigram.png";
+import imgOrgChart from "../../img/organigrame.png";
 import imgPhotoGrp from "../../img/image_a_use/photo_grp.jpg";
 import imgPaul from "../../img/image_a_use/paulm.jpg";
 import imgAssistante from "../../img/image_a_use/assitante.jpg";
@@ -395,7 +395,7 @@ const Presentation = () => {
             },
             {
               label: t("presentation.hq_label"),
-              value: "Cocody, Abidjan",
+              value: "Cocody Angré 9ème tranche, Abidjan, Côte d'Ivoire",
               icon: (
                 <svg
                   viewBox="0 0 24 24"
@@ -518,226 +518,24 @@ const Presentation = () => {
 };
 
 /* ── Organigramme ── */
-/* ── Organigramme interactif ── */
-type OrgNodeData = { title: string; sub?: string; children?: OrgNodeData[] };
-
-const ORG_DATA: OrgNodeData = {
-  title: "CEO", sub: "ANGAHI GEORGES POIRET",
-  children: [
-    {
-      title: "RAF",
-      children: [{ title: "ASSISTANTE COMPTABLE" }],
-    },
-    {
-      title: "CABINET DE GESTION COMPTABLE",
-      children: [
-        {
-          title: "DIRECTEUR SMART SOLUTIONS ET IT",
-          children: [
-            {
-              title: "SMART SOLUTIONS",
-              children: [
-                { title: "EQUIPES 1" }, { title: "EQUIPES 2" },
-                { title: "EQUIPES 3" }, { title: "EQUIPES 4" },
-              ],
-            },
-          ],
-        },
-      ],
-    },
-    {
-      title: "ACHAT BCA I&E SARL",
-      children: [
-        {
-          title: "DIRECTEUR INGENIERIE",
-          children: [
-            {
-              title: "RESPONSABLE INGENIEURIE",
-              children: [
-                {
-                  title: "COORDINATEUR PLANS ET RECOLLEMENTS",
-                  children: [
-                    { title: "RESSOURCE 1" }, { title: "RESSOURCE 2" }, { title: "RESSOURCE 3" },
-                  ],
-                },
-                {
-                  title: "COORDINATEUR ETUDES",
-                  children: [{ title: "EQUIPE 1" }, { title: "EQUIPE 2" }],
-                },
-              ],
-            },
-          ],
-        },
-      ],
-    },
-    { title: "GESTIONNAIRE DE STOCKS ET LOGISTIQUE" },
-    {
-      title: "ASSISTANTE DE DIRECTION",
-      children: [
-        {
-          title: "DIRECTEUR EXPLOITATION ET MAINTENANCE",
-          children: [
-            {
-              title: "RESPONSABLE DEPLOIEMENT",
-              children: [
-                {
-                  title: "COORDINATEUR GENIE CIVIL DEPLOIEMENT ET RACCORDEMENT",
-                  children: [
-                    { title: "EQUIPE 1" }, { title: "EQUIPE 2" },
-                    { title: "EQUIPE 3" }, { title: "EQUIPE 4" },
-                  ],
-                },
-                {
-                  title: "COORDINATEUR DEPLOIEMENT ET RACCORDEMENT",
-                  children: [
-                    { title: "EQUIPE 1" }, { title: "EQUIPE 2" },
-                    { title: "EQUIPE 3" }, { title: "EQUIPE 4" },
-                  ],
-                },
-              ],
-            },
-            {
-              title: "RESPONSABLE GENIE CIVIL, OPTIMISATION ET PRODUCTIONS",
-              children: [
-                {
-                  title: "COORDINATEUR INSTALLATIONS ET DERANGEMENT",
-                  children: [
-                    { title: "EQUIPE 1" }, { title: "EQUIPE 2" },
-                    { title: "EQUIPE 3" }, { title: "EQUIPE 4" },
-                  ],
-                },
-                {
-                  title: "COORDINATEUR QUALITE PRODUCTION",
-                  children: [
-                    { title: "EQUIPE 1" }, { title: "EQUIPE 2" },
-                    { title: "EQUIPE 3" }, { title: "EQUIPE 4" },
-                  ],
-                },
-              ],
-            },
-          ],
-        },
-      ],
-    },
-    {
-      title: "RESPONSABLE COMMERCIAL ET MARKETING",
-      children: [
-        {
-          title: "DIRECTEUR QUALITE",
-          children: [
-            {
-              title: "RESPONSABLE QUALITE",
-              children: [
-                { title: "EQUIPE 1" }, { title: "EQUIPE 2" },
-                { title: "EQUIPE 3" }, { title: "EQUIPE 4" },
-              ],
-            },
-          ],
-        },
-        { title: "ASSISTANT COMMERCIAL ET MARKETING" },
-      ],
-    },
-    { title: "RESPONSABLE RESSOURCES HUMAINES" },
-    {
-      title: "RESPONSABLE JURIDIQUE",
-      children: [
-        {
-          title: "C COMMUNITY MANAGER",
-          children: [
-            {
-              title: "RESPONSABLE MAINTENANCE",
-              children: [
-                {
-                  title: "COORDINATEUR MAINTENANCE",
-                  children: [
-                    { title: "EQUIPE 1" }, { title: "EQUIPE 2" },
-                    { title: "EQUIPE 3" }, { title: "EQUIPE 4" },
-                  ],
-                },
-              ],
-            },
-          ],
-        },
-      ],
-    },
-  ],
-};
-
-const OrgBox = ({ title, sub, isRoot }: { title: string; sub?: string; isRoot?: boolean }) => (
-  <div
-    className={`text-white text-[10px] font-bold px-2.5 py-2 rounded text-center leading-tight shadow border border-blue-950/40 select-none ${
-      isRoot
-        ? "bg-[#1a3f96] text-sm px-5 py-3 min-w-[180px]"
-        : "bg-[#143278] min-w-[90px] max-w-[150px]"
-    }`}
-  >
-    <span className="block">{title}</span>
-    {sub && <span className="block text-blue-200 text-[9px] font-normal mt-0.5">{sub}</span>}
-  </div>
-);
-
-const OrgTree = ({ node, isRoot }: { node: OrgNodeData; isRoot?: boolean }) => {
-  const children = node.children ?? [];
-  const n = children.length;
-
-  return (
-    <div className="flex flex-col items-center">
-      <OrgBox title={node.title} sub={node.sub} isRoot={isRoot} />
-
-      {n > 0 && (
-        <>
-          {/* Vertical stem down from box */}
-          <div className="w-px h-5 bg-blue-400/60 flex-shrink-0" />
-
-          {/* Children row with horizontal connector */}
-          <div className="relative flex items-start">
-            {/* Horizontal connecting bar */}
-            {n > 1 && (
-              <div
-                className="absolute top-0 h-px bg-blue-400/60 pointer-events-none"
-                style={{
-                  left: `${100 / (2 * n)}%`,
-                  right: `${100 / (2 * n)}%`,
-                }}
-              />
-            )}
-
-            {children.map((child, i) => (
-              <div key={i} className="flex-1 flex flex-col items-center px-1.5 min-w-0">
-                {/* Vertical drop */}
-                <div className="w-px h-5 bg-blue-400/60 flex-shrink-0" />
-                <OrgTree node={child} />
-              </div>
-            ))}
-          </div>
-        </>
-      )}
-    </div>
-  );
-};
-
 const OrgChart = () => {
   const { t } = useTranslation();
-  const scrollRef = React.useRef<HTMLDivElement>(null);
-  React.useEffect(() => {
-    const el = scrollRef.current;
-    if (el) el.scrollLeft = (el.scrollWidth - el.clientWidth) / 2;
-  }, []);
   return (
     <section className="bg-white py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="mb-10">
-          <h2 className="text-2xl font-bold text-gray-900">{t("about.orgchart_title")}</h2>
+          <h2 className="text-2xl font-bold text-gray-900">
+            {t("about.orgchart_title")}
+          </h2>
           <div className="mt-2 w-8 h-0.5 bg-blue-600" />
         </div>
-        <div ref={scrollRef} className="overflow-x-auto pb-4 -mx-6 px-6">
-          <div className="inline-flex justify-center min-w-max py-4">
-            <OrgTree node={ORG_DATA} isRoot />
-          </div>
+        <div className="overflow-x-auto rounded-xl border border-gray-100 shadow-sm">
+          <img
+            src={imgOrgChart}
+            alt="Organigramme BCA Technologies"
+            className="w-full h-auto object-contain"
+          />
         </div>
-        <p className="mt-4 text-gray-400 text-xs text-center">
-          {t("i18n.language") === "en" ? "Scroll horizontally to see the full chart" : "Faire défiler horizontalement pour voir l'organigramme complet"}
-        </p>
       </div>
     </section>
   );
@@ -745,132 +543,12 @@ const OrgChart = () => {
 
 /* ── Nos Forces ── */
 const NosForces = () => {
-  const forces: { icon: React.ReactNode; title: string; desc: string }[] = [
-    {
-      icon: (
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-        >
-          <circle cx="12" cy="12" r="3" />
-          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
-        </svg>
-      ),
-      title: "Expertise qualifiée",
-      desc: "Ressources hautement qualifiées avec expertise en déploiement, opérations et maintenance des réseaux fibre optique (Backbone, Metro, FTTx).",
-    },
-    {
-      icon: (
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-        >
-          <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-        </svg>
-      ),
-      title: "Équipements complets",
-      desc: "Un parc d'équipements performant pour le contrôle, la gestion et l'installation des réseaux fibre optique.",
-    },
-    {
-      icon: (
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-        >
-          <rect x="1" y="3" width="15" height="13" />
-          <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
-          <circle cx="5.5" cy="18.5" r="2.5" />
-          <circle cx="18.5" cy="18.5" r="2.5" />
-        </svg>
-      ),
-      title: "Moyens logistiques",
-      desc: "7 fourgons entièrement équipés pour garantir rapidité et efficacité dans les interventions.",
-    },
-    {
-      icon: (
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-        >
-          <line x1="16.5" y1="9.4" x2="7.5" y2="4.21" />
-          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-          <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-          <line x1="12" y1="22.08" x2="12" y2="12" />
-        </svg>
-      ),
-      title: "Projets clés en main",
-      desc: "Organisation complète couvrant étude, réalisation, test, installation et maintenance.",
-    },
-    {
-      icon: (
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-        >
-          <circle cx="12" cy="8" r="6" />
-          <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
-        </svg>
-      ),
-      title: "Satisfaction client",
-      desc: "Système de gestion de qualité rigoureux pour garantir une satisfaction optimale.",
-    },
-    {
-      icon: (
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-        >
-          <polyline points="23 4 23 10 17 10" />
-          <polyline points="1 20 1 14 7 14" />
-          <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
-        </svg>
-      ),
-      title: "Flexibilité",
-      desc: "Adaptation rapide aux évolutions du marché et aux besoins spécifiques des clients.",
-    },
-    {
-      icon: (
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-        >
-          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-        </svg>
-      ),
-      title: "Réactivité",
-      desc: "Prise de décision rapide et interventions efficaces pour réduire les délais.",
-    },
-    {
-      icon: (
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-        >
-          <circle cx="12" cy="12" r="10" />
-          <line x1="2" y1="12" x2="22" y2="12" />
-          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-        </svg>
-      ),
-      title: "Couverture étendue",
-      desc: "Interventions sur toute la Côte d'Ivoire et à l'international.",
-    },
-  ];
+  const { t } = useTranslation();
+  const forces = t("about.forces", { returnObjects: true }) as Array<{
+    icon: string;
+    title: string;
+    desc: string;
+  }>;
 
   return (
     <section
@@ -883,7 +561,7 @@ const NosForces = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-14">
           <h2 className="text-4xl md:text-5xl font-black text-white">
-            Nos Forces
+            {t("about.nos_forces_title")}
           </h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -896,7 +574,7 @@ const NosForces = () => {
                 border: "1px solid rgba(255,255,255,0.12)",
               }}
             >
-              <div className="w-8 h-8 text-white/90">{f.icon}</div>
+              <div className="text-3xl">{f.icon}</div>
               <h3 className="text-white font-black text-base leading-snug">
                 {f.title}
               </h3>

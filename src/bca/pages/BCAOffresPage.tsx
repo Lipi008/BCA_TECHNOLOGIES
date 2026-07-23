@@ -5,24 +5,30 @@ import imgTelecom from "../../img/image_a_use/fiberoptiques.jpg";
 import imgIT from "../../img/image_a_use/securité_electorniques.jpg";
 import imgSecurite from "../../img/image_a_use/domotique.jpg";
 import imgDomotique from "../../img/image_a_use/techno_terre.jpg";
+import imgInformatique from "../../img/image_a_use/Info_and_electroniques.png";
+import imgSolar from "../../img/image_a_use/energiesolaire.jpg";
 
 interface Props {
   navigate: (p: PageId) => void;
 }
 
-const SERVICE_IDS = ["telecom", "it", "security", "domotique"] as const;
+const SERVICE_IDS = ["telecom", "it", "security", "domotique", "informatique", "solar"] as const;
 type ServiceId = (typeof SERVICE_IDS)[number];
 const SERVICE_ICONS: Record<ServiceId, string> = {
   telecom: "📡",
   it: "🔒",
   security: "🏙️",
   domotique: "🌱",
+  informatique: "💻",
+  solar: "☀️",
 };
 const SERVICE_IMAGES: Record<ServiceId, string> = {
   telecom: imgTelecom,
   it: imgIT,
   security: imgSecurite,
   domotique: imgDomotique,
+  informatique: imgInformatique,
+  solar: imgSolar,
 };
 
 /* Composant ServiceBlock - carte détaillée alternée */

@@ -465,6 +465,96 @@
           "Panneaux solaires & onduleurs",
           "Audit énergétique"
         ]
+      },
+      "informatique": {
+        "badge": "Informatique & Électronique",
+        "title": "Des infrastructures IT robustes, performantes et sécurisées",
+        "tagline": "Équipements IT de pointe et solutions électroniques pour votre infrastructure",
+        "description": "Nous fournissons des équipements informatiques et électroniques de marques référencées (Dell, HP, Cisco, Huawei, Samsung), adaptés aux infrastructures professionnelles. Notre équipe assure le déploiement, la configuration et la maintenance de vos parcs informatiques, en garantissant des performances optimales et une sécurité renforcée pour vos données et systèmes.",
+        "cta": "Équiper mon infrastructure",
+        "kpi": [
+          { "value": "10+", "label": "Marques partenaires" },
+          { "value": "100%", "label": "Professionnel" },
+          { "value": "24/7", "label": "Support technique" }
+        ],
+        "subSections": [
+          {
+            "title": "Infrastructure Serveurs & Stockage",
+            "items": [
+              "Serveurs rack, tour et lame (Dell, HP, Huawei) : dimensionnement et déploiement adaptés à la taille et aux besoins de votre organisation.",
+              "Solutions de stockage NAS & SAN : mise en place de baies de stockage centralisées haute disponibilité pour la sauvegarde et le partage de données.",
+              "Virtualisation & Cloud privé : déploiement de solutions VMware, Hyper-V ou Proxmox pour optimiser l'utilisation de vos ressources physiques.",
+              "Systèmes de sauvegarde & reprise d'activité (PRA/PCA) : architectures de backup automatisé et plans de continuité pour protéger vos données critiques."
+            ]
+          },
+          {
+            "title": "Réseaux, Connectivité & Sécurité IT",
+            "items": [
+              "Switches administrables & routeurs professionnels : installation et configuration de réseaux LAN/WAN performants et segmentés (VLAN).",
+              "Pare-feu & solutions UTM : protection périmétrique de votre réseau contre les cybermenaces avec filtrage applicatif et détection d'intrusion.",
+              "Réseaux Wi-Fi d'entreprise : déploiement de solutions sans fil haute densité (Cisco, Ubiquiti, Huawei) pour bureaux, hôtels et sites industriels.",
+              "VPN & accès distant sécurisé : mise en œuvre de tunnels chiffrés pour le télétravail et l'interconnexion de sites distants."
+            ]
+          },
+          {
+            "title": "Postes de Travail & Bureautique",
+            "items": [
+              "Ordinateurs fixes & portables professionnels : fourniture de postes Dell, HP, Lenovo configurés selon vos profils utilisateurs (standard, graphisme, ingénierie).",
+              "Périphériques & accessoires : écrans, imprimantes multifonctions, scanners, claviers, souris et équipements de visioconférence.",
+              "Matériel bureautique & électronique grand public : téléphones IP, tableaux blancs interactifs, vidéoprojecteurs et systèmes de présentation sans fil.",
+              "Licences logicielles & suites bureautiques : conseil et fourniture de licences Microsoft 365, antivirus et outils de productivité adaptés à votre effectif."
+            ]
+          },
+          {
+            "title": "Déploiement, Maintenance & Support",
+            "items": [
+              "Audit & inventaire du parc informatique : évaluation complète de vos équipements existants pour identifier les axes d'optimisation et de modernisation.",
+              "Déploiement & configuration clés en main : installation, paramétrage et mise en service de l'ensemble de vos équipements IT sur site.",
+              "Maintenance préventive & curative : contrats de maintenance adaptés pour garantir la disponibilité de votre parc et anticiper les pannes.",
+              "Support technique & helpdesk : assistance utilisateurs réactive pour résoudre rapidement les incidents et assurer la continuité de votre activité."
+            ]
+          }
+        ]
+      },
+      "solar": {
+        "badge": "Énergie Solaire",
+        "title": "L'énergie du soleil au service de vos projets",
+        "tagline": "Solutions photovoltaïques sur mesure — Expertise, Installation & Performance",
+        "description": "BCA Technologies Limited propose des solutions d'énergie solaire complètes pour assurer l'alimentation autonome et durable de vos installations. De l'étude de faisabilité à la maintenance des systèmes photovoltaïques, nous accompagnons particuliers, entreprises et collectivités dans leur transition énergétique.",
+        "cta": "Demander une étude solaire",
+        "kpi": [
+          { "value": "100%", "label": "Sur mesure" },
+          { "value": "25 ans", "label": "Durée de vie" },
+          { "value": "24/7", "label": "Monitoring" }
+        ],
+        "subSections": [
+          {
+            "title": "Expertise & Ingénierie",
+            "items": [
+              "Étude de faisabilité & dimensionnement : analyse des besoins énergétiques et étude d'ensoleillement pour dimensionner la solution optimale.",
+              "Conception de systèmes solaires : ingénierie sur mesure pour installations résidentielles, commerciales et industrielles.",
+              "Audit énergétique : évaluation de la consommation existante pour identifier le potentiel d'économie et de transition solaire."
+            ]
+          },
+          {
+            "title": "Installation & Équipements",
+            "items": [
+              "Installation de panneaux solaires : pose et raccordement par des techniciens certifiés, dans le respect des normes de sécurité internationales.",
+              "Systèmes photovoltaïques autonomes (off-grid) : solutions indépendantes du réseau électrique pour sites isolés.",
+              "Systèmes hybrides & on-grid : intégration au réseau existant avec stockage batterie pour une continuité de service optimale.",
+              "Tours de surveillance solaires : alimentation autonome de systèmes de vidéosurveillance pour les zones reculées ou sensibles.",
+              "Vente de panneaux & équipements solaires : fourniture d'équipements certifiés (panneaux, onduleurs, batteries) pour projets clés en main ou en revente."
+            ]
+          },
+          {
+            "title": "Maintenance & Performance",
+            "items": [
+              "Maintenance préventive et curative : suivi rigoureux pour garantir la performance et la durée de vie des installations.",
+              "Monitoring à distance : supervision en temps réel de la production et détection proactive des anomalies.",
+              "Optimisation de la production : ajustements techniques pour maximiser le rendement énergétique dans la durée."
+            ]
+          }
+        ]
       }
     }
   },
@@ -694,7 +784,7 @@
   "about": {
     "ceo_title": "Mot du Directeur Général",
     "ceo_founded": "Fondé le 1er juillet 2026",
-    "ceo_location": "Cocody, Abidjan, CI",
+    "ceo_location": "Cocody Angré 9ème tranche, Abidjan, Côte d'Ivoire",
     "ceo_education": "Ingénierie & Entrepreneuriat",
     "ceo_badge": "Fondateur & PDG",
     "ceo_name_short": "G.P. ANGAHI",
